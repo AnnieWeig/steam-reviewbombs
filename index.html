@@ -49,23 +49,12 @@ let data = [];
 // --------------------
 // Load Python dataset
 // --------------------
-fetch("./data.json")
-  .then(r => {
-    alert("status: " + r.status);
-    return r.json();
-  })
-  .then(d => {
-    alert("items: " + d.length);
-    console.log(d);
-  })
-  .catch(e => alert("ERROR: " + e));
   
   fetch("./data.json")
   .then(res => res.json())
   .then(json => {
     data = json;
     render(0.3);
-    animateRotation();
   });
 
 // --------------------
@@ -98,21 +87,18 @@ document.getElementById("slider").addEventListener("input", (e) => {
   render(parseFloat(e.target.value));
 });
 
-// --------------------
-// Rotate entire graph
-// --------------------
-function animateRotation() {
-  let angle = 0;
+// moveable
+window.addEventListener("load", () => {
+  const graph = document.querySelector("#graph");
 
-  function loop() {
-    angle += 0.3;
-    graph.setAttribute("rotation", `0 ${angle} 0`);
+  let startX = 0;
 
-    requestAnimationFrame(loop);
-  }
-
-  loop();
-}
+  document.addEventListener("touchmove", (e) => {
+    const x = e.touches[0].clientX;
+    graph.setAttribute("rotation", `0 ${x * 0.2} 0`);
+  });
+});
+    
 </script>
 
 </body>
