@@ -1,20 +1,95 @@
+<!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>AR.js</title>
-  
+  <meta charset="utf-8" />
+  <title>AR Data Filter Demo</title>
+
   <script src="./libs/aframe.min.js"></script>
   <script src="./libs/aframe-ar.js"></script>
+
+  <!-- Three.js (for custom logic) -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+
+  <style>
+    body { margin: 0; overflow: hidden; }
+
+    /* UI overlay */
+    #ui {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 999;
+      background: rgba(0,0,0,0.6);
+      padding: 10px;
+      border-radius: 8px;
+      color: white;
+      font-family: sans-serif;
+    }
+  </style>
 </head>
 
-<body style="margin: 0; overflow: hidden;">
-  <a-scene embedded arjs="debugUIEnabled: false;">
-    
-    <a-marker preset="hiro">
-      <a-box position="0 0.5 0" color="red"></a-box>
-    </a-marker>
+<body>
 
-    <a-entity camera></a-entity>
-  </a-scene>
+<div id="ui">
+  <label>Filter (Z threshold):</label><br>
+  <input id="slider" type="range" min="0" max="1" step="0.05" value="0.5">
+</div>
+
+<a-scene embedded arjs="debugUIEnabled: false;">
+  
+  <a-marker preset="hiro">
+    <a-entity id="graph"></a-entity>
+  </a-marker>
+
+  <a-entity camera></a-entity>
+</a-scene>
+
+<script>
+const graph = document.querySelector("#graph");
+
+// -----------------------------
+// 1. Generate dataset
+// -----------------------------
+const data = [];
+
+for (let i = 0; i < 300; i++) {
+  data.push({
+    x: Math.random() * 2 - 1,
+    y: Math.random() * 2 - 1,
+    z: Math.random()
+  });
+}
+
+// -----------------------------
+// 2. Render function
+// -----------------------------
+function render(threshold) {
+  graph.innerHTML = ""; // clear previous
+
+  data
+    .filter(p => p.z >= threshold)
+    .forEach(p => {
+
+      const point = document.createElement("a-sphere");
+
+      point.setAttribute("position", `${p.x} ${p.z} ${p.y}`);
+      point.setAttribute("radius", 0.03);
+      point.setAttribute("color", "#4CC3D9");
+
+      graph.appendChild(point);
+    });
+}
+
+// initial render
+render(0.5);
+
+// -----------------------------
+// 3. UI interaction
+// -----------------------------
+document.getElementById("slider").addEventListener("input", (e) => {
+  render(parseFloat(e.target.value));
+});
+</script>
+
 </body>
 </html>
