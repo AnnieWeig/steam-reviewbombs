@@ -43,34 +43,38 @@
 </a-scene>
 
 <script>
+  
 const graph = document.querySelector("#graph");
 
-// -----------------------------
-// 1. Generate dataset
-// -----------------------------
-const data = [];
+let data = [];
 
-for (let i = 0; i < 300; i++) {
-  data.push({
-    x: Math.random() * 2 - 1,
-    y: Math.random() * 2 - 1,
-    z: Math.random()
+// --------------------
+// Load Python dataset
+// --------------------
+fetch("data.json")
+  .then(res => res.json())
+  .then(json => {
+    data = json;
+    render(0.3);
+    animateRotation();
   });
-}
 
-// -----------------------------
-// 2. Render function
-// -----------------------------
+// --------------------
+// Render function
+// --------------------
 function render(threshold) {
-  graph.innerHTML = ""; // clear previous
+  graph.innerHTML = "";
 
   data
-    .filter(p => p.z >= threshold)
-    .forEach(p => {
-
+    .filter(d => d.value >= threshold)
+    .forEach(d => {
       const point = document.createElement("a-sphere");
 
-      point.setAttribute("position", `${p.x} ${p.z} ${p.y}`);
+      point.setAttribute(
+        "position",
+        `${d.x} ${d.z} ${d.y}`
+      );
+
       point.setAttribute("radius", 0.03);
       point.setAttribute("color", "#4CC3D9");
 
@@ -78,15 +82,37 @@ function render(threshold) {
     });
 }
 
-// initial render
-render(0.5);
-
-// -----------------------------
-// 3. UI interaction
-// -----------------------------
+// --------------------
+// Slider filter
+// --------------------
 document.getElementById("slider").addEventListener("input", (e) => {
   render(parseFloat(e.target.value));
 });
+
+let startX = 0;
+let currentRotation = 0;
+
+// --------------------
+// Touch start
+// --------------------
+document.addEventListener("touchstart", (e) => {
+  startX = e.touches[0].clientX;
+});
+
+// --------------------
+// Touch move (swipe)
+// --------------------
+document.addEventListener("touchmove", (e) => {
+  const x = e.touches[0].clientX;
+  const delta = x - startX;
+
+  // convert swipe → rotation
+  currentRotation += delta * 0.1;
+
+  graph.setAttribute("rotation", `0 ${currentRotation} 0`);
+
+  startX = x; // update for continuous control
+}
 </script>
 
 </body>
