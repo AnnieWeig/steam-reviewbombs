@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8" />
-  <title>AR Data Filter Demo</title>
+  <meta charset="utf-8">
 
   <script src="./libs/aframe.min.js"></script>
   <script src="./libs/aframe-ar.js"></script>
+
   <script src="./libs/three.min.js"></script>
 
   <style>
     body { margin: 0; overflow: hidden; }
 
-    /* UI overlay */
     #ui {
       position: fixed;
       top: 10px;
@@ -19,8 +18,8 @@
       z-index: 999;
       background: rgba(0,0,0,0.6);
       padding: 10px;
-      border-radius: 8px;
       color: white;
+      border-radius: 8px;
       font-family: sans-serif;
     }
   </style>
@@ -29,12 +28,12 @@
 <body>
 
 <div id="ui">
-  <label>Filter (Z threshold):</label><br>
-  <input id="slider" type="range" min="0" max="1" step="0.05" value="0.5">
+  <label>Filter (value threshold)</label><br>
+  <input id="slider" type="range" min="0" max="1" step="0.05" value="0.3">
 </div>
 
 <a-scene embedded arjs="debugUIEnabled: false;">
-  
+
   <a-marker preset="hiro">
     <a-entity id="graph"></a-entity>
   </a-marker>
@@ -43,7 +42,6 @@
 </a-scene>
 
 <script>
-  
 const graph = document.querySelector("#graph");
 
 let data = [];
@@ -56,6 +54,7 @@ fetch("data.json")
   .then(json => {
     data = json;
     render(0.3);
+    animateRotation();
   });
 
 // --------------------
@@ -88,6 +87,21 @@ document.getElementById("slider").addEventListener("input", (e) => {
   render(parseFloat(e.target.value));
 });
 
+// --------------------
+// Rotate entire graph
+// --------------------
+function animateRotation() {
+  let angle = 0;
+
+  function loop() {
+    angle += 0.3;
+    graph.setAttribute("rotation", `0 ${angle} 0`);
+
+    requestAnimationFrame(loop);
+  }
+
+  loop();
+}
 </script>
 
 </body>
