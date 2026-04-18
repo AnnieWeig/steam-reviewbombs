@@ -56,7 +56,6 @@ fetch("data.json")
   .then(json => {
     data = json;
     render(0.3);
-    animateRotation();
   });
 
 // --------------------
@@ -89,30 +88,6 @@ document.getElementById("slider").addEventListener("input", (e) => {
   render(parseFloat(e.target.value));
 });
 
-let startX = 0;
-let currentRotation = 0;
-
-// --------------------
-// Touch start
-// --------------------
-document.addEventListener("touchstart", (e) => {
-  startX = e.touches[0].clientX;
-});
-
-// --------------------
-// Touch move (swipe)
-// --------------------
-document.addEventListener("touchmove", (e) => {
-  const x = e.touches[0].clientX;
-  const delta = x - startX;
-
-  // convert swipe → rotation
-  currentRotation += delta * 0.1;
-
-  graph.setAttribute("rotation", `0 ${currentRotation} 0`);
-
-  startX = x; // update for continuous control
-}
 </script>
 
 </body>
