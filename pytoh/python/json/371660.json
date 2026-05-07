@@ -1,0 +1,872 @@
+{
+  "id": "371660",
+  "name": "Far Cry® Primal",
+  "startdate": "2016-03-01 00:00:00",
+  "enddate": "2026-05-06 00:00:00",
+  "pandas": {
+    "0": {
+      "positiv": 2412,
+      "negativ": -1016,
+      "early_acces": 0,
+      "created": "2016-03",
+      "wordcloud_key": 0
+    },
+    "1": {
+      "positiv": 244,
+      "negativ": -90,
+      "early_acces": 0,
+      "created": "2016-04",
+      "wordcloud_key": 0
+    },
+    "2": {
+      "positiv": 99,
+      "negativ": -47,
+      "early_acces": 0,
+      "created": "2016-05",
+      "wordcloud_key": 0
+    },
+    "3": {
+      "positiv": 136,
+      "negativ": -42,
+      "early_acces": 0,
+      "created": "2016-06",
+      "wordcloud_key": 0
+    },
+    "4": {
+      "positiv": 140,
+      "negativ": -41,
+      "early_acces": 0,
+      "created": "2016-07",
+      "wordcloud_key": 0
+    },
+    "5": {
+      "positiv": 169,
+      "negativ": -56,
+      "early_acces": 0,
+      "created": "2016-08",
+      "wordcloud_key": 0
+    },
+    "6": {
+      "positiv": 84,
+      "negativ": -28,
+      "early_acces": 0,
+      "created": "2016-09",
+      "wordcloud_key": 0
+    },
+    "7": {
+      "positiv": 81,
+      "negativ": -29,
+      "early_acces": 0,
+      "created": "2016-10",
+      "wordcloud_key": 0
+    },
+    "8": {
+      "positiv": 453,
+      "negativ": -66,
+      "early_acces": 0,
+      "created": "2016-11",
+      "wordcloud_key": 0
+    },
+    "9": {
+      "positiv": 323,
+      "negativ": -76,
+      "early_acces": 0,
+      "created": "2016-12",
+      "wordcloud_key": 0
+    },
+    "10": {
+      "positiv": 269,
+      "negativ": -59,
+      "early_acces": 0,
+      "created": "2017-01",
+      "wordcloud_key": 0
+    },
+    "11": {
+      "positiv": 112,
+      "negativ": -28,
+      "early_acces": 0,
+      "created": "2017-02",
+      "wordcloud_key": 0
+    },
+    "12": {
+      "positiv": 358,
+      "negativ": -101,
+      "early_acces": 0,
+      "created": "2017-03",
+      "wordcloud_key": 0
+    },
+    "13": {
+      "positiv": 146,
+      "negativ": -23,
+      "early_acces": 0,
+      "created": "2017-04",
+      "wordcloud_key": 0
+    },
+    "14": {
+      "positiv": 101,
+      "negativ": -29,
+      "early_acces": 0,
+      "created": "2017-05",
+      "wordcloud_key": 0
+    },
+    "15": {
+      "positiv": 123,
+      "negativ": -27,
+      "early_acces": 0,
+      "created": "2017-06",
+      "wordcloud_key": 0
+    },
+    "16": {
+      "positiv": 154,
+      "negativ": -25,
+      "early_acces": 0,
+      "created": "2017-07",
+      "wordcloud_key": 0
+    },
+    "17": {
+      "positiv": 85,
+      "negativ": -28,
+      "early_acces": 0,
+      "created": "2017-08",
+      "wordcloud_key": 0
+    },
+    "18": {
+      "positiv": 50,
+      "negativ": -20,
+      "early_acces": 0,
+      "created": "2017-09",
+      "wordcloud_key": 0
+    },
+    "19": {
+      "positiv": 80,
+      "negativ": -16,
+      "early_acces": 0,
+      "created": "2017-10",
+      "wordcloud_key": 0
+    },
+    "20": {
+      "positiv": 226,
+      "negativ": -38,
+      "early_acces": 0,
+      "created": "2017-11",
+      "wordcloud_key": 0
+    },
+    "21": {
+      "positiv": 136,
+      "negativ": -37,
+      "early_acces": 0,
+      "created": "2017-12",
+      "wordcloud_key": 0
+    },
+    "22": {
+      "positiv": 128,
+      "negativ": -39,
+      "early_acces": 0,
+      "created": "2018-01",
+      "wordcloud_key": 0
+    },
+    "23": {
+      "positiv": 121,
+      "negativ": -20,
+      "early_acces": 0,
+      "created": "2018-02",
+      "wordcloud_key": 0
+    },
+    "24": {
+      "positiv": 125,
+      "negativ": -61,
+      "early_acces": 0,
+      "created": "2018-03",
+      "wordcloud_key": 0
+    },
+    "25": {
+      "positiv": 105,
+      "negativ": -21,
+      "early_acces": 0,
+      "created": "2018-04",
+      "wordcloud_key": 0
+    },
+    "26": {
+      "positiv": 133,
+      "negativ": -27,
+      "early_acces": 0,
+      "created": "2018-05",
+      "wordcloud_key": 0
+    },
+    "27": {
+      "positiv": 64,
+      "negativ": -17,
+      "early_acces": 0,
+      "created": "2018-06",
+      "wordcloud_key": 0
+    },
+    "28": {
+      "positiv": 67,
+      "negativ": -9,
+      "early_acces": 0,
+      "created": "2018-07",
+      "wordcloud_key": 0
+    },
+    "29": {
+      "positiv": 56,
+      "negativ": -22,
+      "early_acces": 0,
+      "created": "2018-08",
+      "wordcloud_key": 0
+    },
+    "30": {
+      "positiv": 54,
+      "negativ": -14,
+      "early_acces": 0,
+      "created": "2018-09",
+      "wordcloud_key": 0
+    },
+    "31": {
+      "positiv": 39,
+      "negativ": -9,
+      "early_acces": 0,
+      "created": "2018-10",
+      "wordcloud_key": 0
+    },
+    "32": {
+      "positiv": 249,
+      "negativ": -25,
+      "early_acces": 0,
+      "created": "2018-11",
+      "wordcloud_key": 0
+    },
+    "33": {
+      "positiv": 132,
+      "negativ": -38,
+      "early_acces": 0,
+      "created": "2018-12",
+      "wordcloud_key": 0
+    },
+    "34": {
+      "positiv": 130,
+      "negativ": -45,
+      "early_acces": 0,
+      "created": "2019-01",
+      "wordcloud_key": 0
+    },
+    "35": {
+      "positiv": 186,
+      "negativ": -46,
+      "early_acces": 0,
+      "created": "2019-02",
+      "wordcloud_key": 0
+    },
+    "36": {
+      "positiv": 158,
+      "negativ": -43,
+      "early_acces": 0,
+      "created": "2019-03",
+      "wordcloud_key": 0
+    },
+    "37": {
+      "positiv": 87,
+      "negativ": -28,
+      "early_acces": 0,
+      "created": "2019-04",
+      "wordcloud_key": 0
+    },
+    "38": {
+      "positiv": 115,
+      "negativ": -35,
+      "early_acces": 0,
+      "created": "2019-05",
+      "wordcloud_key": 0
+    },
+    "39": {
+      "positiv": 256,
+      "negativ": -38,
+      "early_acces": 0,
+      "created": "2019-06",
+      "wordcloud_key": 0
+    },
+    "40": {
+      "positiv": 338,
+      "negativ": -37,
+      "early_acces": 0,
+      "created": "2019-07",
+      "wordcloud_key": 0
+    },
+    "41": {
+      "positiv": 47,
+      "negativ": -18,
+      "early_acces": 0,
+      "created": "2019-08",
+      "wordcloud_key": 0
+    },
+    "42": {
+      "positiv": 51,
+      "negativ": -26,
+      "early_acces": 0,
+      "created": "2019-09",
+      "wordcloud_key": 0
+    },
+    "43": {
+      "positiv": 84,
+      "negativ": -16,
+      "early_acces": 0,
+      "created": "2019-10",
+      "wordcloud_key": 0
+    },
+    "44": {
+      "positiv": 578,
+      "negativ": -47,
+      "early_acces": 0,
+      "created": "2019-11",
+      "wordcloud_key": 0
+    },
+    "45": {
+      "positiv": 657,
+      "negativ": -55,
+      "early_acces": 0,
+      "created": "2019-12",
+      "wordcloud_key": 0
+    },
+    "46": {
+      "positiv": 440,
+      "negativ": -37,
+      "early_acces": 0,
+      "created": "2020-01",
+      "wordcloud_key": 0
+    },
+    "47": {
+      "positiv": 435,
+      "negativ": -58,
+      "early_acces": 0,
+      "created": "2020-02",
+      "wordcloud_key": 0
+    },
+    "48": {
+      "positiv": 696,
+      "negativ": -78,
+      "early_acces": 0,
+      "created": "2020-03",
+      "wordcloud_key": 0
+    },
+    "49": {
+      "positiv": 397,
+      "negativ": -45,
+      "early_acces": 0,
+      "created": "2020-04",
+      "wordcloud_key": 0
+    },
+    "50": {
+      "positiv": 369,
+      "negativ": -48,
+      "early_acces": 0,
+      "created": "2020-05",
+      "wordcloud_key": 0
+    },
+    "51": {
+      "positiv": 257,
+      "negativ": -24,
+      "early_acces": 0,
+      "created": "2020-06",
+      "wordcloud_key": 0
+    },
+    "52": {
+      "positiv": 697,
+      "negativ": -88,
+      "early_acces": 0,
+      "created": "2020-07",
+      "wordcloud_key": 0
+    },
+    "53": {
+      "positiv": 282,
+      "negativ": -36,
+      "early_acces": 0,
+      "created": "2020-08",
+      "wordcloud_key": 0
+    },
+    "54": {
+      "positiv": 183,
+      "negativ": -29,
+      "early_acces": 0,
+      "created": "2020-09",
+      "wordcloud_key": 0
+    },
+    "55": {
+      "positiv": 239,
+      "negativ": -31,
+      "early_acces": 0,
+      "created": "2020-10",
+      "wordcloud_key": 0
+    },
+    "56": {
+      "positiv": 361,
+      "negativ": -33,
+      "early_acces": 0,
+      "created": "2020-11",
+      "wordcloud_key": 0
+    },
+    "57": {
+      "positiv": 399,
+      "negativ": -36,
+      "early_acces": 0,
+      "created": "2020-12",
+      "wordcloud_key": 0
+    },
+    "58": {
+      "positiv": 447,
+      "negativ": -50,
+      "early_acces": 0,
+      "created": "2021-01",
+      "wordcloud_key": 0
+    },
+    "59": {
+      "positiv": 241,
+      "negativ": -33,
+      "early_acces": 0,
+      "created": "2021-02",
+      "wordcloud_key": 0
+    },
+    "60": {
+      "positiv": 331,
+      "negativ": -28,
+      "early_acces": 0,
+      "created": "2021-03",
+      "wordcloud_key": 0
+    },
+    "61": {
+      "positiv": 258,
+      "negativ": -21,
+      "early_acces": 0,
+      "created": "2021-04",
+      "wordcloud_key": 0
+    },
+    "62": {
+      "positiv": 243,
+      "negativ": -30,
+      "early_acces": 0,
+      "created": "2021-05",
+      "wordcloud_key": 0
+    },
+    "63": {
+      "positiv": 335,
+      "negativ": -30,
+      "early_acces": 0,
+      "created": "2021-06",
+      "wordcloud_key": 0
+    },
+    "64": {
+      "positiv": 408,
+      "negativ": -42,
+      "early_acces": 0,
+      "created": "2021-07",
+      "wordcloud_key": 0
+    },
+    "65": {
+      "positiv": 200,
+      "negativ": -25,
+      "early_acces": 0,
+      "created": "2021-08",
+      "wordcloud_key": 0
+    },
+    "66": {
+      "positiv": 152,
+      "negativ": -9,
+      "early_acces": 0,
+      "created": "2021-09",
+      "wordcloud_key": 0
+    },
+    "67": {
+      "positiv": 157,
+      "negativ": -19,
+      "early_acces": 0,
+      "created": "2021-10",
+      "wordcloud_key": 0
+    },
+    "68": {
+      "positiv": 233,
+      "negativ": -30,
+      "early_acces": 0,
+      "created": "2021-11",
+      "wordcloud_key": 0
+    },
+    "69": {
+      "positiv": 517,
+      "negativ": -44,
+      "early_acces": 0,
+      "created": "2021-12",
+      "wordcloud_key": 0
+    },
+    "70": {
+      "positiv": 356,
+      "negativ": -36,
+      "early_acces": 0,
+      "created": "2022-01",
+      "wordcloud_key": 0
+    },
+    "71": {
+      "positiv": 350,
+      "negativ": -34,
+      "early_acces": 0,
+      "created": "2022-02",
+      "wordcloud_key": 0
+    },
+    "72": {
+      "positiv": 257,
+      "negativ": -19,
+      "early_acces": 0,
+      "created": "2022-03",
+      "wordcloud_key": 0
+    },
+    "73": {
+      "positiv": 163,
+      "negativ": -11,
+      "early_acces": 0,
+      "created": "2022-04",
+      "wordcloud_key": 0
+    },
+    "74": {
+      "positiv": 110,
+      "negativ": -18,
+      "early_acces": 0,
+      "created": "2022-05",
+      "wordcloud_key": 0
+    },
+    "75": {
+      "positiv": 223,
+      "negativ": -20,
+      "early_acces": 0,
+      "created": "2022-06",
+      "wordcloud_key": 0
+    },
+    "76": {
+      "positiv": 203,
+      "negativ": -23,
+      "early_acces": 0,
+      "created": "2022-07",
+      "wordcloud_key": 0
+    },
+    "77": {
+      "positiv": 194,
+      "negativ": -25,
+      "early_acces": 0,
+      "created": "2022-08",
+      "wordcloud_key": 0
+    },
+    "78": {
+      "positiv": 194,
+      "negativ": -16,
+      "early_acces": 0,
+      "created": "2022-09",
+      "wordcloud_key": 0
+    },
+    "79": {
+      "positiv": 121,
+      "negativ": -16,
+      "early_acces": 0,
+      "created": "2022-10",
+      "wordcloud_key": 0
+    },
+    "80": {
+      "positiv": 192,
+      "negativ": -16,
+      "early_acces": 0,
+      "created": "2022-11",
+      "wordcloud_key": 0
+    },
+    "81": {
+      "positiv": 243,
+      "negativ": -23,
+      "early_acces": 0,
+      "created": "2022-12",
+      "wordcloud_key": 0
+    },
+    "82": {
+      "positiv": 252,
+      "negativ": -22,
+      "early_acces": 0,
+      "created": "2023-01",
+      "wordcloud_key": 0
+    },
+    "83": {
+      "positiv": 145,
+      "negativ": -18,
+      "early_acces": 0,
+      "created": "2023-02",
+      "wordcloud_key": 0
+    },
+    "84": {
+      "positiv": 287,
+      "negativ": -34,
+      "early_acces": 0,
+      "created": "2023-03",
+      "wordcloud_key": 0
+    },
+    "85": {
+      "positiv": 229,
+      "negativ": -15,
+      "early_acces": 0,
+      "created": "2023-04",
+      "wordcloud_key": 0
+    },
+    "86": {
+      "positiv": 187,
+      "negativ": -20,
+      "early_acces": 0,
+      "created": "2023-05",
+      "wordcloud_key": 0
+    },
+    "87": {
+      "positiv": 141,
+      "negativ": -18,
+      "early_acces": 0,
+      "created": "2023-06",
+      "wordcloud_key": 0
+    },
+    "88": {
+      "positiv": 288,
+      "negativ": -36,
+      "early_acces": 0,
+      "created": "2023-07",
+      "wordcloud_key": 0
+    },
+    "89": {
+      "positiv": 155,
+      "negativ": -19,
+      "early_acces": 0,
+      "created": "2023-08",
+      "wordcloud_key": 0
+    },
+    "90": {
+      "positiv": 225,
+      "negativ": -18,
+      "early_acces": 0,
+      "created": "2023-09",
+      "wordcloud_key": 0
+    },
+    "91": {
+      "positiv": 195,
+      "negativ": -17,
+      "early_acces": 0,
+      "created": "2023-10",
+      "wordcloud_key": 0
+    },
+    "92": {
+      "positiv": 379,
+      "negativ": -30,
+      "early_acces": 0,
+      "created": "2023-11",
+      "wordcloud_key": 0
+    },
+    "93": {
+      "positiv": 331,
+      "negativ": -21,
+      "early_acces": 0,
+      "created": "2023-12",
+      "wordcloud_key": 0
+    },
+    "94": {
+      "positiv": 257,
+      "negativ": -39,
+      "early_acces": 0,
+      "created": "2024-01",
+      "wordcloud_key": 0
+    },
+    "95": {
+      "positiv": 250,
+      "negativ": -30,
+      "early_acces": 0,
+      "created": "2024-02",
+      "wordcloud_key": 0
+    },
+    "96": {
+      "positiv": 259,
+      "negativ": -27,
+      "early_acces": 0,
+      "created": "2024-03",
+      "wordcloud_key": 0
+    },
+    "97": {
+      "positiv": 218,
+      "negativ": -33,
+      "early_acces": 0,
+      "created": "2024-04",
+      "wordcloud_key": 0
+    },
+    "98": {
+      "positiv": 167,
+      "negativ": -23,
+      "early_acces": 0,
+      "created": "2024-05",
+      "wordcloud_key": 0
+    },
+    "99": {
+      "positiv": 193,
+      "negativ": -22,
+      "early_acces": 0,
+      "created": "2024-06",
+      "wordcloud_key": 0
+    },
+    "100": {
+      "positiv": 347,
+      "negativ": -26,
+      "early_acces": 0,
+      "created": "2024-07",
+      "wordcloud_key": 0
+    },
+    "101": {
+      "positiv": 276,
+      "negativ": -31,
+      "early_acces": 0,
+      "created": "2024-08",
+      "wordcloud_key": 0
+    },
+    "102": {
+      "positiv": 156,
+      "negativ": -17,
+      "early_acces": 0,
+      "created": "2024-09",
+      "wordcloud_key": 0
+    },
+    "103": {
+      "positiv": 261,
+      "negativ": -25,
+      "early_acces": 0,
+      "created": "2024-10",
+      "wordcloud_key": 0
+    },
+    "104": {
+      "positiv": 147,
+      "negativ": -23,
+      "early_acces": 0,
+      "created": "2024-11",
+      "wordcloud_key": 0
+    },
+    "105": {
+      "positiv": 317,
+      "negativ": -28,
+      "early_acces": 0,
+      "created": "2024-12",
+      "wordcloud_key": 0
+    },
+    "106": {
+      "positiv": 276,
+      "negativ": -29,
+      "early_acces": 0,
+      "created": "2025-01",
+      "wordcloud_key": 0
+    },
+    "107": {
+      "positiv": 224,
+      "negativ": -29,
+      "early_acces": 0,
+      "created": "2025-02",
+      "wordcloud_key": 0
+    },
+    "108": {
+      "positiv": 477,
+      "negativ": -54,
+      "early_acces": 0,
+      "created": "2025-03",
+      "wordcloud_key": 0
+    },
+    "109": {
+      "positiv": 279,
+      "negativ": -31,
+      "early_acces": 0,
+      "created": "2025-04",
+      "wordcloud_key": 0
+    },
+    "110": {
+      "positiv": 205,
+      "negativ": -19,
+      "early_acces": 0,
+      "created": "2025-05",
+      "wordcloud_key": 0
+    },
+    "111": {
+      "positiv": 245,
+      "negativ": -34,
+      "early_acces": 0,
+      "created": "2025-06",
+      "wordcloud_key": 0
+    },
+    "112": {
+      "positiv": 291,
+      "negativ": -37,
+      "early_acces": 0,
+      "created": "2025-07",
+      "wordcloud_key": 0
+    },
+    "113": {
+      "positiv": 473,
+      "negativ": -76,
+      "early_acces": 0,
+      "created": "2025-08",
+      "wordcloud_key": 0
+    },
+    "114": {
+      "positiv": 230,
+      "negativ": -43,
+      "early_acces": 0,
+      "created": "2025-09",
+      "wordcloud_key": 0
+    },
+    "115": {
+      "positiv": 1302,
+      "negativ": -202,
+      "early_acces": 0,
+      "created": "2025-10",
+      "wordcloud_key": 0
+    },
+    "116": {
+      "positiv": 455,
+      "negativ": -69,
+      "early_acces": 0,
+      "created": "2025-11",
+      "wordcloud_key": 0
+    },
+    "117": {
+      "positiv": 612,
+      "negativ": -83,
+      "early_acces": 0,
+      "created": "2025-12",
+      "wordcloud_key": 0
+    },
+    "118": {
+      "positiv": 548,
+      "negativ": -67,
+      "early_acces": 0,
+      "created": "2026-01",
+      "wordcloud_key": 0
+    },
+    "119": {
+      "positiv": 315,
+      "negativ": -46,
+      "early_acces": 0,
+      "created": "2026-02",
+      "wordcloud_key": 0
+    },
+    "120": {
+      "positiv": 1224,
+      "negativ": -172,
+      "early_acces": 0,
+      "created": "2026-03",
+      "wordcloud_key": 0
+    },
+    "121": {
+      "positiv": 509,
+      "negativ": -44,
+      "early_acces": 0,
+      "created": "2026-04",
+      "wordcloud_key": 0
+    },
+    "122": {
+      "positiv": 57,
+      "negativ": -13,
+      "early_acces": 0,
+      "created": "2026-05",
+      "wordcloud_key": 0
+    }
+  },
+  "wordclouds": {
+    "0": []
+  }
+}
