@@ -1,0 +1,39 @@
+{
+  "id": "2553040",
+  "name": "Nested Lands",
+  "startdate": "2026-02-25 00:00:00",
+  "enddate": "2026-05-04 00:00:00",
+  "pandas": {
+    "0": {
+      "positiv": 144,
+      "negativ": -41,
+      "early_acces": 1,
+      "created": "2026-02",
+      "wordcloud_key": 0
+    },
+    "1": {
+      "positiv": 108,
+      "negativ": -50,
+      "early_acces": 1,
+      "created": "2026-03",
+      "wordcloud_key": 0
+    },
+    "2": {
+      "positiv": 50,
+      "negativ": -25,
+      "early_acces": 1,
+      "created": "2026-04",
+      "wordcloud_key": 0
+    },
+    "3": {
+      "positiv": 4,
+      "negativ": -3,
+      "early_acces": 1,
+      "created": "2026-05",
+      "wordcloud_key": 0
+    }
+  },
+  "wordclouds": {
+    "0": []
+  }
+}

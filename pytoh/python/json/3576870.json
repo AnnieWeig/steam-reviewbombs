@@ -1,0 +1,32 @@
+{
+  "id": "3576870",
+  "name": "Blossom: The Seed of Life",
+  "startdate": "2026-03-09 00:00:00",
+  "enddate": "2026-05-06 00:00:00",
+  "pandas": {
+    "0": {
+      "positiv": 589,
+      "negativ": -63,
+      "early_acces": 0,
+      "created": "2026-03",
+      "wordcloud_key": 0
+    },
+    "1": {
+      "positiv": 108,
+      "negativ": -19,
+      "early_acces": 0,
+      "created": "2026-04",
+      "wordcloud_key": 0
+    },
+    "2": {
+      "positiv": 25,
+      "negativ": -5,
+      "early_acces": 0,
+      "created": "2026-05",
+      "wordcloud_key": 0
+    }
+  },
+  "wordclouds": {
+    "0": []
+  }
+}

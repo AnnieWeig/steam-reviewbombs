@@ -1,0 +1,46 @@
+{
+  "id": "1253220",
+  "name": "The Gold River Project",
+  "startdate": "2026-01-23 00:00:00",
+  "enddate": "2026-05-04 00:00:00",
+  "pandas": {
+    "0": {
+      "positiv": 217,
+      "negativ": -117,
+      "early_acces": 1,
+      "created": "2026-01",
+      "wordcloud_key": 0
+    },
+    "1": {
+      "positiv": 98,
+      "negativ": -38,
+      "early_acces": 1,
+      "created": "2026-02",
+      "wordcloud_key": 0
+    },
+    "2": {
+      "positiv": 36,
+      "negativ": -18,
+      "early_acces": 1,
+      "created": "2026-03",
+      "wordcloud_key": 0
+    },
+    "3": {
+      "positiv": 16,
+      "negativ": -10,
+      "early_acces": 1,
+      "created": "2026-04",
+      "wordcloud_key": 0
+    },
+    "4": {
+      "positiv": 2,
+      "negativ": -1,
+      "early_acces": 1,
+      "created": "2026-05",
+      "wordcloud_key": 0
+    }
+  },
+  "wordclouds": {
+    "0": []
+  }
+}

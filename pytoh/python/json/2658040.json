@@ -1,0 +1,32 @@
+{
+  "id": "2658040",
+  "name": "Responding",
+  "startdate": "2026-03-31 00:00:00",
+  "enddate": "2026-05-05 00:00:00",
+  "pandas": {
+    "0": {
+      "positiv": 23,
+      "negativ": -47,
+      "early_acces": 1,
+      "created": "2026-03",
+      "wordcloud_key": 0
+    },
+    "1": {
+      "positiv": 160,
+      "negativ": -127,
+      "early_acces": 1,
+      "created": "2026-04",
+      "wordcloud_key": 0
+    },
+    "2": {
+      "positiv": 4,
+      "negativ": -3,
+      "early_acces": 1,
+      "created": "2026-05",
+      "wordcloud_key": 0
+    }
+  },
+  "wordclouds": {
+    "0": []
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "1588550",
+  "name": "Cairn",
+  "startdate": "2026-01-29 00:00:00",
+  "enddate": "2026-05-06 00:00:00",
+  "pandas": {
+    "0": {
+      "positiv": 2701,
+      "negativ": -154,
+      "early_acces": 0,
+      "created": "2026-01",
+      "wordcloud_key": 0
+    },
+    "1": {
+      "positiv": 10509,
+      "negativ": -635,
+      "early_acces": 0,
+      "created": "2026-02",
+      "wordcloud_key": 0
+    },
+    "2": {
+      "positiv": 2390,
+      "negativ": -116,
+      "early_acces": 0,
+      "created": "2026-03",
+      "wordcloud_key": 0
+    },
+    "3": {
+      "positiv": 1403,
+      "negativ": -78,
+      "early_acces": 0,
+      "created": "2026-04",
+      "wordcloud_key": 0
+    },
+    "4": {
+      "positiv": 165,
+      "negativ": -9,
+      "early_acces": 0,
+      "created": "2026-05",
+      "wordcloud_key": 0
+    }
+  },
+  "wordclouds": {
+    "0": []
+  }
+}

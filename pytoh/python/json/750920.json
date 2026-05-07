@@ -1,0 +1,926 @@
+{
+  "id": "750920",
+  "name": "Shadow of the Tomb Raider: Definitive Edition",
+  "startdate": "2018-09-14 00:00:00",
+  "enddate": "2026-05-05 00:00:00",
+  "pandas": {
+    "0": {
+      "positiv": 3705,
+      "negativ": -1182,
+      "early_acces": 0,
+      "created": "2018-09",
+      "wordcloud_key": 1
+    },
+    "1": {
+      "positiv": 1461,
+      "negativ": -1367,
+      "early_acces": 0,
+      "created": "2018-10",
+      "wordcloud_key": 1
+    },
+    "2": {
+      "positiv": 2712,
+      "negativ": -529,
+      "early_acces": 0,
+      "created": "2018-11",
+      "wordcloud_key": 0
+    },
+    "3": {
+      "positiv": 672,
+      "negativ": -249,
+      "early_acces": 0,
+      "created": "2018-12",
+      "wordcloud_key": 0
+    },
+    "4": {
+      "positiv": 576,
+      "negativ": -216,
+      "early_acces": 0,
+      "created": "2019-01",
+      "wordcloud_key": 0
+    },
+    "5": {
+      "positiv": 419,
+      "negativ": -188,
+      "early_acces": 0,
+      "created": "2019-02",
+      "wordcloud_key": 0
+    },
+    "6": {
+      "positiv": 327,
+      "negativ": -101,
+      "early_acces": 0,
+      "created": "2019-03",
+      "wordcloud_key": 0
+    },
+    "7": {
+      "positiv": 243,
+      "negativ": -85,
+      "early_acces": 0,
+      "created": "2019-04",
+      "wordcloud_key": 0
+    },
+    "8": {
+      "positiv": 165,
+      "negativ": -67,
+      "early_acces": 0,
+      "created": "2019-05",
+      "wordcloud_key": 0
+    },
+    "9": {
+      "positiv": 707,
+      "negativ": -85,
+      "early_acces": 0,
+      "created": "2019-06",
+      "wordcloud_key": 0
+    },
+    "10": {
+      "positiv": 876,
+      "negativ": -134,
+      "early_acces": 0,
+      "created": "2019-07",
+      "wordcloud_key": 0
+    },
+    "11": {
+      "positiv": 254,
+      "negativ": -90,
+      "early_acces": 0,
+      "created": "2019-08",
+      "wordcloud_key": 0
+    },
+    "12": {
+      "positiv": 301,
+      "negativ": -94,
+      "early_acces": 0,
+      "created": "2019-09",
+      "wordcloud_key": 0
+    },
+    "13": {
+      "positiv": 328,
+      "negativ": -76,
+      "early_acces": 0,
+      "created": "2019-10",
+      "wordcloud_key": 0
+    },
+    "14": {
+      "positiv": 2237,
+      "negativ": -234,
+      "early_acces": 0,
+      "created": "2019-11",
+      "wordcloud_key": 0
+    },
+    "15": {
+      "positiv": 1964,
+      "negativ": -267,
+      "early_acces": 0,
+      "created": "2019-12",
+      "wordcloud_key": 0
+    },
+    "16": {
+      "positiv": 1550,
+      "negativ": -216,
+      "early_acces": 0,
+      "created": "2020-01",
+      "wordcloud_key": 0
+    },
+    "17": {
+      "positiv": 1170,
+      "negativ": -186,
+      "early_acces": 0,
+      "created": "2020-02",
+      "wordcloud_key": 0
+    },
+    "18": {
+      "positiv": 2530,
+      "negativ": -357,
+      "early_acces": 0,
+      "created": "2020-03",
+      "wordcloud_key": 0
+    },
+    "19": {
+      "positiv": 1734,
+      "negativ": -238,
+      "early_acces": 0,
+      "created": "2020-04",
+      "wordcloud_key": 0
+    },
+    "20": {
+      "positiv": 1289,
+      "negativ": -173,
+      "early_acces": 0,
+      "created": "2020-05",
+      "wordcloud_key": 0
+    },
+    "21": {
+      "positiv": 1204,
+      "negativ": -172,
+      "early_acces": 0,
+      "created": "2020-06",
+      "wordcloud_key": 0
+    },
+    "22": {
+      "positiv": 1921,
+      "negativ": -217,
+      "early_acces": 0,
+      "created": "2020-07",
+      "wordcloud_key": 0
+    },
+    "23": {
+      "positiv": 1399,
+      "negativ": -199,
+      "early_acces": 0,
+      "created": "2020-08",
+      "wordcloud_key": 0
+    },
+    "24": {
+      "positiv": 803,
+      "negativ": -103,
+      "early_acces": 0,
+      "created": "2020-09",
+      "wordcloud_key": 0
+    },
+    "25": {
+      "positiv": 933,
+      "negativ": -102,
+      "early_acces": 0,
+      "created": "2020-10",
+      "wordcloud_key": 0
+    },
+    "26": {
+      "positiv": 1382,
+      "negativ": -125,
+      "early_acces": 0,
+      "created": "2020-11",
+      "wordcloud_key": 0
+    },
+    "27": {
+      "positiv": 1463,
+      "negativ": -187,
+      "early_acces": 0,
+      "created": "2020-12",
+      "wordcloud_key": 0
+    },
+    "28": {
+      "positiv": 1434,
+      "negativ": -213,
+      "early_acces": 0,
+      "created": "2021-01",
+      "wordcloud_key": 2
+    },
+    "29": {
+      "positiv": 1047,
+      "negativ": -151,
+      "early_acces": 0,
+      "created": "2021-02",
+      "wordcloud_key": 0
+    },
+    "30": {
+      "positiv": 1314,
+      "negativ": -140,
+      "early_acces": 0,
+      "created": "2021-03",
+      "wordcloud_key": 0
+    },
+    "31": {
+      "positiv": 1044,
+      "negativ": -158,
+      "early_acces": 0,
+      "created": "2021-04",
+      "wordcloud_key": 0
+    },
+    "32": {
+      "positiv": 1099,
+      "negativ": -138,
+      "early_acces": 0,
+      "created": "2021-05",
+      "wordcloud_key": 3
+    },
+    "33": {
+      "positiv": 1081,
+      "negativ": -128,
+      "early_acces": 0,
+      "created": "2021-06",
+      "wordcloud_key": 3
+    },
+    "34": {
+      "positiv": 1131,
+      "negativ": -139,
+      "early_acces": 0,
+      "created": "2021-07",
+      "wordcloud_key": 0
+    },
+    "35": {
+      "positiv": 1112,
+      "negativ": -179,
+      "early_acces": 0,
+      "created": "2021-08",
+      "wordcloud_key": 4
+    },
+    "36": {
+      "positiv": 635,
+      "negativ": -95,
+      "early_acces": 0,
+      "created": "2021-09",
+      "wordcloud_key": 0
+    },
+    "37": {
+      "positiv": 654,
+      "negativ": -177,
+      "early_acces": 0,
+      "created": "2021-10",
+      "wordcloud_key": 0
+    },
+    "38": {
+      "positiv": 1243,
+      "negativ": -157,
+      "early_acces": 0,
+      "created": "2021-11",
+      "wordcloud_key": 0
+    },
+    "39": {
+      "positiv": 997,
+      "negativ": -125,
+      "early_acces": 0,
+      "created": "2021-12",
+      "wordcloud_key": 0
+    },
+    "40": {
+      "positiv": 839,
+      "negativ": -128,
+      "early_acces": 0,
+      "created": "2022-01",
+      "wordcloud_key": 0
+    },
+    "41": {
+      "positiv": 487,
+      "negativ": -60,
+      "early_acces": 0,
+      "created": "2022-02",
+      "wordcloud_key": 0
+    },
+    "42": {
+      "positiv": 469,
+      "negativ": -80,
+      "early_acces": 0,
+      "created": "2022-03",
+      "wordcloud_key": 0
+    },
+    "43": {
+      "positiv": 395,
+      "negativ": -59,
+      "early_acces": 0,
+      "created": "2022-04",
+      "wordcloud_key": 0
+    },
+    "44": {
+      "positiv": 372,
+      "negativ": -52,
+      "early_acces": 0,
+      "created": "2022-05",
+      "wordcloud_key": 0
+    },
+    "45": {
+      "positiv": 369,
+      "negativ": -83,
+      "early_acces": 0,
+      "created": "2022-06",
+      "wordcloud_key": 0
+    },
+    "46": {
+      "positiv": 404,
+      "negativ": -78,
+      "early_acces": 0,
+      "created": "2022-07",
+      "wordcloud_key": 0
+    },
+    "47": {
+      "positiv": 365,
+      "negativ": -44,
+      "early_acces": 0,
+      "created": "2022-08",
+      "wordcloud_key": 0
+    },
+    "48": {
+      "positiv": 285,
+      "negativ": -67,
+      "early_acces": 0,
+      "created": "2022-09",
+      "wordcloud_key": 0
+    },
+    "49": {
+      "positiv": 308,
+      "negativ": -49,
+      "early_acces": 0,
+      "created": "2022-10",
+      "wordcloud_key": 0
+    },
+    "50": {
+      "positiv": 404,
+      "negativ": -59,
+      "early_acces": 0,
+      "created": "2022-11",
+      "wordcloud_key": 0
+    },
+    "51": {
+      "positiv": 472,
+      "negativ": -69,
+      "early_acces": 0,
+      "created": "2022-12",
+      "wordcloud_key": 0
+    },
+    "52": {
+      "positiv": 473,
+      "negativ": -81,
+      "early_acces": 0,
+      "created": "2023-01",
+      "wordcloud_key": 0
+    },
+    "53": {
+      "positiv": 365,
+      "negativ": -47,
+      "early_acces": 0,
+      "created": "2023-02",
+      "wordcloud_key": 0
+    },
+    "54": {
+      "positiv": 381,
+      "negativ": -80,
+      "early_acces": 0,
+      "created": "2023-03",
+      "wordcloud_key": 0
+    },
+    "55": {
+      "positiv": 338,
+      "negativ": -47,
+      "early_acces": 0,
+      "created": "2023-04",
+      "wordcloud_key": 0
+    },
+    "56": {
+      "positiv": 335,
+      "negativ": -64,
+      "early_acces": 0,
+      "created": "2023-05",
+      "wordcloud_key": 0
+    },
+    "57": {
+      "positiv": 508,
+      "negativ": -87,
+      "early_acces": 0,
+      "created": "2023-06",
+      "wordcloud_key": 0
+    },
+    "58": {
+      "positiv": 547,
+      "negativ": -105,
+      "early_acces": 0,
+      "created": "2023-07",
+      "wordcloud_key": 5
+    },
+    "59": {
+      "positiv": 475,
+      "negativ": -80,
+      "early_acces": 0,
+      "created": "2023-08",
+      "wordcloud_key": 0
+    },
+    "60": {
+      "positiv": 383,
+      "negativ": -57,
+      "early_acces": 0,
+      "created": "2023-09",
+      "wordcloud_key": 0
+    },
+    "61": {
+      "positiv": 367,
+      "negativ": -64,
+      "early_acces": 0,
+      "created": "2023-10",
+      "wordcloud_key": 0
+    },
+    "62": {
+      "positiv": 538,
+      "negativ": -96,
+      "early_acces": 0,
+      "created": "2023-11",
+      "wordcloud_key": 0
+    },
+    "63": {
+      "positiv": 493,
+      "negativ": -85,
+      "early_acces": 0,
+      "created": "2023-12",
+      "wordcloud_key": 0
+    },
+    "64": {
+      "positiv": 467,
+      "negativ": -98,
+      "early_acces": 0,
+      "created": "2024-01",
+      "wordcloud_key": 6
+    },
+    "65": {
+      "positiv": 594,
+      "negativ": -97,
+      "early_acces": 0,
+      "created": "2024-02",
+      "wordcloud_key": 0
+    },
+    "66": {
+      "positiv": 465,
+      "negativ": -89,
+      "early_acces": 0,
+      "created": "2024-03",
+      "wordcloud_key": 0
+    },
+    "67": {
+      "positiv": 470,
+      "negativ": -115,
+      "early_acces": 0,
+      "created": "2024-04",
+      "wordcloud_key": 0
+    },
+    "68": {
+      "positiv": 422,
+      "negativ": -107,
+      "early_acces": 0,
+      "created": "2024-05",
+      "wordcloud_key": 0
+    },
+    "69": {
+      "positiv": 353,
+      "negativ": -72,
+      "early_acces": 0,
+      "created": "2024-06",
+      "wordcloud_key": 0
+    },
+    "70": {
+      "positiv": 517,
+      "negativ": -101,
+      "early_acces": 0,
+      "created": "2024-07",
+      "wordcloud_key": 7
+    },
+    "71": {
+      "positiv": 415,
+      "negativ": -71,
+      "early_acces": 0,
+      "created": "2024-08",
+      "wordcloud_key": 0
+    },
+    "72": {
+      "positiv": 473,
+      "negativ": -110,
+      "early_acces": 0,
+      "created": "2024-09",
+      "wordcloud_key": 8
+    },
+    "73": {
+      "positiv": 737,
+      "negativ": -186,
+      "early_acces": 0,
+      "created": "2024-10",
+      "wordcloud_key": 0
+    },
+    "74": {
+      "positiv": 561,
+      "negativ": -125,
+      "early_acces": 0,
+      "created": "2024-11",
+      "wordcloud_key": 0
+    },
+    "75": {
+      "positiv": 718,
+      "negativ": -139,
+      "early_acces": 0,
+      "created": "2024-12",
+      "wordcloud_key": 9
+    },
+    "76": {
+      "positiv": 606,
+      "negativ": -105,
+      "early_acces": 0,
+      "created": "2025-01",
+      "wordcloud_key": 0
+    },
+    "77": {
+      "positiv": 480,
+      "negativ": -88,
+      "early_acces": 0,
+      "created": "2025-02",
+      "wordcloud_key": 0
+    },
+    "78": {
+      "positiv": 543,
+      "negativ": -110,
+      "early_acces": 0,
+      "created": "2025-03",
+      "wordcloud_key": 0
+    },
+    "79": {
+      "positiv": 406,
+      "negativ": -89,
+      "early_acces": 0,
+      "created": "2025-04",
+      "wordcloud_key": 0
+    },
+    "80": {
+      "positiv": 437,
+      "negativ": -110,
+      "early_acces": 0,
+      "created": "2025-05",
+      "wordcloud_key": 0
+    },
+    "81": {
+      "positiv": 443,
+      "negativ": -102,
+      "early_acces": 0,
+      "created": "2025-06",
+      "wordcloud_key": 0
+    },
+    "82": {
+      "positiv": 493,
+      "negativ": -107,
+      "early_acces": 0,
+      "created": "2025-07",
+      "wordcloud_key": 0
+    },
+    "83": {
+      "positiv": 493,
+      "negativ": -105,
+      "early_acces": 0,
+      "created": "2025-08",
+      "wordcloud_key": 0
+    },
+    "84": {
+      "positiv": 384,
+      "negativ": -123,
+      "early_acces": 0,
+      "created": "2025-09",
+      "wordcloud_key": 0
+    },
+    "85": {
+      "positiv": 470,
+      "negativ": -116,
+      "early_acces": 0,
+      "created": "2025-10",
+      "wordcloud_key": 0
+    },
+    "86": {
+      "positiv": 521,
+      "negativ": -87,
+      "early_acces": 0,
+      "created": "2025-11",
+      "wordcloud_key": 0
+    },
+    "87": {
+      "positiv": 975,
+      "negativ": -189,
+      "early_acces": 0,
+      "created": "2025-12",
+      "wordcloud_key": 0
+    },
+    "88": {
+      "positiv": 964,
+      "negativ": -219,
+      "early_acces": 0,
+      "created": "2026-01",
+      "wordcloud_key": 0
+    },
+    "89": {
+      "positiv": 678,
+      "negativ": -148,
+      "early_acces": 0,
+      "created": "2026-02",
+      "wordcloud_key": 0
+    },
+    "90": {
+      "positiv": 681,
+      "negativ": -127,
+      "early_acces": 0,
+      "created": "2026-03",
+      "wordcloud_key": 0
+    },
+    "91": {
+      "positiv": 660,
+      "negativ": -134,
+      "early_acces": 0,
+      "created": "2026-04",
+      "wordcloud_key": 0
+    },
+    "92": {
+      "positiv": 101,
+      "negativ": -19,
+      "early_acces": 0,
+      "created": "2026-05",
+      "wordcloud_key": 10
+    }
+  },
+  "wordclouds": {
+    "0": {
+      "Keine relevanten Reviews": 1
+    },
+    "1": {
+      "tomb raider": 1.0,
+      "rise tomb": 0.23880597014925373,
+      "shadow tomb": 0.16417910447761194,
+      "first two": 0.13432835820895522,
+      "feel like": 0.12935323383084577,
+      "previous two": 0.12437810945273632,
+      "square enix": 0.10945273631840796,
+      "month release": 0.1044776119402985,
+      "croft edition": 0.0945273631840796,
+      "feels like": 0.0945273631840796,
+      "felt like": 0.0945273631840796,
+      "season pass": 0.0945273631840796,
+      "lara croft": 0.08955223880597014,
+      "pre order": 0.08955223880597014,
+      "sale month": 0.06965174129353234,
+      "challenge tombs": 0.06467661691542288,
+      "side quests": 0.06467661691542288,
+      "last two": 0.04975124378109453,
+      "side missions": 0.04975124378109453,
+      "cut scenes": 0.04477611940298507,
+      "ray tracing": 0.04477611940298507,
+      "tomb raiding": 0.04477611940298507,
+      "character development": 0.03980099502487562,
+      "first time": 0.03980099502487562,
+      "lara jonah": 0.03980099502487562,
+      "month later": 0.03980099502487562,
+      "new mechanics": 0.03980099502487562,
+      "nothing new": 0.03980099502487562,
+      "paid full": 0.03980099502487562,
+      "previous titles": 0.03980099502487562,
+      "tombs crypts": 0.03980099502487562,
+      "well done": 0.03980099502487562,
+      "discount month": 0.03482587064676617,
+      "hidden city": 0.03482587064676617,
+      "pre ordered": 0.03482587064676617,
+      "puzzle solving": 0.03482587064676617,
+      "raider fan": 0.03482587064676617,
+      "voice acting": 0.03482587064676617,
+      "weeks release": 0.03482587064676617,
+      "boss fight": 0.029850746268656716,
+      "compared previous": 0.029850746268656716,
+      "final boss": 0.029850746268656716,
+      "go sale": 0.029850746268656716,
+      "little combat": 0.029850746268656716,
+      "put sale": 0.029850746268656716,
+      "puzzles combat": 0.029850746268656716,
+      "skill tree": 0.029850746268656716,
+      "solving puzzles": 0.029850746268656716,
+      "tomb raiders": 0.029850746268656716,
+      "copy paste": 0.024875621890547265,
+      "crystal dynamics": 0.024875621890547265,
+      "de las": 0.024875621890547265,
+      "fight trinity": 0.024875621890547265,
+      "kill enemies": 0.024875621890547265,
+      "less combat": 0.024875621890547265,
+      "like lara": 0.024875621890547265,
+      "never pre": 0.024875621890547265,
+      "reboot trilogy": 0.024875621890547265,
+      "stealth mechanics": 0.024875621890547265,
+      "time time": 0.024875621890547265,
+      "top notch": 0.024875621890547265,
+      "went sale": 0.024875621890547265,
+      "action adventure": 0.01990049751243781,
+      "another tr": 0.01990049751243781,
+      "attention detail": 0.01990049751243781,
+      "better previous": 0.01990049751243781,
+      "compared first": 0.01990049751243781,
+      "cover mud": 0.01990049751243781,
+      "crafting system": 0.01990049751243781,
+      "ever seen": 0.01990049751243781,
+      "explore tombs": 0.01990049751243781,
+      "gameplay mechanics": 0.01990049751243781,
+      "give us": 0.01990049751243781,
+      "go back": 0.01990049751243781,
+      "goes sale": 0.01990049751243781,
+      "hardest difficulty": 0.01990049751243781,
+      "indiana jones": 0.01990049751243781,
+      "let say": 0.01990049751243781,
+      "level design": 0.01990049751243781,
+      "like first": 0.01990049751243781,
+      "like last": 0.01990049751243781,
+      "look like": 0.01990049751243781,
+      "looks like": 0.01990049751243781,
+      "loved rise": 0.01990049751243781,
+      "month released": 0.01990049751243781,
+      "nice touch": 0.01990049751243781,
+      "pay full": 0.01990049751243781,
+      "previous ones": 0.01990049751243781,
+      "raider always": 0.01990049751243781,
+      "raider franchise": 0.01990049751243781,
+      "raider rise": 0.01990049751243781,
+      "raider trilogy": 0.01990049751243781,
+      "reboot tomb": 0.01990049751243781,
+      "sale like": 0.01990049751243781,
+      "see lara": 0.01990049751243781,
+      "skill points": 0.01990049751243781,
+      "stealth combat": 0.01990049751243781,
+      "stealth kill": 0.01990049751243781,
+      "tombs puzzles": 0.01990049751243781,
+      "upgrade weapons": 0.01990049751243781,
+      "want explore": 0.01990049751243781,
+      "weapon upgrades": 0.01990049751243781,
+      "aaa titel": 0.014925373134328358,
+      "action packed": 0.014925373134328358,
+      "actually quite": 0.014925373134328358,
+      "ai dumb": 0.014925373134328358,
+      "areas fps": 0.014925373134328358,
+      "bad guys": 0.014925373134328358,
+      "better rise": 0.014925373134328358,
+      "big bad": 0.014925373134328358,
+      "big discount": 0.014925373134328358,
+      "bow pistol": 0.014925373134328358,
+      "com sharedfiles": 0.014925373134328358,
+      "combat puzzles": 0.014925373134328358,
+      "combat stealth": 0.014925373134328358,
+      "combat wise": 0.014925373134328358,
+      "connected lara": 0.014925373134328358,
+      "development lara": 0.014925373134328358,
+      "dlc rise": 0.014925373134328358,
+      "driving train": 0.014925373134328358,
+      "dual pistols": 0.014925373134328358,
+      "eidos montreal": 0.014925373134328358,
+      "electric chair": 0.014925373134328358,
+      "en el": 0.014925373134328358,
+      "end world": 0.014925373134328358,
+      "ever made": 0.014925373134328358,
+      "fair say": 0.014925373134328358,
+      "falls apart": 0.014925373134328358,
+      "fan tomb": 0.014925373134328358,
+      "fans like": 0.014925373134328358,
+      "fetch quests": 0.014925373134328358,
+      "filedetails id": 0.014925373134328358,
+      "finish trilogy": 0.014925373134328358,
+      "finished main": 0.014925373134328358,
+      "first lara": 0.014925373134328358,
+      "first place": 0.014925373134328358,
+      "first playthrough": 0.014925373134328358,
+      "first tomb": 0.014925373134328358,
+      "flew smoke": 0.014925373134328358,
+      "forced wear": 0.014925373134328358,
+      "frame rate": 0.014925373134328358,
+      "gb ram": 0.014925373134328358,
+      "heavily discounted": 0.014925373134328358,
+      "highest possible": 0.014925373134328358,
+      "hope lara": 0.014925373134328358,
+      "https steamcommunity": 0.014925373134328358,
+      "hub areas": 0.014925373134328358,
+      "la historia": 0.014925373134328358,
+      "lack combat": 0.014925373134328358,
+      "lara character": 0.014925373134328358,
+      "level detail": 0.014925373134328358,
+      "like previous": 0.014925373134328358,
+      "like rise": 0.014925373134328358,
+      "little things": 0.014925373134328358,
+      "looking ever": 0.014925373134328358,
+      "looking forward": 0.014925373134328358,
+      "main characters": 0.014925373134328358,
+      "major issues": 0.014925373134328358,
+      "make feel": 0.014925373134328358,
+      "make mistake": 0.014925373134328358,
+      "makes feel": 0.014925373134328358,
+      "maybe little": 0.014925373134328358,
+      "month ago": 0.014925373134328358,
+      "mud hide": 0.014925373134328358,
+      "new climbing": 0.014925373134328358,
+      "new features": 0.014925373134328358,
+      "new tomb": 0.014925373134328358,
+      "new trilogy": 0.014925373134328358,
+      "next time": 0.014925373134328358,
+      "old tomb": 0.014925373134328358,
+      "order square": 0.014925373134328358,
+      "original tomb": 0.014925373134328358,
+      "people complained": 0.014925373134328358,
+      "performance issues": 0.014925373134328358,
+      "put together": 0.014925373134328358,
+      "quick time": 0.014925373134328358,
+      "raider first": 0.014925373134328358,
+      "raider probably": 0.014925373134328358,
+      "raider series": 0.014925373134328358,
+      "raider title": 0.014925373134328358,
+      "raiding tombs": 0.014925373134328358,
+      "release date": 0.014925373134328358,
+      "res textures": 0.014925373134328358,
+      "rhianna pratchett": 0.014925373134328358,
+      "right direction": 0.014925373134328358,
+      "run gun": 0.014925373134328358,
+      "sale early": 0.014925373134328358,
+      "say least": 0.014925373134328358,
+      "seems like": 0.014925373134328358,
+      "sharedfiles filedetails": 0.014925373134328358,
+      "skills useless": 0.014925373134328358,
+      "slap face": 0.014925373134328358,
+      "smoke filled": 0.014925373134328358,
+      "somehow managed": 0.014925373134328358,
+      "something different": 0.014925373134328358,
+      "sparks flew": 0.014925373134328358,
+      "stealth sections": 0.014925373134328358,
+      "steamcommunity com": 0.014925373134328358,
+      "strapped electric": 0.014925373134328358,
+      "survival instincts": 0.014925373134328358
+    },
+    "2": {
+      "croft simp": 1.0,
+      "lara croft": 1.0
+    },
+    "3": {
+      "annoying navigate": 1.0,
+      "apart difficulty": 1.0,
+      "arnt apart": 1.0,
+      "clunky feels": 1.0,
+      "combat clunky": 1.0,
+      "cumbersome far": 1.0,
+      "difficulty make": 1.0,
+      "ever player": 1.0,
+      "far less": 1.0,
+      "feedback kills": 1.0,
+      "feels like": 1.0,
+      "genuinely worst": 1.0,
+      "hard trail": 1.0,
+      "hit markers": 1.0,
+      "ie hit": 1.0,
+      "indicators arnt": 1.0,
+      "ive ever": 1.0,
+      "kills ie": 1.0,
+      "less refined": 1.0,
+      "like theres": 1.0,
+      "make annoying": 1.0,
+      "markers turned": 1.0,
+      "navigate cumbersome": 1.0,
+      "player combat": 1.0,
+      "refined uncharted": 1.0,
+      "theres feedback": 1.0,
+      "trail indicators": 1.0,
+      "turned hard": 1.0,
+      "worst ive": 1.0
+    },
+    "4": {
+      "Keine relevanten Reviews": 1
+    },
+    "5": {
+      "Keine relevanten Reviews": 1
+    },
+    "6": {
+      "place positive": 1.0,
+      "positive rewiew": 1.0,
+      "rewiew hehe": 1.0,
+      "someting place": 1.0,
+      "write someting": 1.0
+    },
+    "7": {
+      "Keine relevanten Reviews": 1
+    },
+    "8": {
+      "Keine relevanten Reviews": 1
+    },
+    "9": {
+      "Keine relevanten Reviews": 1
+    },
+    "10": {
+      "Keine relevanten Reviews": 1
+    }
+  }
+}

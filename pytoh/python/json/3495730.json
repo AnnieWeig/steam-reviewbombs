@@ -1,0 +1,32 @@
+{
+  "id": "3495730",
+  "name": "Lucid Blocks",
+  "startdate": "2026-03-13 00:00:00",
+  "enddate": "2026-05-06 00:00:00",
+  "pandas": {
+    "0": {
+      "positiv": 2605,
+      "negativ": -160,
+      "early_acces": 0,
+      "created": "2026-03",
+      "wordcloud_key": 0
+    },
+    "1": {
+      "positiv": 870,
+      "negativ": -65,
+      "early_acces": 0,
+      "created": "2026-04",
+      "wordcloud_key": 0
+    },
+    "2": {
+      "positiv": 69,
+      "negativ": -5,
+      "early_acces": 0,
+      "created": "2026-05",
+      "wordcloud_key": 0
+    }
+  },
+  "wordclouds": {
+    "0": []
+  }
+}

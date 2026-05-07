@@ -1,0 +1,60 @@
+{
+  "id": "2074620",
+  "name": "Ars Notoria",
+  "startdate": "2025-11-27 00:00:00",
+  "enddate": "2026-05-03 00:00:00",
+  "pandas": {
+    "0": {
+      "positiv": 91,
+      "negativ": -55,
+      "early_acces": 1,
+      "created": "2025-11",
+      "wordcloud_key": 0
+    },
+    "1": {
+      "positiv": 67,
+      "negativ": -33,
+      "early_acces": 1,
+      "created": "2025-12",
+      "wordcloud_key": 0
+    },
+    "2": {
+      "positiv": 13,
+      "negativ": -13,
+      "early_acces": 1,
+      "created": "2026-01",
+      "wordcloud_key": 0
+    },
+    "3": {
+      "positiv": 2,
+      "negativ": -2,
+      "early_acces": 1,
+      "created": "2026-02",
+      "wordcloud_key": 0
+    },
+    "4": {
+      "positiv": 10,
+      "negativ": -3,
+      "early_acces": 1,
+      "created": "2026-03",
+      "wordcloud_key": 0
+    },
+    "5": {
+      "positiv": 2,
+      "negativ": -2,
+      "early_acces": 1,
+      "created": "2026-04",
+      "wordcloud_key": 0
+    },
+    "6": {
+      "positiv": 1,
+      "negativ": 0,
+      "early_acces": 1,
+      "created": "2026-05",
+      "wordcloud_key": 0
+    }
+  },
+  "wordclouds": {
+    "0": []
+  }
+}

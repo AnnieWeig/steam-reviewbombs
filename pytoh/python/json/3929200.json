@@ -1,0 +1,46 @@
+{
+  "id": "3929200",
+  "name": "BULT: Hunting simulator",
+  "startdate": "2026-01-06 00:00:00",
+  "enddate": "2026-05-05 00:00:00",
+  "pandas": {
+    "0": {
+      "positiv": 373,
+      "negativ": -49,
+      "early_acces": 1,
+      "created": "2026-01",
+      "wordcloud_key": 0
+    },
+    "1": {
+      "positiv": 130,
+      "negativ": -20,
+      "early_acces": 1,
+      "created": "2026-02",
+      "wordcloud_key": 0
+    },
+    "2": {
+      "positiv": 100,
+      "negativ": -14,
+      "early_acces": 1,
+      "created": "2026-03",
+      "wordcloud_key": 0
+    },
+    "3": {
+      "positiv": 50,
+      "negativ": -8,
+      "early_acces": 1,
+      "created": "2026-04",
+      "wordcloud_key": 0
+    },
+    "4": {
+      "positiv": 7,
+      "negativ": -2,
+      "early_acces": 1,
+      "created": "2026-05",
+      "wordcloud_key": 0
+    }
+  },
+  "wordclouds": {
+    "0": []
+  }
+}

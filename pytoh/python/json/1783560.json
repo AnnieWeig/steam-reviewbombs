@@ -1,0 +1,60 @@
+{
+  "id": "1783560",
+  "name": "The Last Caretaker",
+  "startdate": "2025-11-06 00:00:00",
+  "enddate": "2026-05-05 00:00:00",
+  "pandas": {
+    "0": {
+      "positiv": 3483,
+      "negativ": -565,
+      "early_acces": 1,
+      "created": "2025-11",
+      "wordcloud_key": 0
+    },
+    "1": {
+      "positiv": 1979,
+      "negativ": -338,
+      "early_acces": 1,
+      "created": "2025-12",
+      "wordcloud_key": 0
+    },
+    "2": {
+      "positiv": 1380,
+      "negativ": -250,
+      "early_acces": 1,
+      "created": "2026-01",
+      "wordcloud_key": 0
+    },
+    "3": {
+      "positiv": 713,
+      "negativ": -124,
+      "early_acces": 1,
+      "created": "2026-02",
+      "wordcloud_key": 0
+    },
+    "4": {
+      "positiv": 806,
+      "negativ": -161,
+      "early_acces": 1,
+      "created": "2026-03",
+      "wordcloud_key": 0
+    },
+    "5": {
+      "positiv": 508,
+      "negativ": -63,
+      "early_acces": 1,
+      "created": "2026-04",
+      "wordcloud_key": 0
+    },
+    "6": {
+      "positiv": 52,
+      "negativ": -8,
+      "early_acces": 1,
+      "created": "2026-05",
+      "wordcloud_key": 0
+    }
+  },
+  "wordclouds": {
+    "0": []
+  }
+}

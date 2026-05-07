@@ -1,0 +1,53 @@
+{
+  "id": "3846120",
+  "name": "MineMogul",
+  "startdate": "2025-12-04 00:00:00",
+  "enddate": "2026-05-05 00:00:00",
+  "pandas": {
+    "0": {
+      "positiv": 1051,
+      "negativ": -32,
+      "early_acces": 1,
+      "created": "2025-12",
+      "wordcloud_key": 0
+    },
+    "1": {
+      "positiv": 1097,
+      "negativ": -57,
+      "early_acces": 1,
+      "created": "2026-01",
+      "wordcloud_key": 0
+    },
+    "2": {
+      "positiv": 737,
+      "negativ": -23,
+      "early_acces": 1,
+      "created": "2026-02",
+      "wordcloud_key": 0
+    },
+    "3": {
+      "positiv": 427,
+      "negativ": -15,
+      "early_acces": 1,
+      "created": "2026-03",
+      "wordcloud_key": 0
+    },
+    "4": {
+      "positiv": 223,
+      "negativ": -12,
+      "early_acces": 1,
+      "created": "2026-04",
+      "wordcloud_key": 0
+    },
+    "5": {
+      "positiv": 12,
+      "negativ": -1,
+      "early_acces": 1,
+      "created": "2026-05",
+      "wordcloud_key": 0
+    }
+  },
+  "wordclouds": {
+    "0": []
+  }
+}

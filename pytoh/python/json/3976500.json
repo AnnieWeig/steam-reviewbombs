@@ -1,0 +1,25 @@
+{
+  "id": "3976500",
+  "name": "The Spotter: Dig or Die",
+  "startdate": "2026-04-07 00:00:00",
+  "enddate": "2026-05-06 00:00:00",
+  "pandas": {
+    "0": {
+      "positiv": 1079,
+      "negativ": -167,
+      "early_acces": 0,
+      "created": "2026-04",
+      "wordcloud_key": 0
+    },
+    "1": {
+      "positiv": 61,
+      "negativ": -7,
+      "early_acces": 0,
+      "created": "2026-05",
+      "wordcloud_key": 0
+    }
+  },
+  "wordclouds": {
+    "0": []
+  }
+}

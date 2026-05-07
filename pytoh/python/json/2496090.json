@@ -1,0 +1,39 @@
+{
+  "id": "2496090",
+  "name": "Whisper of the Swallows",
+  "startdate": "2026-01-29 00:00:00",
+  "enddate": "2026-04-26 00:00:00",
+  "pandas": {
+    "0": {
+      "positiv": 22,
+      "negativ": -1,
+      "early_acces": 1,
+      "created": "2026-01",
+      "wordcloud_key": 0
+    },
+    "1": {
+      "positiv": 87,
+      "negativ": -15,
+      "early_acces": 1,
+      "created": "2026-02",
+      "wordcloud_key": 0
+    },
+    "2": {
+      "positiv": 16,
+      "negativ": -3,
+      "early_acces": 1,
+      "created": "2026-03",
+      "wordcloud_key": 0
+    },
+    "3": {
+      "positiv": 6,
+      "negativ": -2,
+      "early_acces": 1,
+      "created": "2026-04",
+      "wordcloud_key": 0
+    }
+  },
+  "wordclouds": {
+    "0": []
+  }
+}

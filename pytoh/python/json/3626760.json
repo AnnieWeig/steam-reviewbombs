@@ -1,0 +1,53 @@
+{
+  "id": "3626760",
+  "name": "No Man's Home",
+  "startdate": "2025-12-12 00:00:00",
+  "enddate": "2026-05-03 00:00:00",
+  "pandas": {
+    "0": {
+      "positiv": 34,
+      "negativ": -4,
+      "early_acces": 1,
+      "created": "2025-12",
+      "wordcloud_key": 0
+    },
+    "1": {
+      "positiv": 30,
+      "negativ": -5,
+      "early_acces": 1,
+      "created": "2026-01",
+      "wordcloud_key": 0
+    },
+    "2": {
+      "positiv": 19,
+      "negativ": -1,
+      "early_acces": 1,
+      "created": "2026-02",
+      "wordcloud_key": 0
+    },
+    "3": {
+      "positiv": 17,
+      "negativ": -5,
+      "early_acces": 1,
+      "created": "2026-03",
+      "wordcloud_key": 0
+    },
+    "4": {
+      "positiv": 18,
+      "negativ": -3,
+      "early_acces": 1,
+      "created": "2026-04",
+      "wordcloud_key": 0
+    },
+    "5": {
+      "positiv": 1,
+      "negativ": 0,
+      "early_acces": 1,
+      "created": "2026-05",
+      "wordcloud_key": 0
+    }
+  },
+  "wordclouds": {
+    "0": []
+  }
+}

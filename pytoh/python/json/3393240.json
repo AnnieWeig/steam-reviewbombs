@@ -1,0 +1,74 @@
+{
+  "id": "3393240",
+  "name": "Banker Simulator",
+  "startdate": "2025-09-22 00:00:00",
+  "enddate": "2026-05-05 00:00:00",
+  "pandas": {
+    "0": {
+      "positiv": 124,
+      "negativ": -68,
+      "early_acces": 1,
+      "created": "2025-09",
+      "wordcloud_key": 0
+    },
+    "1": {
+      "positiv": 90,
+      "negativ": -40,
+      "early_acces": 1,
+      "created": "2025-10",
+      "wordcloud_key": 0
+    },
+    "2": {
+      "positiv": 72,
+      "negativ": -27,
+      "early_acces": 1,
+      "created": "2025-11",
+      "wordcloud_key": 0
+    },
+    "3": {
+      "positiv": 31,
+      "negativ": -27,
+      "early_acces": 1,
+      "created": "2025-12",
+      "wordcloud_key": 0
+    },
+    "4": {
+      "positiv": 24,
+      "negativ": -24,
+      "early_acces": 1,
+      "created": "2026-01",
+      "wordcloud_key": 0
+    },
+    "5": {
+      "positiv": 22,
+      "negativ": -22,
+      "early_acces": 1,
+      "created": "2026-02",
+      "wordcloud_key": 0
+    },
+    "6": {
+      "positiv": 43,
+      "negativ": -36,
+      "early_acces": 1,
+      "created": "2026-03",
+      "wordcloud_key": 0
+    },
+    "7": {
+      "positiv": 11,
+      "negativ": -9,
+      "early_acces": 1,
+      "created": "2026-04",
+      "wordcloud_key": 0
+    },
+    "8": {
+      "positiv": 1,
+      "negativ": -1,
+      "early_acces": 1,
+      "created": "2026-05",
+      "wordcloud_key": 0
+    }
+  },
+  "wordclouds": {
+    "0": []
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "id": "1151380",
+  "name": "Cowboy Life Simulator",
+  "startdate": "2025-11-26 00:00:00",
+  "enddate": "2026-05-05 00:00:00",
+  "pandas": {
+    "0": {
+      "positiv": 260,
+      "negativ": -12,
+      "early_acces": 1,
+      "created": "2025-11",
+      "wordcloud_key": 0
+    },
+    "1": {
+      "positiv": 453,
+      "negativ": -54,
+      "early_acces": 1,
+      "created": "2025-12",
+      "wordcloud_key": 0
+    },
+    "2": {
+      "positiv": 147,
+      "negativ": -14,
+      "early_acces": 1,
+      "created": "2026-01",
+      "wordcloud_key": 0
+    },
+    "3": {
+      "positiv": 63,
+      "negativ": -11,
+      "early_acces": 1,
+      "created": "2026-02",
+      "wordcloud_key": 0
+    },
+    "4": {
+      "positiv": 73,
+      "negativ": -4,
+      "early_acces": 1,
+      "created": "2026-03",
+      "wordcloud_key": 0
+    },
+    "5": {
+      "positiv": 41,
+      "negativ": -2,
+      "early_acces": 1,
+      "created": "2026-04",
+      "wordcloud_key": 0
+    },
+    "6": {
+      "positiv": 5,
+      "negativ": -3,
+      "early_acces": 1,
+      "created": "2026-05",
+      "wordcloud_key": 0
+    }
+  },
+  "wordclouds": {
+    "0": []
+  }
+}

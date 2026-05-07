@@ -1,0 +1,32 @@
+{
+  "id": "2253100",
+  "name": "Everwind",
+  "startdate": "2026-03-17 00:00:00",
+  "enddate": "2026-05-06 00:00:00",
+  "pandas": {
+    "0": {
+      "positiv": 1710,
+      "negativ": -360,
+      "early_acces": 1,
+      "created": "2026-03",
+      "wordcloud_key": 0
+    },
+    "1": {
+      "positiv": 650,
+      "negativ": -148,
+      "early_acces": 1,
+      "created": "2026-04",
+      "wordcloud_key": 0
+    },
+    "2": {
+      "positiv": 34,
+      "negativ": -7,
+      "early_acces": 1,
+      "created": "2026-05",
+      "wordcloud_key": 0
+    }
+  },
+  "wordclouds": {
+    "0": []
+  }
+}
