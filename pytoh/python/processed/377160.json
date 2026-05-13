@@ -7,8 +7,8 @@
         {
             "time": "2026-02",
             "earlyAccess": false,
-            "reviewBombed": false,
-            "wordCloud": NaN,
+            "reviewBombed": true,
+            "wordClouds": [],
             "values": {
                 "positiv": 3539,
                 "cusumPositiv": 3539,
@@ -19,8 +19,8 @@
         {
             "time": "2026-03",
             "earlyAccess": false,
-            "reviewBombed": false,
-            "wordCloud": NaN,
+            "reviewBombed": true,
+            "wordClouds": [],
             "values": {
                 "positiv": 1856,
                 "cusumPositiv": 5395,
@@ -31,8 +31,8 @@
         {
             "time": "2026-04",
             "earlyAccess": false,
-            "reviewBombed": false,
-            "wordCloud": NaN,
+            "reviewBombed": true,
+            "wordClouds": [],
             "values": {
                 "positiv": 1348,
                 "cusumPositiv": 6743,
@@ -43,8 +43,8 @@
         {
             "time": "2026-05",
             "earlyAccess": false,
-            "reviewBombed": false,
-            "wordCloud": NaN,
+            "reviewBombed": true,
+            "wordClouds": [],
             "values": {
                 "positiv": 199,
                 "cusumPositiv": 6942,

@@ -1,105 +1,813 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Three.js Column Chart</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        overflow: hidden;
+        background: #111;
+      }
+      canvas {
+        display: block;
+        touch-action: none;
+      }
 
-  <script src="./libs/aframe.min.js"></script>
-  <script src="./libs/aframe-ar.js"></script>
+      .label-x {
+        font-family: sans-serif;
+        font-size: 10px;
+        color: #fff;
+        white-space: nowrap;
+        pointer-events: none;
+      }
+      .label-y {
+        font-family: sans-serif;
+        font-size: 11px;
+        color: #ffaa00;
+        white-space: nowrap;
+        pointer-events: none;
+      }
+      .label-z {
+        font-family: sans-serif;
+        font-size: 13px;
+        font-weight: 500;
+        color: #00aaff;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 3px 8px;
+        border-radius: 3px;
+        white-space: nowrap;
+        pointer-events: none;
+      }
+      .label-bomb {
+        font-family: sans-serif;
+        font-size: 11px;
+        color: #ff4422;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 2px 6px;
+        border-radius: 3px;
+        white-space: nowrap;
+        pointer-events: none;
+      }
 
-  <script src="./libs/three.min.js"></script>
+      #controls {
+        position: absolute;
+        top: 16px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.72);
+        color: white;
+        font-family: sans-serif;
+        font-size: 13px;
+        padding: 10px 16px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+        z-index: 200;
+        pointer-events: all;
+      }
 
-  <style>
-    body { margin: 0; overflow: hidden; }
+      #popup {
+        display: none;
+        position: absolute;
+        pointer-events: none;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(10, 10, 20, 0.92);
+        color: white;
+        font-family: sans-serif;
+        padding: 24px 28px;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        min-width: 280px;
+        max-width: 90vw;
+        z-index: 300;
+      }
 
-    #ui {
-      position: fixed;
-      top: 10px;
-      left: 10px;
-      z-index: 999;
-      background: rgba(0,0,0,0.6);
-      padding: 10px;
-      color: white;
-      border-radius: 8px;
-      font-family: sans-serif;
-    }
-  </style>
-</head>
+      #touch-hint {
+        display: none;
+        position: absolute;
+        bottom: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.6);
+        color: #aaa;
+        font-family: sans-serif;
+        font-size: 11px;
+        padding: 6px 12px;
+        border-radius: 6px;
+        pointer-events: none;
+        z-index: 100;
+        white-space: nowrap;
+      }
 
-<body>
+      #ar-toggle {
+        position: absolute;
+        bottom: 20px;
+        right: 16px;
+        z-index: 200;
+        background: rgba(0, 120, 255, 0.9);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 18px;
+        font-family: sans-serif;
+        font-size: 13px;
+        cursor: pointer;
+        pointer-events: all;
+      }
 
-<div id="ui">
-  <label>Filter (value threshold)</label><br>
-  <input id="slider" type="range" min="0" max="1" step="0.05" value="0.3">
-</div>
+      /* video element injected by AR mode sits behind everything */
+      #ar-video {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        pointer-events: none;
+      }
 
-<a-scene embedded arjs="debugUIEnabled: false;">
+      #ar-panel {
+        display: none;
+        position: absolute;
+        bottom: 64px;
+        right: 16px;
+        z-index: 200;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        font-family: sans-serif;
+        font-size: 12px;
+        padding: 12px 14px;
+        border-radius: 8px;
+        pointer-events: all;
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+        min-width: 200px;
+      }
+      #ar-panel button {
+        background: rgba(255, 255, 255, 0.12);
+        color: white;
+        border: none;
+        border-radius: 6px;
+        padding: 8px 12px;
+        cursor: pointer;
+        font-size: 12px;
+      }
+      #ar-panel button:active {
+        background: rgba(255, 255, 255, 0.28);
+      }
+      #ar-panel .hint {
+        color: #888;
+        font-size: 10px;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <video id="ar-video" autoplay playsinline muted></video>
 
-  <a-marker preset="hiro">
-    <a-entity id="graph"></a-entity>
-  </a-marker>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
 
-  <a-entity camera></a-entity>
-</a-scene>
+    <!-- CSS2D polyfill -->
+    <script>
+      THREE.CSS2DObject = class extends THREE.Object3D {
+        constructor(el) {
+          super();
+          this.element = el;
+          el.style.position = "absolute";
+          el.style.userSelect = "none";
+        }
+      };
+      THREE.CSS2DRenderer = class {
+        constructor() {
+          this.domElement = document.createElement("div");
+          this.domElement.style.overflow = "hidden";
+        }
+        setSize(w, h) {
+          this.domElement.style.width = w + "px";
+          this.domElement.style.height = h + "px";
+          this._w = w;
+          this._h = h;
+        }
+        render(scene, camera) {
+          const proj = new THREE.Vector3();
+          scene.traverse((obj) => {
+            if (!(obj instanceof THREE.CSS2DObject)) return;
+            proj.setFromMatrixPosition(obj.matrixWorld);
+            proj.project(camera);
+            const x = (proj.x * 0.5 + 0.5) * this._w;
+            const y = (proj.y * -0.5 + 0.5) * this._h;
+            obj.element.style.transform = `translate(-50%,-50%) translate(${x}px,${y}px)`;
+            obj.element.style.display = proj.z > 1 ? "none" : "";
+            if (!obj.element.parentNode) this.domElement.appendChild(obj.element);
+          });
+        }
+      };
+    </script>
 
-<script>
-const graph = document.querySelector("#graph");
+    <script>
+      // ═══════════════════════════════════════════════════════════
+      //  STATE
+      // ═══════════════════════════════════════════════════════════
+      const MAX_BAR_HEIGHT = 5;
+      let rowGroups = [];
+      let allBars = [];
 
-let data = [];
+      // AR
+      let arActive = false;
+      let arStream = null;
+      let arCameraFacing = "environment"; // "environment"=back/webcam  "user"=selfie
 
-// --------------------
-// Load Python dataset
-// --------------------
-  
-fetch("./data.json")
-  .then(res => res.json())
-  .then(json => {
-    data = json;
-    render(0.3);
-  });
+      // Interaction
+      let isDragging = false;
+      let draggedRow = null;
+      let touchDragRow = null;
+      let prevMouse = { x: 0, y: 0 };
+      let mouseDownPos = { x: 0, y: 0 };
+      let dragStartMouse = { y: 0 };
+      let dragStartZ = 0;
 
-// --------------------
-// Render function
-// --------------------
-function render(threshold) {
-  graph.innerHTML = "";
+      // Touch
+      let touchStartTime = 0;
+      let longPressTimer = null;
+      let lastPinchDist = null;
 
-  data
-    .filter(d => d.value >= threshold)
-    .forEach(d => {
-      const point = document.createElement("a-sphere");
+      // Camera orbit
+      let target = new THREE.Vector3(0, 0, 0);
+      const FIXED_PHI = 1.2;
+      const FIXED_THETA = 0.0;
+      let spherical = { theta: FIXED_THETA, phi: FIXED_PHI, radius: 20 };
 
-      point.setAttribute(
-        "position",
-        `${d.x} ${d.z} ${d.y}`
+      const raycaster = new THREE.Raycaster();
+      const mouse = new THREE.Vector2();
+
+      // ═══════════════════════════════════════════════════════════
+      //  SCENE
+      // ═══════════════════════════════════════════════════════════
+      const scene = new THREE.Scene();
+      scene.background = new THREE.Color(0x111111);
+
+      const camera = new THREE.PerspectiveCamera(75, innerWidth / innerHeight, 0.1, 1000);
+
+      scene.add(new THREE.AmbientLight(0xffffff, 0.75));
+      const dirLight = new THREE.DirectionalLight(0xffffff, 0.6);
+      dirLight.position.set(5, 10, 5);
+      scene.add(dirLight);
+
+      scene.add(new THREE.GridHelper(10, 10));
+
+      // alpha:true so setClearColor(…,0) actually produces a transparent canvas
+      const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+      renderer.setSize(innerWidth, innerHeight);
+      renderer.setPixelRatio(devicePixelRatio);
+      renderer.setClearColor(0x111111, 1); // opaque by default
+      document.body.appendChild(renderer.domElement);
+      renderer.domElement.style.zIndex = "0";
+
+      const labelRenderer = new THREE.CSS2DRenderer();
+      labelRenderer.setSize(innerWidth, innerHeight);
+      labelRenderer.domElement.style.cssText = "position:absolute;top:0;pointer-events:none;z-index:1;";
+      document.body.appendChild(labelRenderer.domElement);
+
+      // ═══════════════════════════════════════════════════════════
+      //  DOM
+      // ═══════════════════════════════════════════════════════════
+      document.body.insertAdjacentHTML(
+        "beforeend",
+        `
+        <div id="controls">
+          <label>From <input type="month" id="filterFrom" style="margin-left:4px"></label>
+          <label>To   <input type="month" id="filterTo"   style="margin-left:4px"></label>
+          <button onclick="applyFilter()">Apply</button>
+          <button onclick="resetFilter()">Reset</button>
+        </div>
+
+        <div id="popup">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+            <span id="popup-title" style="font-size:15px;font-weight:500;color:#00aaff"></span>
+            <button onclick="closePopup()"
+              style="background:none;border:none;color:white;font-size:20px;cursor:pointer;padding:0 0 0 16px">✕</button>
+          </div>
+          <div id="popup-content" style="font-size:13px;line-height:1.7;color:#ccc"></div>
+        </div>
+
+        <div id="touch-hint">
+          1 finger: pan &nbsp;|&nbsp; 2 fingers: zoom &nbsp;|&nbsp;
+          long-press: drag row &nbsp;|&nbsp; tap: details
+        </div>
+
+        <button id="ar-toggle" onclick="toggleAR()">📷 Enter AR</button>
+
+        <div id="ar-panel">
+          <button id="ar-flip-btn" onclick="flipARCamera()">
+            🔄 Flip camera (currently: back)
+          </button>
+          <div class="hint">
+            The chart overlays your live camera feed.<br>
+            Pan / zoom as normal to position it.
+          </div>
+        </div>
+      `
       );
 
-      point.setAttribute("radius", 0.03);
-      point.setAttribute("color", "#4CC3D9");
+      if (matchMedia("(pointer: coarse)").matches) document.getElementById("touch-hint").style.display = "block";
 
-      graph.appendChild(point);
-    });
-}
+      // ═══════════════════════════════════════════════════════════
+      //  CHART
+      // ═══════════════════════════════════════════════════════════
+      function getColor(i) {
+        return [0x00dd00, 0x00aaff, 0xffaa00, 0xff00aa][i % 4];
+      }
 
-// --------------------
-// Slider filter
-// --------------------
-document.getElementById("slider").addEventListener("input", (e) => {
-  render(parseFloat(e.target.value));
-});
+      function buildChart(json, zOffset = 0, globalT0 = null, scale = 0.01) {
+        json.data.sort((a, b) => new Date(a.time) - new Date(b.time));
+        const keys = Object.keys(json.data[0].values);
+        const GROUP_SPACING = 1.2;
+        const BAR_W = 0.8;
+        const t0 = globalT0 ?? new Date(json.data[0].time).getTime();
 
-// moveable
-window.addEventListener("load", () => {
-  const graph = document.querySelector("#graph");
+        const group = new THREE.Group();
+        group.position.z = zOffset;
+        group.userData.zOffset = zOffset;
 
-  let startX = 0;
+        json.data.forEach((d) => {
+          const t = new Date(d.time).getTime();
+          const x = ((t - t0) / (1000 * 60 * 60 * 24 * 30.44)) * GROUP_SPACING;
 
-  document.addEventListener("touchmove", (e) => {
-    const x = e.touches[0].clientX;
-    graph.setAttribute("rotation", `0 ${x * 0.2} 0`);
-  });
-});
-    
-</script>
+          keys.forEach((key, j) => {
+            const value = d.values[key];
+            const height = Math.abs(value) * scale;
+            const color = d.reviewBombed ? 0xff2200 : getColor(j);
 
-</body>
+            const bar = new THREE.Mesh(
+              new THREE.BoxGeometry(BAR_W, height, BAR_W),
+              new THREE.MeshLambertMaterial({
+                color,
+                transparent: !!d.reviewBombed,
+                opacity: d.reviewBombed ? 0.82 : 1.0
+              })
+            );
+            bar.position.set(x, value >= 0 ? height / 2 : -height / 2, 0);
+            group.add(bar);
+            allBars.push({ mesh: bar, date: new Date(d.time), group, reviewBombed: !!d.reviewBombed });
+          });
+
+          if (d.reviewBombed) {
+            const div = document.createElement("div");
+            div.className = "label-bomb";
+            div.textContent = "⚠ bombed";
+            const lbl = new THREE.CSS2DObject(div);
+            lbl.position.set(x, MAX_BAR_HEIGHT + 0.3, 0);
+            group.add(lbl);
+          }
+
+          const div = document.createElement("div");
+          div.className = "label-x";
+          div.textContent = new Date(d.time).toLocaleDateString("de-DE", {
+            month: "short",
+            year: "2-digit"
+          });
+          Object.assign(div.style, {
+            transform: "rotate(-90deg)",
+            transformOrigin: "center",
+            fontSize: "10px",
+            background: "transparent",
+            padding: "0"
+          });
+          const lbl = new THREE.CSS2DObject(div);
+          lbl.position.set(x, 0.2, 0);
+          group.add(lbl);
+        });
+
+        scene.add(group);
+
+        const times = json.data.map((d) => new Date(d.time).getTime());
+        const span = (Math.max(...times) - t0) / (1000 * 60 * 60 * 24 * 30.44);
+        return {
+          group,
+          totalWidth: span * GROUP_SPACING,
+          maxValue: Math.max(...json.data.flatMap((d) => Object.values(d.values).map(Math.abs))) * scale
+        };
+      }
+
+      function addYLabels(allJson, axisX, axisZ, scale) {
+        const maxVal = Math.max(
+          ...allJson.flatMap((j) => j.data.flatMap((d) => Object.values(d.values).map(Math.abs)))
+        );
+        const step = Math.ceil(maxVal / 5 / 100) * 100;
+        for (let v = -maxVal; v <= maxVal; v += step)
+          makeLabel(v.toLocaleString(), { x: axisX, y: v * scale, z: axisZ }, "label-y");
+      }
+
+      function addZLabels(labels, zOffsets) {
+        labels.forEach((text, i) => makeLabel(text, { x: -1.5, y: 0, z: zOffsets[i] }, "label-z"));
+      }
+
+      function makeLabel(text, pos, cssClass = "label") {
+        const div = document.createElement("div");
+        div.className = cssClass;
+        div.textContent = text;
+        const lbl = new THREE.CSS2DObject(div);
+        lbl.position.set(pos.x, pos.y, pos.z);
+        scene.add(lbl);
+        return lbl;
+      }
+
+      async function loadData() {
+        const [json1, json2] = await Promise.all([
+          fetch("./data/data.json").then((r) => r.json()),
+          fetch("./data/data2.json").then((r) => r.json())
+        ]);
+
+        const zOffsets = [0, 1.5];
+        const allDates = [...json1.data, ...json2.data].map((d) => new Date(d.time));
+        const minDate = new Date(Math.min(...allDates));
+        const maxDate = new Date(Math.max(...allDates));
+        const toMonth = (d) => d.toISOString().slice(0, 7);
+        document.getElementById("filterFrom").value = toMonth(minDate);
+        document.getElementById("filterTo").value = toMonth(maxDate);
+
+        const globalT0 = Math.min(...allDates);
+        const globalMax = Math.max(
+          ...[...json1.data, ...json2.data].flatMap((d) => Object.values(d.values).map(Math.abs))
+        );
+        const scale = MAX_BAR_HEIGHT / globalMax;
+
+        const r1 = buildChart(json1, zOffsets[0], globalT0, scale);
+        const r2 = buildChart(json2, zOffsets[1], globalT0, scale);
+        rowGroups = [r1.group, r2.group];
+
+        const totalWidth = Math.max(r1.totalWidth, r2.totalWidth);
+        const gridSize = Math.ceil(Math.max(totalWidth, Math.max(r1.maxValue, r2.maxValue) * 2) + 4);
+        const grid = new THREE.GridHelper(gridSize, gridSize);
+        grid.position.set(totalWidth / 2, 0, 0.75);
+        scene.add(grid);
+
+        addYLabels([json1, json2], -1.5, 0.75, scale);
+        addZLabels(["Dataset 1", "Dataset 2"], zOffsets);
+
+        target.set(totalWidth / 2, 0, 0.75);
+        spherical.radius = Math.max(totalWidth, 1.5) * 0.8;
+        updateCamera();
+      }
+
+      // ═══════════════════════════════════════════════════════════
+      //  CAMERA ORBIT
+      // ═══════════════════════════════════════════════════════════
+      function updateCamera() {
+        camera.position.set(
+          target.x + spherical.radius * Math.sin(spherical.phi) * Math.sin(spherical.theta),
+          target.y + spherical.radius * Math.cos(spherical.phi),
+          target.z + spherical.radius * Math.sin(spherical.phi) * Math.cos(spherical.theta)
+        );
+        camera.lookAt(target);
+      }
+      updateCamera();
+
+      // ═══════════════════════════════════════════════════════════
+      //  POPUP
+      // ═══════════════════════════════════════════════════════════
+      function handleBarClick(e) {
+        mouse.x = (e.clientX / innerWidth) * 2 - 1;
+        mouse.y = -(e.clientY / innerHeight) * 2 + 1;
+        raycaster.setFromCamera(mouse, camera);
+        for (const group of rowGroups) {
+          const hits = raycaster.intersectObjects(group.children, true);
+          if (!hits.length) continue;
+          const barData = allBars.find((b) => b.mesh === hits[0].object);
+          if (!barData) return;
+          const dateStr = barData.date.toLocaleDateString("de-DE", { month: "long", year: "numeric" });
+          openPopup(
+            dateStr + (barData.reviewBombed ? " ⚠ Review Bomb" : ""),
+            `
+            <p>Word cloud coming soon for <strong>${dateStr}</strong>.</p>
+            <p style="margin-top:12px;color:#888;font-size:12px">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim in eros elementum tristique.
+            </p>
+            ${
+              barData.reviewBombed
+                ? `<p style="margin-top:12px;color:#ff4422;font-size:12px">
+                   ⚠ This month was flagged as a review bomb.</p>`
+                : ""
+            }
+          `
+          );
+          return;
+        }
+      }
+
+      function openPopup(title, content) {
+        document.getElementById("popup-title").textContent = title;
+        document.getElementById("popup-content").innerHTML = content;
+        const p = document.getElementById("popup");
+        p.style.display = "block";
+        p.style.pointerEvents = "all";
+      }
+      function closePopup() {
+        const p = document.getElementById("popup");
+        p.style.display = "none";
+        p.style.pointerEvents = "none";
+      }
+
+      // ═══════════════════════════════════════════════════════════
+      //  MOUSE EVENTS
+      // ═══════════════════════════════════════════════════════════
+      renderer.domElement.addEventListener("mousedown", (e) => {
+        if (e.button === 0) {
+          isDragging = true;
+          prevMouse = mouseDownPos = { x: e.clientX, y: e.clientY };
+        }
+        if (e.button === 2) {
+          mouse.x = (e.clientX / innerWidth) * 2 - 1;
+          mouse.y = -(e.clientY / innerHeight) * 2 + 1;
+          raycaster.setFromCamera(mouse, camera);
+          draggedRow = null;
+          for (const g of rowGroups) {
+            if (raycaster.intersectObjects(g.children, true).length) {
+              draggedRow = g;
+              dragStartMouse = { y: e.clientY };
+              dragStartZ = g.position.z;
+              break;
+            }
+          }
+        }
+      });
+
+      renderer.domElement.addEventListener("mouseup", (e) => {
+        isDragging = false;
+        if (Math.abs(e.clientX - mouseDownPos.x) < 5 && Math.abs(e.clientY - mouseDownPos.y) < 5 && e.button === 0)
+          handleBarClick(e);
+        draggedRow = null;
+      });
+
+      renderer.domElement.addEventListener("mousemove", (e) => {
+        if (draggedRow) {
+          draggedRow.position.z = dragStartZ + (e.clientY - dragStartMouse.y) * 0.02;
+          return;
+        }
+        if (isDragging) {
+          target.x -= (e.clientX - prevMouse.x) * (spherical.radius / 1000);
+          prevMouse = { x: e.clientX, y: e.clientY };
+          updateCamera();
+        }
+      });
+
+      renderer.domElement.addEventListener("mouseleave", () => {
+        isDragging = false;
+        draggedRow = null;
+      });
+      renderer.domElement.addEventListener("contextmenu", (e) => e.preventDefault());
+      window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closePopup();
+      });
+
+      renderer.domElement.addEventListener(
+        "wheel",
+        (e) => {
+          e.preventDefault();
+          const d = camera.position.clone().sub(target);
+          spherical.radius = Math.max(3, Math.min(100, d.length() + e.deltaY * 0.05));
+          updateCamera();
+        },
+        { passive: false }
+      );
+
+      // ═══════════════════════════════════════════════════════════
+      //  TOUCH EVENTS
+      // ═══════════════════════════════════════════════════════════
+      function touchDist(t) {
+        const dx = t[0].clientX - t[1].clientX,
+          dy = t[0].clientY - t[1].clientY;
+        return Math.sqrt(dx * dx + dy * dy);
+      }
+
+      renderer.domElement.addEventListener(
+        "touchstart",
+        (e) => {
+          e.preventDefault();
+          if (e.touches.length === 1) {
+            const t = e.touches[0];
+            touchStartTime = Date.now();
+            mouseDownPos = prevMouse = { x: t.clientX, y: t.clientY };
+            isDragging = true;
+            lastPinchDist = null;
+            longPressTimer = setTimeout(() => {
+              mouse.x = (t.clientX / innerWidth) * 2 - 1;
+              mouse.y = -(t.clientY / innerHeight) * 2 + 1;
+              raycaster.setFromCamera(mouse, camera);
+              for (const g of rowGroups) {
+                if (raycaster.intersectObjects(g.children, true).length) {
+                  touchDragRow = g;
+                  dragStartMouse = { y: t.clientY };
+                  dragStartZ = g.position.z;
+                  isDragging = false;
+                  if (navigator.vibrate) navigator.vibrate(40);
+                  break;
+                }
+              }
+            }, 500);
+          } else if (e.touches.length === 2) {
+            clearTimeout(longPressTimer);
+            isDragging = false;
+            touchDragRow = null;
+            lastPinchDist = touchDist(e.touches);
+          }
+        },
+        { passive: false }
+      );
+
+      renderer.domElement.addEventListener(
+        "touchmove",
+        (e) => {
+          e.preventDefault();
+          if (e.touches.length === 2) {
+            clearTimeout(longPressTimer);
+            const dist = touchDist(e.touches);
+            if (lastPinchDist !== null) {
+              const d = camera.position.clone().sub(target);
+              spherical.radius = Math.max(3, Math.min(100, d.length() + (lastPinchDist - dist) * 0.08));
+              updateCamera();
+            }
+            lastPinchDist = dist;
+            return;
+          }
+          if (e.touches.length === 1) {
+            const t = e.touches[0];
+            if (touchDragRow) {
+              touchDragRow.position.z = dragStartZ + (t.clientY - dragStartMouse.y) * 0.02;
+              return;
+            }
+            if (isDragging) {
+              if (Math.abs(t.clientX - mouseDownPos.x) > 8 || Math.abs(t.clientY - mouseDownPos.y) > 8)
+                clearTimeout(longPressTimer);
+              target.x -= (t.clientX - prevMouse.x) * (spherical.radius / 1000);
+              prevMouse = { x: t.clientX, y: t.clientY };
+              updateCamera();
+            }
+          }
+        },
+        { passive: false }
+      );
+
+      renderer.domElement.addEventListener(
+        "touchend",
+        (e) => {
+          e.preventDefault();
+          clearTimeout(longPressTimer);
+          const t = e.changedTouches[0];
+          if (
+            Math.abs(t.clientX - mouseDownPos.x) < 10 &&
+            Math.abs(t.clientY - mouseDownPos.y) < 10 &&
+            Date.now() - touchStartTime < 300 &&
+            !touchDragRow
+          )
+            handleBarClick({ clientX: t.clientX, clientY: t.clientY });
+          isDragging = false;
+          touchDragRow = null;
+          lastPinchDist = null;
+        },
+        { passive: false }
+      );
+
+      renderer.domElement.addEventListener("touchcancel", () => {
+        clearTimeout(longPressTimer);
+        isDragging = false;
+        touchDragRow = null;
+        lastPinchDist = null;
+      });
+
+      // ═══════════════════════════════════════════════════════════
+      //  FILTER
+      // ═══════════════════════════════════════════════════════════
+      function applyFilter() {
+        const from = document.getElementById("filterFrom").value;
+        const to = document.getElementById("filterTo").value;
+        const fd = from ? new Date(from) : null;
+        const td = to ? new Date(to + "-31") : null;
+        allBars.forEach(({ mesh, date }) => {
+          mesh.visible = (!fd || date >= fd) && (!td || date <= td);
+        });
+      }
+      function resetFilter() {
+        document.getElementById("filterFrom").value = "";
+        document.getElementById("filterTo").value = "";
+        allBars.forEach(({ mesh }) => (mesh.visible = true));
+      }
+
+      // ═══════════════════════════════════════════════════════════
+      //  RESIZE
+      // ═══════════════════════════════════════════════════════════
+      window.addEventListener("resize", () => {
+        camera.aspect = innerWidth / innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(innerWidth, innerHeight);
+        renderer.setPixelRatio(devicePixelRatio);
+        labelRenderer.setSize(innerWidth, innerHeight);
+        updateCamera();
+      });
+
+      // ═══════════════════════════════════════════════════════════
+      //  AR  — markerless: camera feed behind transparent canvas
+      // ═══════════════════════════════════════════════════════════
+      function toggleAR() {
+        arActive ? exitAR() : enterAR();
+      }
+
+      async function enterAR() {
+        // Request camera — prefer back camera on phones, fall back to any
+        try {
+          arStream = await navigator.mediaDevices.getUserMedia({
+            video: {
+              facingMode: { ideal: arCameraFacing },
+              width: { ideal: innerWidth },
+              height: { ideal: innerHeight }
+            },
+            audio: false
+          });
+        } catch (err) {
+          alert(
+            "Camera access failed:\n" +
+              err.message +
+              "\n\nMake sure the page is served over HTTPS and camera permission is granted."
+          );
+          return;
+        }
+
+        // Feed stream into the pre-existing <video> element
+        const vid = document.getElementById("ar-video");
+        vid.srcObject = arStream;
+        vid.style.display = "block";
+        await vid.play().catch(() => {});
+
+        // Make Three.js canvas transparent so the video shows through
+        scene.background = null;
+        renderer.setClearColor(0x000000, 0);
+
+        arActive = true;
+        document.getElementById("ar-toggle").textContent = "❌ Exit AR";
+        document.getElementById("ar-panel").style.display = "flex";
+        document.getElementById("controls").style.display = "none";
+      }
+
+      function exitAR() {
+        if (!arActive) return;
+
+        // Stop camera stream
+        if (arStream) {
+          arStream.getTracks().forEach((t) => t.stop());
+          arStream = null;
+        }
+        const vid = document.getElementById("ar-video");
+        vid.srcObject = null;
+        vid.style.display = "none";
+
+        // Restore opaque scene background
+        scene.background = new THREE.Color(0x111111);
+        renderer.setClearColor(0x111111, 1);
+
+        arActive = false;
+        document.getElementById("ar-toggle").textContent = "📷 Enter AR";
+        document.getElementById("ar-panel").style.display = "none";
+        document.getElementById("controls").style.display = "flex";
+
+        updateCamera();
+      }
+
+      function flipARCamera() {
+        arCameraFacing = arCameraFacing === "environment" ? "user" : "environment";
+        document.getElementById("ar-flip-btn").textContent =
+          `🔄 Flip camera (currently: ${arCameraFacing === "environment" ? "back" : "front"})`;
+        // Restart stream with new facing mode
+        if (arActive) {
+          exitAR();
+          setTimeout(enterAR, 200);
+        }
+      }
+
+      // ═══════════════════════════════════════════════════════════
+      //  RENDER LOOP
+      // ═══════════════════════════════════════════════════════════
+      function animate() {
+        requestAnimationFrame(animate);
+        renderer.render(scene, camera);
+        labelRenderer.render(scene, camera);
+      }
+      animate();
+
+      loadData();
+    </script>
+  </body>
 </html>

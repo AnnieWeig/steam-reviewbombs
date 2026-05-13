@@ -7,8 +7,8 @@
         {
             "time": "2025-11",
             "earlyAccess": false,
-            "reviewBombed": false,
-            "wordCloud": NaN,
+            "reviewBombed": true,
+            "wordClouds": [],
             "values": {
                 "positiv": 105,
                 "cusumPositiv": 105,
@@ -19,8 +19,8 @@
         {
             "time": "2025-12",
             "earlyAccess": false,
-            "reviewBombed": false,
-            "wordCloud": NaN,
+            "reviewBombed": true,
+            "wordClouds": [],
             "values": {
                 "positiv": 19,
                 "cusumPositiv": 124,
@@ -31,8 +31,8 @@
         {
             "time": "2026-01",
             "earlyAccess": false,
-            "reviewBombed": false,
-            "wordCloud": NaN,
+            "reviewBombed": true,
+            "wordClouds": [],
             "values": {
                 "positiv": 9,
                 "cusumPositiv": 133,
@@ -43,8 +43,8 @@
         {
             "time": "2026-02",
             "earlyAccess": false,
-            "reviewBombed": false,
-            "wordCloud": NaN,
+            "reviewBombed": true,
+            "wordClouds": [],
             "values": {
                 "positiv": 6,
                 "cusumPositiv": 139,
@@ -55,8 +55,8 @@
         {
             "time": "2026-03",
             "earlyAccess": false,
-            "reviewBombed": false,
-            "wordCloud": NaN,
+            "reviewBombed": true,
+            "wordClouds": [],
             "values": {
                 "positiv": 3,
                 "cusumPositiv": 142,
@@ -67,8 +67,8 @@
         {
             "time": "2026-04",
             "earlyAccess": false,
-            "reviewBombed": false,
-            "wordCloud": NaN,
+            "reviewBombed": true,
+            "wordClouds": [],
             "values": {
                 "positiv": 2,
                 "cusumPositiv": 144,
@@ -79,8 +79,8 @@
         {
             "time": "2026-05",
             "earlyAccess": false,
-            "reviewBombed": false,
-            "wordCloud": NaN,
+            "reviewBombed": true,
+            "wordClouds": [],
             "values": {
                 "positiv": 1,
                 "cusumPositiv": 145,
