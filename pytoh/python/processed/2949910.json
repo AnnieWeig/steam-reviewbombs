@@ -1,0 +1,68 @@
+{
+    "id": "2949910",
+    "name": "ANGST: A TALE OF SURVIVAL",
+    "startDate": "2025-12-05 00:00:00",
+    "endDate": "2026-04-28 00:00:00",
+    "data": [
+        {
+            "time": "2025-12",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 125,
+                "cusumPositiv": 125,
+                "negativ": -14,
+                "cusumNegativ": -14
+            }
+        },
+        {
+            "time": "2026-01",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 19,
+                "cusumPositiv": 144,
+                "negativ": -2,
+                "cusumNegativ": -16
+            }
+        },
+        {
+            "time": "2026-02",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 8,
+                "cusumPositiv": 152,
+                "negativ": -4,
+                "cusumNegativ": -20
+            }
+        },
+        {
+            "time": "2026-03",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 17,
+                "cusumPositiv": 169,
+                "negativ": -6,
+                "cusumNegativ": -26
+            }
+        },
+        {
+            "time": "2026-04",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 8,
+                "cusumPositiv": 177,
+                "negativ": -1,
+                "cusumNegativ": -27
+            }
+        }
+    ]
+}

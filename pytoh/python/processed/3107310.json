@@ -1,0 +1,44 @@
+{
+    "id": "3107310",
+    "name": "Baking Bad",
+    "startDate": "2026-02-19 00:00:00",
+    "endDate": "2026-04-26 00:00:00",
+    "data": [
+        {
+            "time": "2026-02",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 35,
+                "cusumPositiv": 35,
+                "negativ": -80,
+                "cusumNegativ": -80
+            }
+        },
+        {
+            "time": "2026-03",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 6,
+                "cusumPositiv": 41,
+                "negativ": -12,
+                "cusumNegativ": -92
+            }
+        },
+        {
+            "time": "2026-04",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 3,
+                "cusumPositiv": 44,
+                "negativ": -2,
+                "cusumNegativ": -94
+            }
+        }
+    ]
+}

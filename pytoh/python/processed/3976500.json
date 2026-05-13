@@ -1,0 +1,32 @@
+{
+    "id": "3976500",
+    "name": "The Spotter: Dig or Die",
+    "startDate": "2026-04-07 00:00:00",
+    "endDate": "2026-05-06 00:00:00",
+    "data": [
+        {
+            "time": "2026-04",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 1079,
+                "cusumPositiv": 1079,
+                "negativ": -167,
+                "cusumNegativ": -167
+            }
+        },
+        {
+            "time": "2026-05",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 61,
+                "cusumPositiv": 1140,
+                "negativ": -7,
+                "cusumNegativ": -174
+            }
+        }
+    ]
+}

@@ -1,0 +1,128 @@
+{
+    "id": "3380110",
+    "name": "Campus Fantasy",
+    "startDate": "2025-07-12 00:00:00",
+    "endDate": "2026-04-27 00:00:00",
+    "data": [
+        {
+            "time": "2025-07",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 116,
+                "cusumPositiv": 116,
+                "negativ": -40,
+                "cusumNegativ": -40
+            }
+        },
+        {
+            "time": "2025-08",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 10,
+                "cusumPositiv": 126,
+                "negativ": -5,
+                "cusumNegativ": -45
+            }
+        },
+        {
+            "time": "2025-09",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 2,
+                "cusumPositiv": 128,
+                "negativ": -3,
+                "cusumNegativ": -48
+            }
+        },
+        {
+            "time": "2025-10",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 2,
+                "cusumPositiv": 130,
+                "negativ": -2,
+                "cusumNegativ": -50
+            }
+        },
+        {
+            "time": "2025-11",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 10,
+                "cusumPositiv": 140,
+                "negativ": -3,
+                "cusumNegativ": -53
+            }
+        },
+        {
+            "time": "2025-12",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 2,
+                "cusumPositiv": 142,
+                "negativ": -3,
+                "cusumNegativ": -56
+            }
+        },
+        {
+            "time": "2026-01",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 1,
+                "cusumPositiv": 143,
+                "negativ": -1,
+                "cusumNegativ": -57
+            }
+        },
+        {
+            "time": "2026-02",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 3,
+                "cusumPositiv": 146,
+                "negativ": -1,
+                "cusumNegativ": -58
+            }
+        },
+        {
+            "time": "2026-03",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 4,
+                "cusumPositiv": 150,
+                "negativ": -2,
+                "cusumNegativ": -60
+            }
+        },
+        {
+            "time": "2026-04",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 1,
+                "cusumPositiv": 151,
+                "negativ": -3,
+                "cusumNegativ": -63
+            }
+        }
+    ]
+}

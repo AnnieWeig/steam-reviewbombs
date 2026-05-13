@@ -1,0 +1,44 @@
+{
+    "id": "3398110",
+    "name": "The Walking Trade",
+    "startDate": "2026-03-05 00:00:00",
+    "endDate": "2026-05-06 00:00:00",
+    "data": [
+        {
+            "time": "2026-03",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 1261,
+                "cusumPositiv": 1261,
+                "negativ": -174,
+                "cusumNegativ": -174
+            }
+        },
+        {
+            "time": "2026-04",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 301,
+                "cusumPositiv": 1562,
+                "negativ": -46,
+                "cusumNegativ": -220
+            }
+        },
+        {
+            "time": "2026-05",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 86,
+                "cusumPositiv": 1648,
+                "negativ": -15,
+                "cusumNegativ": -235
+            }
+        }
+    ]
+}

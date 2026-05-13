@@ -1,0 +1,44 @@
+{
+    "id": "2112740",
+    "name": "Humanica",
+    "startDate": "2026-03-03 00:00:00",
+    "endDate": "2026-05-05 00:00:00",
+    "data": [
+        {
+            "time": "2026-03",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 115,
+                "cusumPositiv": 115,
+                "negativ": -6,
+                "cusumNegativ": -6
+            }
+        },
+        {
+            "time": "2026-04",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 17,
+                "cusumPositiv": 132,
+                "negativ": -3,
+                "cusumNegativ": -9
+            }
+        },
+        {
+            "time": "2026-05",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 2,
+                "cusumPositiv": 134,
+                "negativ": 0,
+                "cusumNegativ": -9
+            }
+        }
+    ]
+}

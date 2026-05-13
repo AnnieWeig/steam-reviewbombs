@@ -1,0 +1,104 @@
+{
+    "id": "1609370",
+    "name": "Caravanners",
+    "startDate": "2025-10-31 00:00:00",
+    "endDate": "2026-05-01 00:00:00",
+    "data": [
+        {
+            "time": "2025-10",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 81,
+                "cusumPositiv": 81,
+                "negativ": -130,
+                "cusumNegativ": -130
+            }
+        },
+        {
+            "time": "2025-11",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 208,
+                "cusumPositiv": 289,
+                "negativ": -251,
+                "cusumNegativ": -381
+            }
+        },
+        {
+            "time": "2025-12",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 22,
+                "cusumPositiv": 311,
+                "negativ": -42,
+                "cusumNegativ": -423
+            }
+        },
+        {
+            "time": "2026-01",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 7,
+                "cusumPositiv": 318,
+                "negativ": -16,
+                "cusumNegativ": -439
+            }
+        },
+        {
+            "time": "2026-02",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 3,
+                "cusumPositiv": 321,
+                "negativ": -15,
+                "cusumNegativ": -454
+            }
+        },
+        {
+            "time": "2026-03",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 1,
+                "cusumPositiv": 322,
+                "negativ": -3,
+                "cusumNegativ": -457
+            }
+        },
+        {
+            "time": "2026-04",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 2,
+                "cusumPositiv": 324,
+                "negativ": -7,
+                "cusumNegativ": -464
+            }
+        },
+        {
+            "time": "2026-05",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 1,
+                "cusumPositiv": 325,
+                "negativ": 0,
+                "cusumNegativ": -464
+            }
+        }
+    ]
+}

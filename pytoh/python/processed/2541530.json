@@ -1,0 +1,44 @@
+{
+    "id": "2541530",
+    "name": "AETHUS",
+    "startDate": "2026-03-06 00:00:00",
+    "endDate": "2026-05-05 00:00:00",
+    "data": [
+        {
+            "time": "2026-03",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 1120,
+                "cusumPositiv": 1120,
+                "negativ": -47,
+                "cusumNegativ": -47
+            }
+        },
+        {
+            "time": "2026-04",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 342,
+                "cusumPositiv": 1462,
+                "negativ": -22,
+                "cusumNegativ": -69
+            }
+        },
+        {
+            "time": "2026-05",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 56,
+                "cusumPositiv": 1518,
+                "negativ": -3,
+                "cusumNegativ": -72
+            }
+        }
+    ]
+}

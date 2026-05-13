@@ -1,0 +1,92 @@
+{
+    "id": "3531470",
+    "name": "Driving Life",
+    "startDate": "2025-11-14 00:00:00",
+    "endDate": "2026-05-02 00:00:00",
+    "data": [
+        {
+            "time": "2025-11",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 73,
+                "cusumPositiv": 73,
+                "negativ": -31,
+                "cusumNegativ": -31
+            }
+        },
+        {
+            "time": "2025-12",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 9,
+                "cusumPositiv": 82,
+                "negativ": -17,
+                "cusumNegativ": -48
+            }
+        },
+        {
+            "time": "2026-01",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 6,
+                "cusumPositiv": 88,
+                "negativ": -9,
+                "cusumNegativ": -57
+            }
+        },
+        {
+            "time": "2026-02",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 4,
+                "cusumPositiv": 92,
+                "negativ": -7,
+                "cusumNegativ": -64
+            }
+        },
+        {
+            "time": "2026-03",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 1,
+                "cusumPositiv": 93,
+                "negativ": -2,
+                "cusumNegativ": -66
+            }
+        },
+        {
+            "time": "2026-04",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 2,
+                "cusumPositiv": 95,
+                "negativ": -2,
+                "cusumNegativ": -68
+            }
+        },
+        {
+            "time": "2026-05",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 1,
+                "cusumPositiv": 96,
+                "negativ": 0,
+                "cusumNegativ": -68
+            }
+        }
+    ]
+}

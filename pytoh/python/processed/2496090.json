@@ -1,0 +1,56 @@
+{
+    "id": "2496090",
+    "name": "Whisper of the Swallows",
+    "startDate": "2026-01-29 00:00:00",
+    "endDate": "2026-04-26 00:00:00",
+    "data": [
+        {
+            "time": "2026-01",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 22,
+                "cusumPositiv": 22,
+                "negativ": -1,
+                "cusumNegativ": -1
+            }
+        },
+        {
+            "time": "2026-02",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 87,
+                "cusumPositiv": 109,
+                "negativ": -15,
+                "cusumNegativ": -16
+            }
+        },
+        {
+            "time": "2026-03",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 16,
+                "cusumPositiv": 125,
+                "negativ": -3,
+                "cusumNegativ": -19
+            }
+        },
+        {
+            "time": "2026-04",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 6,
+                "cusumPositiv": 131,
+                "negativ": -2,
+                "cusumNegativ": -21
+            }
+        }
+    ]
+}

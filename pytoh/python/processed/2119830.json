@@ -1,0 +1,104 @@
+{
+    "id": "2119830",
+    "name": "MISERY",
+    "startDate": "2025-10-23 00:00:00",
+    "endDate": "2026-05-06 00:00:00",
+    "data": [
+        {
+            "time": "2025-10",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 4200,
+                "cusumPositiv": 4200,
+                "negativ": -763,
+                "cusumNegativ": -763
+            }
+        },
+        {
+            "time": "2025-11",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 6273,
+                "cusumPositiv": 10473,
+                "negativ": -834,
+                "cusumNegativ": -1597
+            }
+        },
+        {
+            "time": "2025-12",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 1824,
+                "cusumPositiv": 12297,
+                "negativ": -369,
+                "cusumNegativ": -1966
+            }
+        },
+        {
+            "time": "2026-01",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 1613,
+                "cusumPositiv": 13910,
+                "negativ": -390,
+                "cusumNegativ": -2356
+            }
+        },
+        {
+            "time": "2026-02",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 574,
+                "cusumPositiv": 14484,
+                "negativ": -116,
+                "cusumNegativ": -2472
+            }
+        },
+        {
+            "time": "2026-03",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 641,
+                "cusumPositiv": 15125,
+                "negativ": -141,
+                "cusumNegativ": -2613
+            }
+        },
+        {
+            "time": "2026-04",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 663,
+                "cusumPositiv": 15788,
+                "negativ": -121,
+                "cusumNegativ": -2734
+            }
+        },
+        {
+            "time": "2026-05",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 82,
+                "cusumPositiv": 15870,
+                "negativ": -14,
+                "cusumNegativ": -2748
+            }
+        }
+    ]
+}

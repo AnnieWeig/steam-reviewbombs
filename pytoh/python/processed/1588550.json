@@ -1,0 +1,68 @@
+{
+    "id": "1588550",
+    "name": "Cairn",
+    "startDate": "2026-01-29 00:00:00",
+    "endDate": "2026-05-06 00:00:00",
+    "data": [
+        {
+            "time": "2026-01",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 2701,
+                "cusumPositiv": 2701,
+                "negativ": -154,
+                "cusumNegativ": -154
+            }
+        },
+        {
+            "time": "2026-02",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 10509,
+                "cusumPositiv": 13210,
+                "negativ": -635,
+                "cusumNegativ": -789
+            }
+        },
+        {
+            "time": "2026-03",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 2390,
+                "cusumPositiv": 15600,
+                "negativ": -116,
+                "cusumNegativ": -905
+            }
+        },
+        {
+            "time": "2026-04",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 1403,
+                "cusumPositiv": 17003,
+                "negativ": -78,
+                "cusumNegativ": -983
+            }
+        },
+        {
+            "time": "2026-05",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 165,
+                "cusumPositiv": 17168,
+                "negativ": -9,
+                "cusumNegativ": -992
+            }
+        }
+    ]
+}

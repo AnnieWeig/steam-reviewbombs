@@ -1,0 +1,44 @@
+{
+    "id": "2430390",
+    "name": "DYSPLACED",
+    "startDate": "2026-03-05 00:00:00",
+    "endDate": "2026-05-05 00:00:00",
+    "data": [
+        {
+            "time": "2026-03",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 226,
+                "cusumPositiv": 226,
+                "negativ": -26,
+                "cusumNegativ": -26
+            }
+        },
+        {
+            "time": "2026-04",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 22,
+                "cusumPositiv": 248,
+                "negativ": -6,
+                "cusumNegativ": -32
+            }
+        },
+        {
+            "time": "2026-05",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 3,
+                "cusumPositiv": 251,
+                "negativ": 0,
+                "cusumNegativ": -32
+            }
+        }
+    ]
+}

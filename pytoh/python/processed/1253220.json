@@ -1,0 +1,68 @@
+{
+    "id": "1253220",
+    "name": "The Gold River Project",
+    "startDate": "2026-01-23 00:00:00",
+    "endDate": "2026-05-04 00:00:00",
+    "data": [
+        {
+            "time": "2026-01",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 217,
+                "cusumPositiv": 217,
+                "negativ": -117,
+                "cusumNegativ": -117
+            }
+        },
+        {
+            "time": "2026-02",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 98,
+                "cusumPositiv": 315,
+                "negativ": -38,
+                "cusumNegativ": -155
+            }
+        },
+        {
+            "time": "2026-03",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 36,
+                "cusumPositiv": 351,
+                "negativ": -18,
+                "cusumNegativ": -173
+            }
+        },
+        {
+            "time": "2026-04",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 16,
+                "cusumPositiv": 367,
+                "negativ": -10,
+                "cusumNegativ": -183
+            }
+        },
+        {
+            "time": "2026-05",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 2,
+                "cusumPositiv": 369,
+                "negativ": -1,
+                "cusumNegativ": -184
+            }
+        }
+    ]
+}

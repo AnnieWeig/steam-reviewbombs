@@ -1,0 +1,68 @@
+{
+    "id": "1804470",
+    "name": "Duel Corp.",
+    "startDate": "2026-01-21 00:00:00",
+    "endDate": "2026-05-04 00:00:00",
+    "data": [
+        {
+            "time": "2026-01",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 681,
+                "cusumPositiv": 681,
+                "negativ": -265,
+                "cusumNegativ": -265
+            }
+        },
+        {
+            "time": "2026-02",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 124,
+                "cusumPositiv": 805,
+                "negativ": -45,
+                "cusumNegativ": -310
+            }
+        },
+        {
+            "time": "2026-03",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 42,
+                "cusumPositiv": 847,
+                "negativ": -19,
+                "cusumNegativ": -329
+            }
+        },
+        {
+            "time": "2026-04",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 11,
+                "cusumPositiv": 858,
+                "negativ": -5,
+                "cusumNegativ": -334
+            }
+        },
+        {
+            "time": "2026-05",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordCloud": NaN,
+            "values": {
+                "positiv": 3,
+                "cusumPositiv": 861,
+                "negativ": -1,
+                "cusumNegativ": -335
+            }
+        }
+    ]
+}
