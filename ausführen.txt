@@ -1,0 +1,2 @@
+ausführen: python3 -m http.server
+aufrufen: http://localhost:8000/
