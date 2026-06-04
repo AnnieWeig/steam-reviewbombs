@@ -4,7 +4,7 @@ import { setupInteractions } from "./interactions.js"; // ← was missing
 import { applyFilter, resetFilter, applyReviewBombFilter } from "./filter.js";
 import { closePopup } from "./popup.js";
 import { enterAFrameAR, updateAFrameScale } from "./ar-aframe.js";
-import { loadData, loadGameDynamic, removeGame } from "./data.js";
+import { loadData, loadGameDynamic, removeGame, loadMoreGames, setupLoadMoreButton } from "./data.js";
 import { state } from "./state.js";
 
 // ── Inject DOM ──────────────────────────────────────────────────
@@ -36,6 +36,9 @@ document.body.insertAdjacentHTML(
         <button class="btn-primary" id="btn-game-search">Add game</button>
       </div>
       <div id="search-status" class="search-status"></div>
+      <button id="btn-load-more-games" class="btn-secondary" style="display:none; margin-top: 10px; width: 100%;">
+        Load more games
+      </button>
     </div>
 
     <!-- 2 — Active games + Enter AR CTA -->
@@ -260,6 +263,38 @@ document.getElementById("popup-close").addEventListener("click", closePopup);
 
 if (matchMedia("(pointer: coarse)").matches) document.getElementById("touch-hint").style.display = "block";
 
+// Landscape mode
+function updateOrientationHint() {
+  let el = document.getElementById("rotate-device-hint");
+  if (!el) {
+    el = document.createElement("div");
+    el.id = "rotate-device-hint";
+    el.style.cssText = `
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,0.92);
+      color: white;
+      font: 600 18px sans-serif;
+      text-align: center;
+      padding: 24px;
+    `;
+    el.innerHTML = `📱 Please rotate your device to landscape`;
+    document.body.appendChild(el);
+  }
+
+  const isMobile = matchMedia("(pointer: coarse)").matches;
+  const isPortrait = innerHeight > innerWidth;
+  el.style.display = isMobile && isPortrait ? "flex" : "none";
+}
+
+window.addEventListener("resize", updateOrientationHint);
+window.addEventListener("orientationchange", updateOrientationHint);
+updateOrientationHint();
+
 // ── Resize ───────────────────────────────────────────────────────
 window.addEventListener("resize", () => {
   camera.aspect = innerWidth / innerHeight;
@@ -282,4 +317,5 @@ function animate() {
 animate();
 
 // ── Boot ─────────────────────────────────────────────────────────
+setupLoadMoreButton();
 loadData().then(() => refreshActiveGamesList());
