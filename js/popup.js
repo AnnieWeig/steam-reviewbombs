@@ -83,23 +83,12 @@ let _currentBarData = null;
 
 function applyMobilePopupLayout() {
   const popup = document.getElementById("popup");
-  const content = document.getElementById("popup-content");
-  if (!popup || !content) return;
+  if (!popup) return;
 
   const isMobileLandscape =
     matchMedia("(pointer: coarse)").matches && window.innerWidth > window.innerHeight;
 
-  if (isMobileLandscape) {
-    popup.classList.add("popup-mobile-landscape");
-    content.style.overflowY = "auto";
-    content.style.overflowX = "hidden";
-    content.style.webkitOverflowScrolling = "touch";
-  } else {
-    popup.classList.remove("popup-mobile-landscape");
-    content.style.removeProperty("overflow-y");
-    content.style.removeProperty("overflow-x");
-    content.style.removeProperty("-webkit-overflow-scrolling");
-  }
+  popup.classList.toggle("popup-mobile-landscape", isMobileLandscape);
 }
 
 window.addEventListener("resize", applyMobilePopupLayout);
