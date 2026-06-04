@@ -1,0 +1,44 @@
+{
+    "id": "2658040",
+    "name": "Responding",
+    "startDate": "2026-03-31 00:00:00",
+    "endDate": "2026-05-05 00:00:00",
+    "data": [
+        {
+            "time": "2026-03",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 23,
+                "cusumPositiv": 23,
+                "negativ": -47,
+                "cusumNegativ": -47
+            }
+        },
+        {
+            "time": "2026-04",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 160,
+                "cusumPositiv": 183,
+                "negativ": -127,
+                "cusumNegativ": -174
+            }
+        },
+        {
+            "time": "2026-05",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 4,
+                "cusumPositiv": 187,
+                "negativ": -3,
+                "cusumNegativ": -177
+            }
+        }
+    ]
+}

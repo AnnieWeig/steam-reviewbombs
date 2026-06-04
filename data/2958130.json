@@ -1,0 +1,56 @@
+{
+    "id": "2958130",
+    "name": "Jurassic World Evolution 3",
+    "startDate": "2026-02-07 00:00:00",
+    "endDate": "2026-05-06 00:00:00",
+    "data": [
+        {
+            "time": "2026-02",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 445,
+                "cusumPositiv": 445,
+                "negativ": -35,
+                "cusumNegativ": -35
+            }
+        },
+        {
+            "time": "2026-03",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 648,
+                "cusumPositiv": 1093,
+                "negativ": -47,
+                "cusumNegativ": -82
+            }
+        },
+        {
+            "time": "2026-04",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 499,
+                "cusumPositiv": 1592,
+                "negativ": -43,
+                "cusumNegativ": -125
+            }
+        },
+        {
+            "time": "2026-05",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 73,
+                "cusumPositiv": 1665,
+                "negativ": -10,
+                "cusumNegativ": -135
+            }
+        }
+    ]
+}

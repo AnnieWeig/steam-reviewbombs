@@ -1,0 +1,68 @@
+{
+    "id": "2644050",
+    "name": "Echoes of Elysium",
+    "startDate": "2026-01-27 00:00:00",
+    "endDate": "2026-05-06 00:00:00",
+    "data": [
+        {
+            "time": "2026-01",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 169,
+                "cusumPositiv": 169,
+                "negativ": -109,
+                "cusumNegativ": -109
+            }
+        },
+        {
+            "time": "2026-02",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 110,
+                "cusumPositiv": 279,
+                "negativ": -64,
+                "cusumNegativ": -173
+            }
+        },
+        {
+            "time": "2026-03",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 41,
+                "cusumPositiv": 320,
+                "negativ": -8,
+                "cusumNegativ": -181
+            }
+        },
+        {
+            "time": "2026-04",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 8,
+                "cusumPositiv": 328,
+                "negativ": -3,
+                "cusumNegativ": -184
+            }
+        },
+        {
+            "time": "2026-05",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 0,
+                "cusumPositiv": 328,
+                "negativ": -1,
+                "cusumNegativ": -185
+            }
+        }
+    ]
+}
