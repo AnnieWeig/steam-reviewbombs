@@ -1,0 +1,44 @@
+{
+    "id": "1657740",
+    "name": "Mr. Sleepy Man",
+    "startDate": "2026-03-10 00:00:00",
+    "endDate": "2026-05-06 00:00:00",
+    "data": [
+        {
+            "time": "2026-03",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 345,
+                "cusumPositiv": 345,
+                "negativ": -2,
+                "cusumNegativ": -2
+            }
+        },
+        {
+            "time": "2026-04",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 110,
+                "cusumPositiv": 455,
+                "negativ": -1,
+                "cusumNegativ": -3
+            }
+        },
+        {
+            "time": "2026-05",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 7,
+                "cusumPositiv": 462,
+                "negativ": 0,
+                "cusumNegativ": -3
+            }
+        }
+    ]
+}
