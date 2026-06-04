@@ -358,23 +358,30 @@ function buildWordCloudHTML(wordMap, meta) {
 }
 
 function buildBarsHTML() {
-  const GROUP_SPACING = 1.2;
-  const BAR_W = 0.8;
+  const GROUP_SPACING = 0.72;
+  const ROW_SPACING = 0.95;
+  const BAR_W = 0.42;
   const centerX = -state.globalTotalWidth / 2;
-  const centerZ = -0.75;
+  const centerZ = -0.35;
+
+  // Was aframeScale / 100 → way too small.
+  // New scale gives useful marker-sized output.
   const s = aframeScale / 100;
+
   let html = "";
   const allDates = [];
 
   state.loadedJsons.forEach((json, rowIdx) => {
-    const zOffsetWorld = rowIdx * 1.5;
-    const keys = Object.keys(json.data[0].values);
+    const zOffsetWorld = rowIdx * ROW_SPACING;
+    const keys = ["cusumPositiv", "cusumNegativ"];
 
     html += `<a-text
       value="${(json.name ?? "Dataset").replace(/"/g, "'")}"
-      position="${((centerX - 2) * s).toFixed(4)} 0.03 ${((centerZ + zOffsetWorld) * s).toFixed(4)}"
-      color="#00aaff" width="${(s * 15).toFixed(3)}"
-      align="right" side="double">
+      position="${((centerX - 1.4) * s).toFixed(4)} ${(0.16 * s).toFixed(4)} ${((centerZ + zOffsetWorld) * s).toFixed(4)}"
+      color="#00aaff"
+      width="${(10 * s).toFixed(4)}"
+      align="right"
+      side="double">
     </a-text>`;
 
     const hasBomb = json.data.some((d) => d.reviewBombed);
@@ -383,19 +390,24 @@ function buildBarsHTML() {
       data-row="${rowIdx}"
       ${hasBomb ? 'data-has-bomb="true"' : ""}
       material="visible: false"
-      width="0.001" height="0.001"
+      width="0.001"
+      height="0.001"
       position="0 0 ${((centerZ + zOffsetWorld) * s).toFixed(4)}">
     </a-plane>`;
 
     json.data.forEach((d) => {
       const dateStr = new Date(d.time).toISOString().slice(0, 7);
       allDates.push(dateStr);
+
       const xWorld =
-        ((new Date(d.time).getTime() - state.globalChartT0) / (1000 * 60 * 60 * 24 * 30.44)) * GROUP_SPACING + centerX;
+        ((new Date(d.time).getTime() - state.globalChartT0) / (1000 * 60 * 60 * 24 * 30.44)) *
+          GROUP_SPACING +
+        centerX;
+
       const ea = !!d.earlyAccess;
 
       keys.forEach((key, j) => {
-        const value = d.values[key];
+        const value = d.values?.[key] ?? 0;
         const hWorld = Math.abs(value) * state.globalChartScale;
         const yWorld = value >= 0 ? hWorld / 2 : -hWorld / 2;
         const color = getBarColorHex(j, ea, d.reviewBombed);
@@ -403,7 +415,9 @@ function buildBarsHTML() {
 
         html += `<a-box
           position="${(xWorld * s).toFixed(4)} ${(yWorld * s).toFixed(4)} ${((zOffsetWorld + centerZ) * s).toFixed(4)}"
-          width="${(BAR_W * s).toFixed(4)}" height="${(hWorld * s).toFixed(4)}" depth="${(BAR_W * s).toFixed(4)}"
+          width="${(BAR_W * s).toFixed(4)}"
+          height="${Math.max(hWorld * s, 0.01).toFixed(4)}"
+          depth="${(BAR_W * s).toFixed(4)}"
           color="${color}"
           material="transparent:true;opacity:${opacity};side:double"
           shadow
@@ -414,10 +428,13 @@ function buildBarsHTML() {
       });
 
       if (d.reviewBombed) {
-        html += `<a-text value="⚠ bombed"
-          position="${(xWorld * s).toFixed(4)} ${((MAX_BAR_HEIGHT + 0.6) * s).toFixed(4)} ${((zOffsetWorld + centerZ) * s).toFixed(4)}"
-          color="#ff4422" width="${(s * 10).toFixed(3)}"
-          align="center" side="double"
+        html += `<a-text
+          value="⚠"
+          position="${(xWorld * s).toFixed(4)} ${((MAX_BAR_HEIGHT + 0.45) * s).toFixed(4)} ${((zOffsetWorld + centerZ) * s).toFixed(4)}"
+          color="#ff4422"
+          width="${(4.5 * s).toFixed(4)}"
+          align="center"
+          side="double"
           data-date="${dateStr}"
           data-row="${rowIdx}"
           data-review-bombed="true">
@@ -427,7 +444,11 @@ function buildBarsHTML() {
   });
 
   const sorted = [...new Set(allDates)].sort();
-  return { html, minDate: sorted[0] ?? "", maxDate: sorted[sorted.length - 1] ?? "" };
+  return {
+    html,
+    minDate: sorted[0] ?? "",
+    maxDate: sorted[sorted.length - 1] ?? ""
+  };
 }
 
 function iframeCSS() {
