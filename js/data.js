@@ -1,9 +1,13 @@
 import { state, MAX_BAR_HEIGHT } from "./state.js";
 import { scene } from "./scene.js";
-import { buildChart, addYLabels, disposeCSS2D } from "./chart.js";
+import { buildChart, disposeCSS2D } from "./chart.js";
 import { spherical, target, updateCamera } from "./camera.js";
 
 let _index = [];
+let _visibleIndexCount = 0;
+
+const INITIAL_GAME_LIMIT = 10;
+const LOAD_MORE_STEP = 10;
 
 export async function loadIndex() {
   try {
@@ -23,16 +27,83 @@ export function getIndex() {
 export async function loadData() {
   await loadIndex();
 
-  const [json1, json2] = await Promise.all([
-    fetch("./data/data.json").then((r) => r.json()),
-    fetch("./data/data2.json").then((r) => r.json())
-  ]);
+  if (!_index.length) {
+    state.loadedJsons = [];
+    state.rowGroups = [];
+    state.allBars = [];
+    _setEmptyState(true);
+    _refreshLoadMoreButton();
+    return;
+  }
+
+  _visibleIndexCount = Math.min(INITIAL_GAME_LIMIT, _index.length);
+
+  const jsons = await Promise.all(
+    _index.slice(0, _visibleIndexCount).map((entry) => {
+      const url = entry.file ?? `./data/${entry.id}.json`;
+      return fetch(url).then((r) => {
+        if (!r.ok) throw new Error(`Failed to load ${url}`);
+        return r.json();
+      });
+    })
+  );
 
   state.loadedJsons = [];
   state.rowGroups = [];
   state.allBars = [];
 
-  _initChart([json1, json2]);
+  _initChart(jsons);
+  _refreshLoadMoreButton();
+}
+
+export async function loadMoreGames() {
+  if (_visibleIndexCount >= _index.length) return;
+
+  const nextCount = Math.min(_visibleIndexCount + LOAD_MORE_STEP, _index.length);
+  const nextEntries = _index.slice(_visibleIndexCount, nextCount);
+
+  try {
+    const newJsons = await Promise.all(
+      nextEntries.map((entry) => {
+        const url = entry.file ?? `./data/${entry.id}.json`;
+        return fetch(url).then((r) => {
+          if (!r.ok) throw new Error(`Failed to load ${url}`);
+          return r.json();
+        });
+      })
+    );
+
+    if (state.loadedJsons.length === 0) {
+      state.loadedJsons = [...newJsons];
+      _initChart(state.loadedJsons);
+    } else {
+      state.loadedJsons.push(...newJsons);
+      _recalcScale();
+      _rebuildAllRows();
+      _refreshActiveGamesList();
+      _setEmptyState(false);
+    }
+
+    _visibleIndexCount = nextCount;
+    _refreshLoadMoreButton();
+  } catch (e) {
+    console.error("Failed to load more games:", e);
+  }
+}
+
+function _refreshLoadMoreButton() {
+  const btn = document.getElementById("btn-load-more-games");
+  if (!btn) return;
+
+  const remaining = Math.max(_index.length - _visibleIndexCount, 0);
+
+  if (remaining <= 0) {
+    btn.style.display = "none";
+    return;
+  }
+
+  btn.style.display = "inline-flex";
+  btn.textContent = `Load more games (${remaining} left)`;
 }
 
 function _initChart(jsons) {
@@ -44,8 +115,12 @@ function _initChart(jsons) {
   document.getElementById("filterTo").value = toMonth(maxDate);
 
   state.globalChartT0 = Math.min(...allDates);
-  state.globalChartScale =
-    MAX_BAR_HEIGHT / Math.max(...jsons.flatMap((j) => j.data.flatMap((d) => Object.values(d.values).map(Math.abs))));
+  state.globalChartScale = MAX_BAR_HEIGHT /
+  Math.max(
+    ...jsons.flatMap((j) =>
+      j.data.flatMap((d) => [Math.abs(d.values.cusumPositiv ?? 0), Math.abs(d.values.cusumNegativ ?? 0)])
+    )
+  );
   state.globalTotalWidth = 0;
   state.loadedJsons = [];
 
@@ -57,10 +132,9 @@ function _initChart(jsons) {
   });
 
   _addInitialGrid();
-  _addYLabels(state.loadedJsons);
 
   target.set(state.globalTotalWidth / 2, 0, 0.75);
-  spherical.radius = Math.max(state.globalTotalWidth, 1.5) * 0.8;
+  spherical.radius = Math.max(state.globalTotalWidth, 1.5) * 0.5;
   updateCamera();
 
   _refreshActiveGamesList();
@@ -114,6 +188,13 @@ export async function loadGameDynamic(idOrName) {
   return { ok: true, msg: `"${json.name}" added.` };
 }
 
+export function setupLoadMoreButton() {
+  const btn = document.getElementById("btn-load-more-games");
+  if (!btn) return;
+  btn.addEventListener("click", loadMoreGames);
+  _refreshLoadMoreButton();
+}
+
 // ── Dynamic remove ───────────────────────────────────────────────
 export function removeGame(gameId) {
   const idx = state.loadedJsons.findIndex((j) => String(j.id) === String(gameId));
@@ -136,7 +217,9 @@ export function removeGame(gameId) {
 /** Recalculate globalChartScale from all currently loaded games. */
 function _recalcScale() {
   const globalMax = Math.max(
-    ...state.loadedJsons.flatMap((j) => j.data.flatMap((d) => Object.values(d.values).map(Math.abs)))
+    ...state.loadedJsons.flatMap((j) =>
+      j.data.flatMap((d) => [Math.abs(d.values.cusumPositiv ?? 0), Math.abs(d.values.cusumNegativ ?? 0)])
+    )
   );
   state.globalChartScale = MAX_BAR_HEIGHT / globalMax;
 }
@@ -159,7 +242,6 @@ function _rebuildAllRows() {
     state.globalTotalWidth = Math.max(state.globalTotalWidth, totalWidth);
   });
 
-  _addYLabels(state.loadedJsons);
 }
 
 /** Added once on boot — never recreated. */
@@ -168,15 +250,6 @@ function _addInitialGrid() {
   const grid = new THREE.GridHelper(gridSize, gridSize);
   grid.position.set((state.globalTotalWidth ?? 0) / 2, 0, 0.75);
   scene.add(grid);
-}
-
-function _addYLabels(jsons) {
-  if (state.yLabelGroup) {
-    disposeCSS2D(state.yLabelGroup);
-    scene.remove(state.yLabelGroup);
-    state.yLabelGroup = null;
-  }
-  state.yLabelGroup = addYLabels(jsons, -1.5, 0.75, state.globalChartScale);
 }
 
 function _clearAll() {
