@@ -694,3 +694,94 @@ canvas {
 #popup-wc-ar-btn:active {
   opacity: 0.72;
 }
+.label-value {
+  color: #ffffff;
+  font-size: 9px;
+  font-family: monospace;
+  background: rgba(0, 0, 0, 0.55);
+  padding: 1px 3px;
+  border-radius: 2px;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+#popup,
+.wordcloud-preview-panel,
+.wordcloud-info-panel {
+  max-height: 100dvh;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (pointer: coarse) and (orientation: landscape) {
+  #popup,
+  .wordcloud-preview-panel,
+  .wordcloud-info-panel {
+    top: 8px !important;
+    left: 8px !important;
+    right: 8px !important;
+    bottom: 8px !important;
+    width: auto !important;
+    max-width: none !important;
+    max-height: calc(100dvh - 16px) !important;
+    padding: 10px !important;
+    border-radius: 10px !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+  }
+
+  #popup-title,
+  .wordcloud-title {
+    font-size: 13px !important;
+    line-height: 1.2 !important;
+    margin-bottom: 6px !important;
+  }
+
+  #popup-content,
+  .wordcloud-meta,
+  .wordcloud-description {
+    font-size: 11px !important;
+    line-height: 1.35 !important;
+  }
+
+  #popup-content > * {
+    margin-bottom: 8px !important;
+  }
+
+  #popup canvas,
+  #popup img,
+  .wordcloud-preview-panel canvas,
+  .wordcloud-preview-panel img {
+    max-width: 100% !important;
+    max-height: 24dvh !important;
+    object-fit: contain !important;
+    display: block;
+    margin: 0 auto 8px auto;
+  }
+
+  .wordcloud-preview-panel button,
+  .wordcloud-info-panel button,
+  #btn-enter-wordcloud,
+  .btn-enter-wordcloud,
+  #popup button {
+    min-height: 36px;
+    font-size: 12px !important;
+    padding: 8px 12px !important;
+  }
+
+  .wordcloud-actions,
+  #popup-actions,
+  .popup-actions {
+    position: sticky;
+    bottom: 0;
+    background: rgba(15, 15, 25, 0.96);
+    padding-top: 8px;
+    margin-top: 10px;
+  }
+}
