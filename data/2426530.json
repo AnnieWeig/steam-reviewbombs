@@ -1,0 +1,44 @@
+{
+    "id": "2426530",
+    "name": "Nova Roma",
+    "startDate": "2026-03-26 00:00:00",
+    "endDate": "2026-05-06 00:00:00",
+    "data": [
+        {
+            "time": "2026-03",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 677,
+                "cusumPositiv": 677,
+                "negativ": -19,
+                "cusumNegativ": -19
+            }
+        },
+        {
+            "time": "2026-04",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 887,
+                "cusumPositiv": 1564,
+                "negativ": -62,
+                "cusumNegativ": -81
+            }
+        },
+        {
+            "time": "2026-05",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 42,
+                "cusumPositiv": 1606,
+                "negativ": -3,
+                "cusumNegativ": -84
+            }
+        }
+    ]
+}

@@ -1,0 +1,2554 @@
+{
+    "id": "25000",
+    "name": "Overgrowth",
+    "startDate": "2013-12-17 00:00:00",
+    "endDate": "2026-05-05 00:00:00",
+    "data": [
+        {
+            "time": "2013-12",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 179,
+                "cusumPositiv": 179,
+                "negativ": -17,
+                "cusumNegativ": -17
+            }
+        },
+        {
+            "time": "2014-01",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 174,
+                "cusumPositiv": 353,
+                "negativ": -11,
+                "cusumNegativ": -28
+            }
+        },
+        {
+            "time": "2014-02",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 103,
+                "cusumPositiv": 456,
+                "negativ": -15,
+                "cusumNegativ": -43
+            }
+        },
+        {
+            "time": "2014-03",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 55,
+                "cusumPositiv": 511,
+                "negativ": -8,
+                "cusumNegativ": -51
+            }
+        },
+        {
+            "time": "2014-04",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 52,
+                "cusumPositiv": 563,
+                "negativ": -4,
+                "cusumNegativ": -55
+            }
+        },
+        {
+            "time": "2014-05",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 49,
+                "cusumPositiv": 612,
+                "negativ": -5,
+                "cusumNegativ": -60
+            }
+        },
+        {
+            "time": "2014-06",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 81,
+                "cusumPositiv": 693,
+                "negativ": -14,
+                "cusumNegativ": -74
+            }
+        },
+        {
+            "time": "2014-07",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 37,
+                "cusumPositiv": 730,
+                "negativ": -4,
+                "cusumNegativ": -78
+            }
+        },
+        {
+            "time": "2014-08",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 40,
+                "cusumPositiv": 770,
+                "negativ": -3,
+                "cusumNegativ": -81
+            }
+        },
+        {
+            "time": "2014-09",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 23,
+                "cusumPositiv": 793,
+                "negativ": -7,
+                "cusumNegativ": -88
+            }
+        },
+        {
+            "time": "2014-10",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 30,
+                "cusumPositiv": 823,
+                "negativ": -2,
+                "cusumNegativ": -90
+            }
+        },
+        {
+            "time": "2014-11",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 27,
+                "cusumPositiv": 850,
+                "negativ": -7,
+                "cusumNegativ": -97
+            }
+        },
+        {
+            "time": "2014-12",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 43,
+                "cusumPositiv": 893,
+                "negativ": -12,
+                "cusumNegativ": -109
+            }
+        },
+        {
+            "time": "2015-01",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 45,
+                "cusumPositiv": 938,
+                "negativ": -9,
+                "cusumNegativ": -118
+            }
+        },
+        {
+            "time": "2015-02",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 28,
+                "cusumPositiv": 966,
+                "negativ": -12,
+                "cusumNegativ": -130
+            }
+        },
+        {
+            "time": "2015-03",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 32,
+                "cusumPositiv": 998,
+                "negativ": -5,
+                "cusumNegativ": -135
+            }
+        },
+        {
+            "time": "2015-04",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 25,
+                "cusumPositiv": 1023,
+                "negativ": -15,
+                "cusumNegativ": -150
+            }
+        },
+        {
+            "time": "2015-05",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 19,
+                "cusumPositiv": 1042,
+                "negativ": -15,
+                "cusumNegativ": -165
+            }
+        },
+        {
+            "time": "2015-06",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 29,
+                "cusumPositiv": 1071,
+                "negativ": -24,
+                "cusumNegativ": -189
+            }
+        },
+        {
+            "time": "2015-07",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 28,
+                "cusumPositiv": 1099,
+                "negativ": -21,
+                "cusumNegativ": -210
+            }
+        },
+        {
+            "time": "2015-08",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 18,
+                "cusumPositiv": 1117,
+                "negativ": -14,
+                "cusumNegativ": -224
+            }
+        },
+        {
+            "time": "2015-09",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 22,
+                "cusumPositiv": 1139,
+                "negativ": -7,
+                "cusumNegativ": -231
+            }
+        },
+        {
+            "time": "2015-10",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 22,
+                "cusumPositiv": 1161,
+                "negativ": -15,
+                "cusumNegativ": -246
+            }
+        },
+        {
+            "time": "2015-11",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 26,
+                "cusumPositiv": 1187,
+                "negativ": -21,
+                "cusumNegativ": -267
+            }
+        },
+        {
+            "time": "2015-12",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 37,
+                "cusumPositiv": 1224,
+                "negativ": -13,
+                "cusumNegativ": -280
+            }
+        },
+        {
+            "time": "2016-01",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 30,
+                "cusumPositiv": 1254,
+                "negativ": -10,
+                "cusumNegativ": -290
+            }
+        },
+        {
+            "time": "2016-02",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 24,
+                "cusumPositiv": 1278,
+                "negativ": -6,
+                "cusumNegativ": -296
+            }
+        },
+        {
+            "time": "2016-03",
+            "earlyAccess": true,
+            "reviewBombed": true,
+            "wordClouds": {
+                "accomplished time": 1.0,
+                "absolute black": 0.5,
+                "actual adult": 0.5,
+                "actually wolfire": 0.5,
+                "adult job": 0.5,
+                "ago hd": 0.5,
+                "always held": 0.5,
+                "animosity towards": 0.5,
+                "belief timeframe": 0.5,
+                "biased market": 0.5,
+                "black shades": 0.5,
+                "completely fair": 0.5,
+                "conditions undercutting": 0.5,
+                "create biased": 0.5,
+                "decision though": 0.5,
+                "delusional self": 0.5,
+                "desperate gods": 0.5,
+                "develop less": 0.5,
+                "development time": 0.5,
+                "fair rule": 0.5,
+                "fanboy upon": 0.5,
+                "feeding tim": 0.5,
+                "finally leave": 0.5,
+                "gods receiver": 0.5,
+                "groups desperate": 0.5,
+                "growing absolute": 0.5,
+                "hd release": 0.5,
+                "held belief": 0.5,
+                "high school": 0.5,
+                "job accomplished": 0.5,
+                "leave negative": 0.5,
+                "less animosity": 0.5,
+                "life development": 0.5,
+                "literally years": 0.5,
+                "lugaru growing": 0.5,
+                "lugaru literally": 0.5,
+                "making visually": 0.5,
+                "market conditions": 0.5,
+                "negative though": 0.5,
+                "person groups": 0.5,
+                "receiver safe": 0.5,
+                "release release": 0.5,
+                "release suing": 0.5,
+                "rule feeding": 0.5,
+                "safe say": 0.5,
+                "say actually": 0.5,
+                "school actual": 0.5,
+                "self serving": 0.5,
+                "serving thing": 0.5,
+                "shades person": 0.5,
+                "stores completely": 0.5,
+                "stupid accomplished": 0.5,
+                "suing valve": 0.5,
+                "sweeney delusional": 0.5,
+                "thing finally": 0.5,
+                "think create": 0.5,
+                "though always": 0.5,
+                "though think": 0.5,
+                "tim sweeney": 0.5,
+                "time develop": 0.5,
+                "time high": 0.5,
+                "time life": 0.5,
+                "time making": 0.5,
+                "timeframe development": 0.5,
+                "towards decision": 0.5,
+                "undercutting stores": 0.5,
+                "updated lugaru": 0.5,
+                "upon time": 0.5,
+                "used lugaru": 0.5,
+                "valve stupid": 0.5,
+                "visually updated": 0.5,
+                "wolfire fanboy": 0.5,
+                "years ago": 0.5
+            },
+            "values": {
+                "positiv": 24,
+                "cusumPositiv": 1302,
+                "negativ": -7,
+                "cusumNegativ": -303
+            }
+        },
+        {
+            "time": "2016-04",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 19,
+                "cusumPositiv": 1321,
+                "negativ": -14,
+                "cusumNegativ": -317
+            }
+        },
+        {
+            "time": "2016-05",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 16,
+                "cusumPositiv": 1337,
+                "negativ": -13,
+                "cusumNegativ": -330
+            }
+        },
+        {
+            "time": "2016-06",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 20,
+                "cusumPositiv": 1357,
+                "negativ": -23,
+                "cusumNegativ": -353
+            }
+        },
+        {
+            "time": "2016-07",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 20,
+                "cusumPositiv": 1377,
+                "negativ": -15,
+                "cusumNegativ": -368
+            }
+        },
+        {
+            "time": "2016-08",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 20,
+                "cusumPositiv": 1397,
+                "negativ": -15,
+                "cusumNegativ": -383
+            }
+        },
+        {
+            "time": "2016-09",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 16,
+                "cusumPositiv": 1413,
+                "negativ": -14,
+                "cusumNegativ": -397
+            }
+        },
+        {
+            "time": "2016-10",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 10,
+                "cusumPositiv": 1423,
+                "negativ": -5,
+                "cusumNegativ": -402
+            }
+        },
+        {
+            "time": "2016-11",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 25,
+                "cusumPositiv": 1448,
+                "negativ": -8,
+                "cusumNegativ": -410
+            }
+        },
+        {
+            "time": "2016-12",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 23,
+                "cusumPositiv": 1471,
+                "negativ": -10,
+                "cusumNegativ": -420
+            }
+        },
+        {
+            "time": "2017-01",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 85,
+                "cusumPositiv": 1556,
+                "negativ": -35,
+                "cusumNegativ": -455
+            }
+        },
+        {
+            "time": "2017-02",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 59,
+                "cusumPositiv": 1615,
+                "negativ": -39,
+                "cusumNegativ": -494
+            }
+        },
+        {
+            "time": "2017-03",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 20,
+                "cusumPositiv": 1635,
+                "negativ": -15,
+                "cusumNegativ": -509
+            }
+        },
+        {
+            "time": "2017-04",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 22,
+                "cusumPositiv": 1657,
+                "negativ": -12,
+                "cusumNegativ": -521
+            }
+        },
+        {
+            "time": "2017-05",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 37,
+                "cusumPositiv": 1694,
+                "negativ": -21,
+                "cusumNegativ": -542
+            }
+        },
+        {
+            "time": "2017-06",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 22,
+                "cusumPositiv": 1716,
+                "negativ": -8,
+                "cusumNegativ": -550
+            }
+        },
+        {
+            "time": "2017-07",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 22,
+                "cusumPositiv": 1738,
+                "negativ": -11,
+                "cusumNegativ": -561
+            }
+        },
+        {
+            "time": "2017-08",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 13,
+                "cusumPositiv": 1751,
+                "negativ": -2,
+                "cusumNegativ": -563
+            }
+        },
+        {
+            "time": "2017-09",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 23,
+                "cusumPositiv": 1774,
+                "negativ": -10,
+                "cusumNegativ": -573
+            }
+        },
+        {
+            "time": "2017-10",
+            "earlyAccess": false,
+            "reviewBombed": true,
+            "wordClouds": {
+                "support developers": 1.0,
+                "accordingly want": 0.5,
+                "acting felt": 0.5,
+                "action approaches": 0.5,
+                "alphas went": 0.5,
+                "although hand": 0.5,
+                "although may": 0.5,
+                "approach things": 0.5,
+                "approaches stealth": 0.5,
+                "aware reflexes": 0.5,
+                "bad okay": 0.5,
+                "basically like": 0.5,
+                "bigger level": 0.5,
+                "bladed aware": 0.5,
+                "blocking stealth": 0.5,
+                "blue moon": 0.5,
+                "brutal heavy": 0.5,
+                "campaign choices": 0.5,
+                "campaign decade": 0.5,
+                "campaign drika": 0.5,
+                "campaign time": 0.5,
+                "campaigns community": 0.5,
+                "campaigns lugaru": 0.5,
+                "capable hands": 0.5,
+                "change accordingly": 0.5,
+                "changes faithful": 0.5,
+                "character acting": 0.5,
+                "character dialogue": 0.5,
+                "choices interesting": 0.5,
+                "choices sandbox": 0.5,
+                "combat main": 0.5,
+                "combat mostly": 0.5,
+                "combat needed": 0.5,
+                "combat oriented": 0.5,
+                "commonly seen": 0.5,
+                "community creations": 0.5,
+                "continues turner": 0.5,
+                "controls jank": 0.5,
+                "conversation lots": 0.5,
+                "covers lore": 0.5,
+                "creations packaged": 0.5,
+                "decade development": 0.5,
+                "design non": 0.5,
+                "developers fairly": 0.5,
+                "development since": 0.5,
+                "development time": 0.5,
+                "dialogue change": 0.5,
+                "died everyone": 0.5,
+                "directions readable": 0.5,
+                "drika lugaru": 0.5,
+                "drika sub": 0.5,
+                "drop instantly": 0.5,
+                "easy handle": 0.5,
+                "every blue": 0.5,
+                "every character": 0.5,
+                "every level": 0.5,
+                "everyone moving": 0.5,
+                "everything made": 0.5,
+                "expands bigger": 0.5,
+                "fairly interested": 0.5,
+                "fairly medium": 0.5,
+                "faithful original": 0.5,
+                "felt like": 0.5,
+                "fighting last": 0.5,
+                "fighting quick": 0.5,
+                "find everything": 0.5,
+                "first campaign": 0.5,
+                "first changes": 0.5,
+                "first hundred": 0.5,
+                "fixes improvements": 0.5,
+                "flaws lugaru": 0.5,
+                "follow given": 0.5,
+                "followed development": 0.5,
+                "gameplay approach": 0.5,
+                "gameplay handful": 0.5,
+                "gameplay mix": 0.5,
+                "given directions": 0.5,
+                "gives player": 0.5,
+                "grasp sure": 0.5,
+                "hand fighting": 0.5,
+                "hand hand": 0.5,
+                "handful levels": 0.5,
+                "handle capable": 0.5,
+                "hands new": 0.5,
+                "heavy sword": 0.5,
+                "hits spot": 0.5,
+                "hundred alphas": 0.5,
+                "hype died": 0.5,
+                "important win": 0.5,
+                "improvements worthwhile": 0.5,
+                "improves upon": 0.5,
+                "including therium": 0.5,
+                "instantly although": 0.5,
+                "interested modding": 0.5,
+                "interesting followed": 0.5,
+                "jank someone": 0.5,
+                "kill perps": 0.5,
+                "knife hits": 0.5,
+                "last longer": 0.5,
+                "later levels": 0.5,
+                "length combat": 0.5,
+                "level continues": 0.5,
+                "level design": 0.5,
+                "levels mainly": 0.5,
+                "levels quite": 0.5,
+                "levels slowly": 0.5,
+                "life mishaps": 0.5,
+                "like grasp": 0.5,
+                "like rimworld": 0.5,
+                "like writers": 0.5,
+                "longer bladed": 0.5,
+                "lore secrets": 0.5,
+                "lore world": 0.5,
+                "lots modding": 0.5,
+                "lowering quality": 0.5,
+                "lugaru main": 0.5,
+                "lugaru remake": 0.5,
+                "lugaru sequel": 0.5,
+                "lugaru therium": 0.5,
+                "made campaign": 0.5,
+                "made shines": 0.5,
+                "main campaign": 0.5,
+                "main oriented": 0.5,
+                "main premise": 0.5,
+                "main trying": 0.5,
+                "mainly covers": 0.5,
+                "make sense": 0.5,
+                "masterpiece well": 0.5,
+                "may new": 0.5,
+                "medium length": 0.5,
+                "mishaps first": 0.5,
+                "mix parkour": 0.5,
+                "mod repackaged": 0.5,
+                "moddability things": 0.5,
+                "modding basically": 0.5,
+                "modding scene": 0.5,
+                "mods nowaday": 0.5,
+                "moon sale": 0.5,
+                "mostly combat": 0.5,
+                "moving although": 0.5,
+                "narrative writing": 0.5,
+                "needed every": 0.5,
+                "new mods": 0.5,
+                "new ones": 0.5,
+                "noise commonly": 0.5,
+                "non combat": 0.5,
+                "non stealth": 0.5,
+                "nowaday hype": 0.5,
+                "okay campaigns": 0.5,
+                "ones releasing": 0.5,
+                "opinion yes": 0.5,
+                "oriented bad": 0.5,
+                "oriented gameplay": 0.5,
+                "oriented short": 0.5,
+                "original say": 0.5,
+                "oruin side": 0.5,
+                "packaged main": 0.5,
+                "parkour puzzles": 0.5,
+                "perps blocking": 0.5,
+                "personal opinion": 0.5,
+                "player choices": 0.5,
+                "plays scenery": 0.5,
+                "premise lugaru": 0.5,
+                "pure action": 0.5,
+                "puzzles combat": 0.5,
+                "quality later": 0.5,
+                "quick brutal": 0.5,
+                "quite sure": 0.5,
+                "readable lore": 0.5,
+                "reflexes timing": 0.5,
+                "releasing every": 0.5,
+                "remake first": 0.5,
+                "repackaged fixes": 0.5,
+                "rimworld moddability": 0.5,
+                "ruins oruin": 0.5,
+                "sale want": 0.5,
+                "sandbox gameplay": 0.5,
+                "say fairly": 0.5,
+                "scene gameplay": 0.5,
+                "scenery conversation": 0.5,
+                "scuffles stealth": 0.5,
+                "secrets find": 0.5,
+                "seen non": 0.5,
+                "sense every": 0.5,
+                "separate therium": 0.5,
+                "sequel fighting": 0.5,
+                "shines campaign": 0.5,
+                "shines mod": 0.5,
+                "short levels": 0.5,
+                "side campaigns": 0.5,
+                "since first": 0.5,
+                "slowly sort": 0.5,
+                "someone like": 0.5,
+                "sort lowering": 0.5,
+                "spot drop": 0.5,
+                "stealth oriented": 0.5,
+                "stealth pure": 0.5,
+                "stealth usual": 0.5,
+                "stealth way": 0.5,
+                "sub separate": 0.5
+            },
+            "values": {
+                "positiv": 210,
+                "cusumPositiv": 1984,
+                "negativ": -121,
+                "cusumNegativ": -694
+            }
+        },
+        {
+            "time": "2017-11",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 118,
+                "cusumPositiv": 2102,
+                "negativ": -31,
+                "cusumNegativ": -725
+            }
+        },
+        {
+            "time": "2017-12",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 57,
+                "cusumPositiv": 2159,
+                "negativ": -25,
+                "cusumNegativ": -750
+            }
+        },
+        {
+            "time": "2018-01",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 52,
+                "cusumPositiv": 2211,
+                "negativ": -16,
+                "cusumNegativ": -766
+            }
+        },
+        {
+            "time": "2018-02",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 67,
+                "cusumPositiv": 2278,
+                "negativ": -53,
+                "cusumNegativ": -819
+            }
+        },
+        {
+            "time": "2018-03",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 142,
+                "cusumPositiv": 2420,
+                "negativ": -119,
+                "cusumNegativ": -938
+            }
+        },
+        {
+            "time": "2018-04",
+            "earlyAccess": false,
+            "reviewBombed": true,
+            "wordClouds": {
+                "able undercut": 1.0,
+                "action lawsuit": 1.0,
+                "actually fixing": 1.0,
+                "become class": 1.0,
+                "behavior especially": 1.0,
+                "better went": 1.0,
+                "bothered make": 1.0,
+                "citing unfair": 1.0,
+                "class action": 1.0,
+                "company sucks": 1.0,
+                "crap support": 1.0,
+                "decided sue": 1.0,
+                "disappointing experience": 1.0,
+                "especially nothing": 1.0,
+                "experience rather": 1.0,
+                "fighting mechanics": 1.0,
+                "fixing decided": 1.0,
+                "give money": 1.0,
+                "hurt valve": 1.0,
+                "jeopardize whole": 1.0,
+                "keep prices": 1.0,
+                "lawsuit rough": 1.0,
+                "leading disappointing": 1.0,
+                "libraries hurt": 1.0,
+                "lifeless world": 1.0,
+                "make better": 1.0,
+                "mechanics shallow": 1.0,
+                "mediocre crap": 1.0,
+                "money mediocre": 1.0,
+                "namely wanted": 1.0,
+                "nonsense behavior": 1.0,
+                "nothing offer": 1.0,
+                "nowhere fighting": 1.0,
+                "otherwise leading": 1.0,
+                "platforms jeopardize": 1.0,
+                "potential went": 1.0,
+                "practices selling": 1.0,
+                "prices storefronts": 1.0,
+                "rather actually": 1.0,
+                "rough sucks": 1.0,
+                "selling namely": 1.0,
+                "shallow lifeless": 1.0,
+                "significantly become": 1.0,
+                "storefronts want": 1.0,
+                "sucks bothered": 1.0,
+                "sucks company": 1.0,
+                "sue valve": 1.0,
+                "support nonsense": 1.0,
+                "ton potential": 1.0,
+                "undercut platforms": 1.0,
+                "unfair practices": 1.0,
+                "valve citing": 1.0,
+                "valve give": 1.0,
+                "valve significantly": 1.0,
+                "want able": 1.0,
+                "wanted keep": 1.0,
+                "went nowhere": 1.0,
+                "went valve": 1.0,
+                "whole libraries": 1.0,
+                "world otherwise": 1.0
+            },
+            "values": {
+                "positiv": 42,
+                "cusumPositiv": 2462,
+                "negativ": -26,
+                "cusumNegativ": -964
+            }
+        },
+        {
+            "time": "2018-05",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 26,
+                "cusumPositiv": 2488,
+                "negativ": -15,
+                "cusumNegativ": -979
+            }
+        },
+        {
+            "time": "2018-06",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 42,
+                "cusumPositiv": 2530,
+                "negativ": -19,
+                "cusumNegativ": -998
+            }
+        },
+        {
+            "time": "2018-07",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 26,
+                "cusumPositiv": 2556,
+                "negativ": -11,
+                "cusumNegativ": -1009
+            }
+        },
+        {
+            "time": "2018-08",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 17,
+                "cusumPositiv": 2573,
+                "negativ": -10,
+                "cusumNegativ": -1019
+            }
+        },
+        {
+            "time": "2018-09",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 19,
+                "cusumPositiv": 2592,
+                "negativ": -8,
+                "cusumNegativ": -1027
+            }
+        },
+        {
+            "time": "2018-10",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 14,
+                "cusumPositiv": 2606,
+                "negativ": -7,
+                "cusumNegativ": -1034
+            }
+        },
+        {
+            "time": "2018-11",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 37,
+                "cusumPositiv": 2643,
+                "negativ": -5,
+                "cusumNegativ": -1039
+            }
+        },
+        {
+            "time": "2018-12",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 20,
+                "cusumPositiv": 2663,
+                "negativ": -9,
+                "cusumNegativ": -1048
+            }
+        },
+        {
+            "time": "2019-01",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 23,
+                "cusumPositiv": 2686,
+                "negativ": -6,
+                "cusumNegativ": -1054
+            }
+        },
+        {
+            "time": "2019-02",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 22,
+                "cusumPositiv": 2708,
+                "negativ": -11,
+                "cusumNegativ": -1065
+            }
+        },
+        {
+            "time": "2019-03",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 33,
+                "cusumPositiv": 2741,
+                "negativ": -16,
+                "cusumNegativ": -1081
+            }
+        },
+        {
+            "time": "2019-04",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 37,
+                "cusumPositiv": 2778,
+                "negativ": -12,
+                "cusumNegativ": -1093
+            }
+        },
+        {
+            "time": "2019-05",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 17,
+                "cusumPositiv": 2795,
+                "negativ": -8,
+                "cusumNegativ": -1101
+            }
+        },
+        {
+            "time": "2019-06",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 47,
+                "cusumPositiv": 2842,
+                "negativ": -12,
+                "cusumNegativ": -1113
+            }
+        },
+        {
+            "time": "2019-07",
+            "earlyAccess": false,
+            "reviewBombed": true,
+            "wordClouds": {
+                "feel bad": 1.0,
+                "gets stale": 1.0,
+                "missed opportunities": 1.0,
+                "name baby": 1.0,
+                "opportunities name": 1.0,
+                "potential missed": 1.0,
+                "untapped potential": 1.0,
+                "absolutely asking": 0.5,
+                "achieved considering": 0.5,
+                "activist sit": 0.5,
+                "add combat": 0.5,
+                "allay area": 0.5,
+                "almost everything": 0.5,
+                "always pretty": 0.5,
+                "amend share": 0.5,
+                "angsty teen": 0.5,
+                "animal rights": 0.5,
+                "animals cutting": 0.5,
+                "animals sake": 0.5,
+                "area feels": 0.5,
+                "around kick": 0.5,
+                "arts combat": 0.5,
+                "asking laughably": 0.5,
+                "ass feels": 0.5,
+                "assed final": 0.5,
+                "avoid unless": 0.5,
+                "awfully jarring": 0.5,
+                "baby absolutely": 0.5,
+                "baby fact": 0.5,
+                "bad cutting": 0.5,
+                "bad killing": 0.5,
+                "bad way": 0.5,
+                "baffling lawsuit": 0.5,
+                "behind leaves": 0.5,
+                "beyond took": 0.5,
+                "blame lack": 0.5,
+                "blasphemy charge": 0.5,
+                "bread landfill": 0.5,
+                "brings uncanny": 0.5,
+                "campaign obviously": 0.5,
+                "care future": 0.5,
+                "characters depth": 0.5,
+                "charge half": 0.5,
+                "chase sequence": 0.5,
+                "combat always": 0.5,
+                "combat blame": 0.5,
+                "combat gets": 0.5,
+                "combat make": 0.5,
+                "combat parkour": 0.5,
+                "combat seems": 0.5,
+                "communicating misery": 0.5,
+                "compared almost": 0.5,
+                "connected sure": 0.5,
+                "considering scratch": 0.5,
+                "cool first": 0.5,
+                "cope failing": 0.5,
+                "currency may": 0.5,
+                "cutscene tries": 0.5,
+                "cutting animals": 0.5,
+                "cutting cutscene": 0.5,
+                "cutting dogs": 0.5,
+                "decent plot": 0.5,
+                "depth seems": 0.5,
+                "dev launching": 0.5,
+                "dogs since": 0.5,
+                "done though": 0.5,
+                "dope video": 0.5,
+                "dr combat": 0.5,
+                "dreaming stupid": 0.5,
+                "drop ocean": 0.5,
+                "dropped like": 0.5,
+                "dudes allay": 0.5,
+                "dunce og": 0.5,
+                "earlier brings": 0.5,
+                "effect makes": 0.5,
+                "element executed": 0.5,
+                "else puzzles": 0.5,
+                "embarassing whimper": 0.5,
+                "enough recently": 0.5,
+                "equivalent whatever": 0.5,
+                "esque feeling": 0.5,
+                "everything else": 0.5,
+                "exactly animal": 0.5,
+                "excuse run": 0.5,
+                "executed kinda": 0.5,
+                "experience feeling": 0.5,
+                "experience gets": 0.5,
+                "extend beyond": 0.5,
+                "extremely sad": 0.5,
+                "fact worked": 0.5,
+                "failing extremely": 0.5,
+                "falls flat": 0.5,
+                "faster bread": 0.5,
+                "favour avoid": 0.5,
+                "feeling hell": 0.5,
+                "feeling permeates": 0.5,
+                "feels awfully": 0.5,
+                "feels like": 0.5,
+                "feels loosely": 0.5,
+                "final product": 0.5,
+                "find blasphemy": 0.5,
+                "find dev": 0.5,
+                "finish campaign": 0.5,
+                "firefight parkour": 0.5,
+                "first martial": 0.5,
+                "flat embarassing": 0.5,
+                "frustrating though": 0.5,
+                "funnily enough": 0.5,
+                "future titles": 0.5,
+                "gets dropped": 0.5,
+                "getting mod": 0.5,
+                "give characters": 0.5,
+                "goring dudes": 0.5,
+                "gun firefight": 0.5,
+                "half assed": 0.5,
+                "hang onto": 0.5,
+                "heavily relies": 0.5,
+                "hell cutting": 0.5,
+                "helps hurts": 0.5,
+                "hurts valve": 0.5,
+                "impact nerf": 0.5,
+                "impossible lot": 0.5,
+                "instead find": 0.5,
+                "ironically touted": 0.5,
+                "jaded point": 0.5,
+                "jarring killing": 0.5,
+                "jul untapped": 0.5,
+                "kick ass": 0.5,
+                "killing animals": 0.5,
+                "killing load": 0.5,
+                "kinda well": 0.5,
+                "lack decent": 0.5,
+                "landfill impact": 0.5,
+                "last year": 0.5,
+                "laughably luck": 0.5,
+                "launching baffling": 0.5,
+                "lawsuit helps": 0.5,
+                "leaves sour": 0.5,
+                "leaving behind": 0.5,
+                "left jaded": 0.5,
+                "like angsty": 0.5,
+                "like bad": 0.5,
+                "like load": 0.5,
+                "like mentioned": 0.5,
+                "like putting": 0.5,
+                "lives goring": 0.5,
+                "load animals": 0.5,
+                "load npc": 0.5,
+                "loosely connected": 0.5,
+                "lot done": 0.5,
+                "luck getting": 0.5,
+                "make player": 0.5,
+                "make right": 0.5,
+                "makes experience": 0.5,
+                "makes feel": 0.5,
+                "martial arts": 0.5,
+                "may use": 0.5,
+                "mentioned earlier": 0.5,
+                "misery lives": 0.5,
+                "mod support": 0.5,
+                "mod work": 0.5,
+                "months leaving": 0.5,
+                "mouth please": 0.5,
+                "need excuse": 0.5,
+                "nerf gun": 0.5,
+                "nice time": 0.5,
+                "npc set": 0.5,
+                "obviously left": 0.5,
+                "ocean tl": 0.5,
+                "og text": 0.5,
+                "onto like": 0.5,
+                "parkour element": 0.5,
+                "parkour test": 0.5,
+                "parkour woefully": 0.5,
+                "permeates throughout": 0.5,
+                "personally find": 0.5,
+                "player feel": 0.5,
+                "player untapped": 0.5,
+                "please favour": 0.5,
+                "plot exactly": 0.5,
+                "plot hang": 0.5,
+                "poetry vo": 0.5,
+                "point reviewing": 0.5,
+                "pretty dope": 0.5,
+                "product heavily": 0.5,
+                "profound poetry": 0.5,
+                "proud achieved": 0.5,
+                "pushing profound": 0.5,
+                "putting chase": 0.5,
+                "puzzles frustrating": 0.5,
+                "quid equivalent": 0.5,
+                "recently thinking": 0.5,
+                "relies mod": 0.5,
+                "reviewing months": 0.5,
+                "revisiting last": 0.5,
+                "right makes": 0.5,
+                "right parkour": 0.5,
+                "rights activist": 0.5,
+                "roundabout cope": 0.5,
+                "run around": 0.5
+            },
+            "values": {
+                "positiv": 78,
+                "cusumPositiv": 2920,
+                "negativ": -10,
+                "cusumNegativ": -1123
+            }
+        },
+        {
+            "time": "2019-08",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 13,
+                "cusumPositiv": 2933,
+                "negativ": -3,
+                "cusumNegativ": -1126
+            }
+        },
+        {
+            "time": "2019-09",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 12,
+                "cusumPositiv": 2945,
+                "negativ": -5,
+                "cusumNegativ": -1131
+            }
+        },
+        {
+            "time": "2019-10",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 32,
+                "cusumPositiv": 2977,
+                "negativ": -6,
+                "cusumNegativ": -1137
+            }
+        },
+        {
+            "time": "2019-11",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 147,
+                "cusumPositiv": 3124,
+                "negativ": -11,
+                "cusumNegativ": -1148
+            }
+        },
+        {
+            "time": "2019-12",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 85,
+                "cusumPositiv": 3209,
+                "negativ": -10,
+                "cusumNegativ": -1158
+            }
+        },
+        {
+            "time": "2020-01",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 73,
+                "cusumPositiv": 3282,
+                "negativ": -10,
+                "cusumNegativ": -1168
+            }
+        },
+        {
+            "time": "2020-02",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 53,
+                "cusumPositiv": 3335,
+                "negativ": -9,
+                "cusumNegativ": -1177
+            }
+        },
+        {
+            "time": "2020-03",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 61,
+                "cusumPositiv": 3396,
+                "negativ": -7,
+                "cusumNegativ": -1184
+            }
+        },
+        {
+            "time": "2020-04",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 113,
+                "cusumPositiv": 3509,
+                "negativ": -29,
+                "cusumNegativ": -1213
+            }
+        },
+        {
+            "time": "2020-05",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 67,
+                "cusumPositiv": 3576,
+                "negativ": -3,
+                "cusumNegativ": -1216
+            }
+        },
+        {
+            "time": "2020-06",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 74,
+                "cusumPositiv": 3650,
+                "negativ": -13,
+                "cusumNegativ": -1229
+            }
+        },
+        {
+            "time": "2020-07",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 82,
+                "cusumPositiv": 3732,
+                "negativ": -9,
+                "cusumNegativ": -1238
+            }
+        },
+        {
+            "time": "2020-08",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 44,
+                "cusumPositiv": 3776,
+                "negativ": -12,
+                "cusumNegativ": -1250
+            }
+        },
+        {
+            "time": "2020-09",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 45,
+                "cusumPositiv": 3821,
+                "negativ": -2,
+                "cusumNegativ": -1252
+            }
+        },
+        {
+            "time": "2020-10",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 66,
+                "cusumPositiv": 3887,
+                "negativ": -10,
+                "cusumNegativ": -1262
+            }
+        },
+        {
+            "time": "2020-11",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 109,
+                "cusumPositiv": 3996,
+                "negativ": -19,
+                "cusumNegativ": -1281
+            }
+        },
+        {
+            "time": "2020-12",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 91,
+                "cusumPositiv": 4087,
+                "negativ": -14,
+                "cusumNegativ": -1295
+            }
+        },
+        {
+            "time": "2021-01",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 81,
+                "cusumPositiv": 4168,
+                "negativ": -12,
+                "cusumNegativ": -1307
+            }
+        },
+        {
+            "time": "2021-02",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 52,
+                "cusumPositiv": 4220,
+                "negativ": -14,
+                "cusumNegativ": -1321
+            }
+        },
+        {
+            "time": "2021-03",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 59,
+                "cusumPositiv": 4279,
+                "negativ": -7,
+                "cusumNegativ": -1328
+            }
+        },
+        {
+            "time": "2021-04",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 48,
+                "cusumPositiv": 4327,
+                "negativ": -6,
+                "cusumNegativ": -1334
+            }
+        },
+        {
+            "time": "2021-05",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 51,
+                "cusumPositiv": 4378,
+                "negativ": -25,
+                "cusumNegativ": -1359
+            }
+        },
+        {
+            "time": "2021-06",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 58,
+                "cusumPositiv": 4436,
+                "negativ": -10,
+                "cusumNegativ": -1369
+            }
+        },
+        {
+            "time": "2021-07",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 74,
+                "cusumPositiv": 4510,
+                "negativ": -11,
+                "cusumNegativ": -1380
+            }
+        },
+        {
+            "time": "2021-08",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 52,
+                "cusumPositiv": 4562,
+                "negativ": -6,
+                "cusumNegativ": -1386
+            }
+        },
+        {
+            "time": "2021-09",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 47,
+                "cusumPositiv": 4609,
+                "negativ": -6,
+                "cusumNegativ": -1392
+            }
+        },
+        {
+            "time": "2021-10",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 37,
+                "cusumPositiv": 4646,
+                "negativ": -8,
+                "cusumNegativ": -1400
+            }
+        },
+        {
+            "time": "2021-11",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 60,
+                "cusumPositiv": 4706,
+                "negativ": -4,
+                "cusumNegativ": -1404
+            }
+        },
+        {
+            "time": "2021-12",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 96,
+                "cusumPositiv": 4802,
+                "negativ": -9,
+                "cusumNegativ": -1413
+            }
+        },
+        {
+            "time": "2022-01",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 63,
+                "cusumPositiv": 4865,
+                "negativ": -7,
+                "cusumNegativ": -1420
+            }
+        },
+        {
+            "time": "2022-02",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 33,
+                "cusumPositiv": 4898,
+                "negativ": -12,
+                "cusumNegativ": -1432
+            }
+        },
+        {
+            "time": "2022-03",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 52,
+                "cusumPositiv": 4950,
+                "negativ": -5,
+                "cusumNegativ": -1437
+            }
+        },
+        {
+            "time": "2022-04",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 35,
+                "cusumPositiv": 4985,
+                "negativ": -4,
+                "cusumNegativ": -1441
+            }
+        },
+        {
+            "time": "2022-05",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 46,
+                "cusumPositiv": 5031,
+                "negativ": -4,
+                "cusumNegativ": -1445
+            }
+        },
+        {
+            "time": "2022-06",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 50,
+                "cusumPositiv": 5081,
+                "negativ": -3,
+                "cusumNegativ": -1448
+            }
+        },
+        {
+            "time": "2022-07",
+            "earlyAccess": false,
+            "reviewBombed": true,
+            "wordClouds": {
+                "active ragdolls": 1.0,
+                "fighting though": 1.0,
+                "npcs fighting": 1.0,
+                "ragdolls npcs": 1.0,
+                "say therium": 1.0,
+                "therium part": 1.0,
+                "though say": 1.0
+            },
+            "values": {
+                "positiv": 89,
+                "cusumPositiv": 5170,
+                "negativ": -8,
+                "cusumNegativ": -1456
+            }
+        },
+        {
+            "time": "2022-08",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 57,
+                "cusumPositiv": 5227,
+                "negativ": -7,
+                "cusumNegativ": -1463
+            }
+        },
+        {
+            "time": "2022-09",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 53,
+                "cusumPositiv": 5280,
+                "negativ": -3,
+                "cusumNegativ": -1466
+            }
+        },
+        {
+            "time": "2022-10",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 36,
+                "cusumPositiv": 5316,
+                "negativ": -3,
+                "cusumNegativ": -1469
+            }
+        },
+        {
+            "time": "2022-11",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 62,
+                "cusumPositiv": 5378,
+                "negativ": -4,
+                "cusumNegativ": -1473
+            }
+        },
+        {
+            "time": "2022-12",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 44,
+                "cusumPositiv": 5422,
+                "negativ": -3,
+                "cusumNegativ": -1476
+            }
+        },
+        {
+            "time": "2023-01",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 57,
+                "cusumPositiv": 5479,
+                "negativ": -3,
+                "cusumNegativ": -1479
+            }
+        },
+        {
+            "time": "2023-02",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 49,
+                "cusumPositiv": 5528,
+                "negativ": -8,
+                "cusumNegativ": -1487
+            }
+        },
+        {
+            "time": "2023-03",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 57,
+                "cusumPositiv": 5585,
+                "negativ": -3,
+                "cusumNegativ": -1490
+            }
+        },
+        {
+            "time": "2023-04",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 36,
+                "cusumPositiv": 5621,
+                "negativ": -3,
+                "cusumNegativ": -1493
+            }
+        },
+        {
+            "time": "2023-05",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 34,
+                "cusumPositiv": 5655,
+                "negativ": -3,
+                "cusumNegativ": -1496
+            }
+        },
+        {
+            "time": "2023-06",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 37,
+                "cusumPositiv": 5692,
+                "negativ": -4,
+                "cusumNegativ": -1500
+            }
+        },
+        {
+            "time": "2023-07",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 65,
+                "cusumPositiv": 5757,
+                "negativ": -4,
+                "cusumNegativ": -1504
+            }
+        },
+        {
+            "time": "2023-08",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 32,
+                "cusumPositiv": 5789,
+                "negativ": -4,
+                "cusumNegativ": -1508
+            }
+        },
+        {
+            "time": "2023-09",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 24,
+                "cusumPositiv": 5813,
+                "negativ": -1,
+                "cusumNegativ": -1509
+            }
+        },
+        {
+            "time": "2023-10",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 25,
+                "cusumPositiv": 5838,
+                "negativ": -3,
+                "cusumNegativ": -1512
+            }
+        },
+        {
+            "time": "2023-11",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 40,
+                "cusumPositiv": 5878,
+                "negativ": -16,
+                "cusumNegativ": -1528
+            }
+        },
+        {
+            "time": "2023-12",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 62,
+                "cusumPositiv": 5940,
+                "negativ": -8,
+                "cusumNegativ": -1536
+            }
+        },
+        {
+            "time": "2024-01",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 58,
+                "cusumPositiv": 5998,
+                "negativ": -9,
+                "cusumNegativ": -1545
+            }
+        },
+        {
+            "time": "2024-02",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 30,
+                "cusumPositiv": 6028,
+                "negativ": -5,
+                "cusumNegativ": -1550
+            }
+        },
+        {
+            "time": "2024-03",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 51,
+                "cusumPositiv": 6079,
+                "negativ": -3,
+                "cusumNegativ": -1553
+            }
+        },
+        {
+            "time": "2024-04",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 47,
+                "cusumPositiv": 6126,
+                "negativ": -2,
+                "cusumNegativ": -1555
+            }
+        },
+        {
+            "time": "2024-05",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 50,
+                "cusumPositiv": 6176,
+                "negativ": -6,
+                "cusumNegativ": -1561
+            }
+        },
+        {
+            "time": "2024-06",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 59,
+                "cusumPositiv": 6235,
+                "negativ": -5,
+                "cusumNegativ": -1566
+            }
+        },
+        {
+            "time": "2024-07",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 71,
+                "cusumPositiv": 6306,
+                "negativ": -5,
+                "cusumNegativ": -1571
+            }
+        },
+        {
+            "time": "2024-08",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 46,
+                "cusumPositiv": 6352,
+                "negativ": -3,
+                "cusumNegativ": -1574
+            }
+        },
+        {
+            "time": "2024-09",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 42,
+                "cusumPositiv": 6394,
+                "negativ": -1,
+                "cusumNegativ": -1575
+            }
+        },
+        {
+            "time": "2024-10",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 32,
+                "cusumPositiv": 6426,
+                "negativ": -5,
+                "cusumNegativ": -1580
+            }
+        },
+        {
+            "time": "2024-11",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 39,
+                "cusumPositiv": 6465,
+                "negativ": -6,
+                "cusumNegativ": -1586
+            }
+        },
+        {
+            "time": "2024-12",
+            "earlyAccess": false,
+            "reviewBombed": true,
+            "wordClouds": {
+                "feels like": 1.0,
+                "tech demo": 1.0,
+                "lawsuit valve": 0.8333333333333334,
+                "pro consumer": 0.8333333333333334,
+                "suing valve": 0.6666666666666666,
+                "cheaper platforms": 0.5,
+                "early access": 0.5,
+                "pc gaming": 0.5,
+                "anything else": 0.3333333333333333,
+                "biting hand": 0.3333333333333333,
+                "bribe money": 0.3333333333333333,
+                "bring back": 0.3333333333333333,
+                "clunky alpha": 0.3333333333333333,
+                "combat pretty": 0.3333333333333333,
+                "epic bribe": 0.3333333333333333,
+                "epic gog": 0.3333333333333333,
+                "frivolous lawsuit": 0.3333333333333333,
+                "hand feeds": 0.3333333333333333,
+                "made developer": 0.3333333333333333,
+                "menu find": 0.3333333333333333,
+                "open level": 0.3333333333333333,
+                "platforming combat": 0.3333333333333333,
+                "press go": 0.3333333333333333,
+                "quality exposure": 0.3333333333333333,
+                "service free": 0.3333333333333333,
+                "spent time": 0.3333333333333333,
+                "sue valve": 0.3333333333333333,
+                "trying sue": 0.3333333333333333,
+                "unfinished feeling": 0.3333333333333333,
+                "unfinished tech": 0.3333333333333333,
+                "want money": 0.3333333333333333,
+                "waste money": 0.3333333333333333,
+                "years ago": 0.3333333333333333,
+                "abandoned mechanics": 0.16666666666666666,
+                "abandoned pretty": 0.16666666666666666,
+                "abandoned salty": 0.16666666666666666,
+                "abandoning updates": 0.16666666666666666,
+                "abandonware extortion": 0.16666666666666666,
+                "able build": 0.16666666666666666,
+                "able drop": 0.16666666666666666,
+                "absolute bs": 0.16666666666666666,
+                "access feature": 0.16666666666666666,
+                "access never": 0.16666666666666666,
+                "access supporter": 0.16666666666666666,
+                "accountability complain": 0.16666666666666666,
+                "accountability user": 0.16666666666666666,
+                "acted shame": 0.16666666666666666,
+                "acting weakens": 0.16666666666666666,
+                "active spend": 0.16666666666666666,
+                "actively avoid": 0.16666666666666666,
+                "actively boycott": 0.16666666666666666,
+                "actively trying": 0.16666666666666666,
+                "actually pretty": 0.16666666666666666,
+                "actually want": 0.16666666666666666,
+                "add anything": 0.16666666666666666,
+                "added anything": 0.16666666666666666,
+                "added interesting": 0.16666666666666666,
+                "added mode": 0.16666666666666666,
+                "adding devs": 0.16666666666666666,
+                "adds anything": 0.16666666666666666,
+                "adkhfgsadiysivsivhsf sdhc": 0.16666666666666666,
+                "adventure combat": 0.16666666666666666,
+                "advise friends": 0.16666666666666666,
+                "adyuif gs": 0.16666666666666666,
+                "aewsome dogwater": 0.16666666666666666,
+                "affect reviewed": 0.16666666666666666,
+                "ago crazy": 0.16666666666666666,
+                "ago early": 0.16666666666666666,
+                "ago expecting": 0.16666666666666666,
+                "agreed sell": 0.16666666666666666,
+                "aimed made": 0.16666666666666666,
+                "aka team": 0.16666666666666666,
+                "allegedly allowing": 0.16666666666666666,
+                "allow share": 0.16666666666666666,
+                "allowed sell": 0.16666666666666666,
+                "allowing devs": 0.16666666666666666,
+                "along another": 0.16666666666666666,
+                "alot fighting": 0.16666666666666666,
+                "alpha left": 0.16666666666666666,
+                "alpha player": 0.16666666666666666,
+                "alpha quality": 0.16666666666666666,
+                "alpha remember": 0.16666666666666666,
+                "alright kinda": 0.16666666666666666,
+                "alright something": 0.16666666666666666,
+                "although validity": 0.16666666666666666,
+                "ambitious project": 0.16666666666666666,
+                "amount freebies": 0.16666666666666666,
+                "angry distributor": 0.16666666666666666,
+                "annoying surely": 0.16666666666666666,
+                "another dev": 0.16666666666666666,
+                "another looking": 0.16666666666666666,
+                "another platform": 0.16666666666666666,
+                "anti competitive": 0.16666666666666666,
+                "anti consumer": 0.16666666666666666,
+                "anti trust": 0.16666666666666666,
+                "anymore enough": 0.16666666666666666,
+                "anything added": 0.16666666666666666,
+                "anything developer": 0.16666666666666666,
+                "anything ling": 0.16666666666666666,
+                "anything new": 0.16666666666666666,
+                "anything world": 0.16666666666666666,
+                "anywhere outside": 0.16666666666666666,
+                "apartment complex": 0.16666666666666666,
+                "appears abandoned": 0.16666666666666666,
+                "approach combat": 0.16666666666666666,
+                "area quality": 0.16666666666666666,
+                "areas leaned": 0.16666666666666666,
+                "arena arena": 0.16666666666666666,
+                "arena rather": 0.16666666666666666,
+                "arenas rather": 0.16666666666666666,
+                "around familiar": 0.16666666666666666,
+                "around kicking": 0.16666666666666666,
+                "around spawned": 0.16666666666666666,
+                "asking devs": 0.16666666666666666,
+                "asking sale": 0.16666666666666666,
+                "aspect fails": 0.16666666666666666,
+                "aspect targets": 0.16666666666666666,
+                "aspects movement": 0.16666666666666666,
+                "ass parkour": 0.16666666666666666,
+                "ass tabs": 0.16666666666666666,
+                "asset flip": 0.16666666666666666,
+                "attempt frivolous": 0.16666666666666666,
+                "attempt piece": 0.16666666666666666,
+                "attention sue": 0.16666666666666666,
+                "attention unjustifiable": 0.16666666666666666,
+                "audience profits": 0.16666666666666666,
+                "avoid made": 0.16666666666666666,
+                "aw heck": 0.16666666666666666,
+                "aw way": 0.16666666666666666,
+                "aware lawsuit": 0.16666666666666666,
+                "away loser": 0.16666666666666666,
+                "awful controls": 0.16666666666666666,
+                "back development": 0.16666666666666666,
+                "back flip": 0.16666666666666666,
+                "back hope": 0.16666666666666666,
+                "back made": 0.16666666666666666,
+                "back mode": 0.16666666666666666,
+                "back potential": 0.16666666666666666,
+                "back spawn": 0.16666666666666666,
+                "back wasted": 0.16666666666666666,
+                "backers mar": 0.16666666666666666,
+                "baked platformer": 0.16666666666666666,
+                "bandwidth back": 0.16666666666666666,
+                "bandwidth ssd": 0.16666666666666666,
+                "barely adds": 0.16666666666666666,
+                "barely developers": 0.16666666666666666,
+                "base better": 0.16666666666666666,
+                "based mod": 0.16666666666666666,
+                "based track": 0.16666666666666666,
+                "basically lazy": 0.16666666666666666,
+                "basically tech": 0.16666666666666666,
+                "basicly tech": 0.16666666666666666,
+                "beat enough": 0.16666666666666666,
+                "bed lay": 0.16666666666666666,
+                "believe slept": 0.16666666666666666,
+                "benefited valves": 0.16666666666666666,
+                "besides fact": 0.16666666666666666,
+                "beta stages": 0.16666666666666666,
+                "better controls": 0.16666666666666666,
+                "better currently": 0.16666666666666666,
+                "better figures": 0.16666666666666666,
+                "better imagine": 0.16666666666666666,
+                "better options": 0.16666666666666666,
+                "better purely": 0.16666666666666666,
+                "better sue": 0.16666666666666666,
+                "beware hit": 0.16666666666666666,
+                "big fat": 0.16666666666666666,
+                "big innovative": 0.16666666666666666,
+                "big outdoor": 0.16666666666666666,
+                "bit less": 0.16666666666666666,
+                "bit short": 0.16666666666666666,
+                "bite devs": 0.16666666666666666,
+                "bite hand": 0.16666666666666666,
+                "blames valve": 0.16666666666666666,
+                "blast makes": 0.16666666666666666,
+                "bloody knives": 0.16666666666666666,
+                "bnuuy revolution": 0.16666666666666666,
+                "bnuy cons": 0.16666666666666666,
+                "bonus bonus": 0.16666666666666666,
+                "bonus super": 0.16666666666666666,
+                "bonus thing": 0.16666666666666666,
+                "boosting sales": 0.16666666666666666,
+                "boring enemies": 0.16666666666666666,
+                "boss type": 0.16666666666666666,
+                "bottom map": 0.16666666666666666,
+                "bounce wall": 0.16666666666666666,
+                "bout rather": 0.16666666666666666,
+                "box around": 0.16666666666666666,
+                "box reset": 0.16666666666666666,
+                "boycott developer": 0.16666666666666666,
+                "bring see": 0.16666666666666666,
+                "brought arena": 0.16666666666666666,
+                "bruh basicly": 0.16666666666666666,
+                "bs keep": 0.16666666666666666,
+                "bucks however": 0.16666666666666666,
+                "build levels": 0.16666666666666666,
+                "building sadly": 0.16666666666666666,
+                "bundle shame": 0.16666666666666666,
+                "bunnies bloody": 0.16666666666666666,
+                "bunny warfare": 0.16666666666666666
+            },
+            "values": {
+                "positiv": 83,
+                "cusumPositiv": 6548,
+                "negativ": -59,
+                "cusumNegativ": -1645
+            }
+        },
+        {
+            "time": "2025-01",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 57,
+                "cusumPositiv": 6605,
+                "negativ": -7,
+                "cusumNegativ": -1652
+            }
+        },
+        {
+            "time": "2025-02",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 39,
+                "cusumPositiv": 6644,
+                "negativ": -1,
+                "cusumNegativ": -1653
+            }
+        },
+        {
+            "time": "2025-03",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 63,
+                "cusumPositiv": 6707,
+                "negativ": -5,
+                "cusumNegativ": -1658
+            }
+        },
+        {
+            "time": "2025-04",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 38,
+                "cusumPositiv": 6745,
+                "negativ": -1,
+                "cusumNegativ": -1659
+            }
+        },
+        {
+            "time": "2025-05",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 39,
+                "cusumPositiv": 6784,
+                "negativ": -4,
+                "cusumNegativ": -1663
+            }
+        },
+        {
+            "time": "2025-06",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 76,
+                "cusumPositiv": 6860,
+                "negativ": -15,
+                "cusumNegativ": -1678
+            }
+        },
+        {
+            "time": "2025-07",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 46,
+                "cusumPositiv": 6906,
+                "negativ": -8,
+                "cusumNegativ": -1686
+            }
+        },
+        {
+            "time": "2025-08",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 42,
+                "cusumPositiv": 6948,
+                "negativ": -7,
+                "cusumNegativ": -1693
+            }
+        },
+        {
+            "time": "2025-09",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 46,
+                "cusumPositiv": 6994,
+                "negativ": -4,
+                "cusumNegativ": -1697
+            }
+        },
+        {
+            "time": "2025-10",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 54,
+                "cusumPositiv": 7048,
+                "negativ": -4,
+                "cusumNegativ": -1701
+            }
+        },
+        {
+            "time": "2025-11",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 35,
+                "cusumPositiv": 7083,
+                "negativ": -2,
+                "cusumNegativ": -1703
+            }
+        },
+        {
+            "time": "2025-12",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 53,
+                "cusumPositiv": 7136,
+                "negativ": -4,
+                "cusumNegativ": -1707
+            }
+        },
+        {
+            "time": "2026-01",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 52,
+                "cusumPositiv": 7188,
+                "negativ": -2,
+                "cusumNegativ": -1709
+            }
+        },
+        {
+            "time": "2026-02",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 24,
+                "cusumPositiv": 7212,
+                "negativ": -10,
+                "cusumNegativ": -1719
+            }
+        },
+        {
+            "time": "2026-03",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 59,
+                "cusumPositiv": 7271,
+                "negativ": -10,
+                "cusumNegativ": -1729
+            }
+        },
+        {
+            "time": "2026-04",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 25,
+                "cusumPositiv": 7296,
+                "negativ": -3,
+                "cusumNegativ": -1732
+            }
+        },
+        {
+            "time": "2026-05",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 7,
+                "cusumPositiv": 7303,
+                "negativ": 0,
+                "cusumNegativ": -1732
+            }
+        }
+    ]
+}

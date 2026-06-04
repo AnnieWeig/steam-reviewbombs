@@ -1,0 +1,92 @@
+{
+    "id": "2489330",
+    "name": "Whiskerwood",
+    "startDate": "2025-11-06 00:00:00",
+    "endDate": "2026-05-05 00:00:00",
+    "data": [
+        {
+            "time": "2025-11",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 1258,
+                "cusumPositiv": 1258,
+                "negativ": -86,
+                "cusumNegativ": -86
+            }
+        },
+        {
+            "time": "2025-12",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 408,
+                "cusumPositiv": 1666,
+                "negativ": -35,
+                "cusumNegativ": -121
+            }
+        },
+        {
+            "time": "2026-01",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 413,
+                "cusumPositiv": 2079,
+                "negativ": -34,
+                "cusumNegativ": -155
+            }
+        },
+        {
+            "time": "2026-02",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 210,
+                "cusumPositiv": 2289,
+                "negativ": -11,
+                "cusumNegativ": -166
+            }
+        },
+        {
+            "time": "2026-03",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 283,
+                "cusumPositiv": 2572,
+                "negativ": -28,
+                "cusumNegativ": -194
+            }
+        },
+        {
+            "time": "2026-04",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 140,
+                "cusumPositiv": 2712,
+                "negativ": -9,
+                "cusumNegativ": -203
+            }
+        },
+        {
+            "time": "2026-05",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 23,
+                "cusumPositiv": 2735,
+                "negativ": -2,
+                "cusumNegativ": -205
+            }
+        }
+    ]
+}
