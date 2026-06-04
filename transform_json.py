@@ -36,6 +36,9 @@ for file_path in input_dir.glob("*.json"):
 
     df["wordcloud"] = df["wordcloud_key"].map(wordclouds)
 
+    # Force key "0" to be treated as no wordcloud
+    df.loc[df["wordcloud_key"] == "0", "wordcloud"] = np.nan
+
     # Clear out the "no relevant reviews" placeholder
     df.loc[df["wordcloud"].apply(
         lambda x: isinstance(x, dict) and x == {"Keine relevanten Reviews": 1}
@@ -53,7 +56,7 @@ for file_path in input_dir.glob("*.json"):
     }
 
     for _, row in df.iterrows():
-        wordcloud_value = row["wordcloud"] if is_valid_wordcloud(row["wordcloud"]) else {}
+        wordcloud_value = row["wordcloud"] if is_valid_wordcloud(row["wordcloud"]) else []
 
         result["data"].append({
             "time": row["created"],
