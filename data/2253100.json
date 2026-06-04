@@ -1,0 +1,44 @@
+{
+    "id": "2253100",
+    "name": "Everwind",
+    "startDate": "2026-03-17 00:00:00",
+    "endDate": "2026-05-06 00:00:00",
+    "data": [
+        {
+            "time": "2026-03",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 1710,
+                "cusumPositiv": 1710,
+                "negativ": -360,
+                "cusumNegativ": -360
+            }
+        },
+        {
+            "time": "2026-04",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 650,
+                "cusumPositiv": 2360,
+                "negativ": -148,
+                "cusumNegativ": -508
+            }
+        },
+        {
+            "time": "2026-05",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 34,
+                "cusumPositiv": 2394,
+                "negativ": -7,
+                "cusumNegativ": -515
+            }
+        }
+    ]
+}

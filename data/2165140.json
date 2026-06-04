@@ -1,0 +1,92 @@
+{
+    "id": "2165140",
+    "name": "Kentum",
+    "startDate": "2025-11-06 00:00:00",
+    "endDate": "2026-05-06 00:00:00",
+    "data": [
+        {
+            "time": "2025-11",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 105,
+                "cusumPositiv": 105,
+                "negativ": -31,
+                "cusumNegativ": -31
+            }
+        },
+        {
+            "time": "2025-12",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 19,
+                "cusumPositiv": 124,
+                "negativ": -9,
+                "cusumNegativ": -40
+            }
+        },
+        {
+            "time": "2026-01",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 9,
+                "cusumPositiv": 133,
+                "negativ": -3,
+                "cusumNegativ": -43
+            }
+        },
+        {
+            "time": "2026-02",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 6,
+                "cusumPositiv": 139,
+                "negativ": -1,
+                "cusumNegativ": -44
+            }
+        },
+        {
+            "time": "2026-03",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 3,
+                "cusumPositiv": 142,
+                "negativ": -1,
+                "cusumNegativ": -45
+            }
+        },
+        {
+            "time": "2026-04",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 2,
+                "cusumPositiv": 144,
+                "negativ": 0,
+                "cusumNegativ": -45
+            }
+        },
+        {
+            "time": "2026-05",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 1,
+                "cusumPositiv": 145,
+                "negativ": 0,
+                "cusumNegativ": -45
+            }
+        }
+    ]
+}
