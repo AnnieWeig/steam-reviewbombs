@@ -358,16 +358,14 @@ function buildWordCloudHTML(wordMap, meta) {
 }
 
 function buildBarsHTML() {
-  const GROUP_SPACING = 0.72;
-  const ROW_SPACING = 0.95;
-  const BAR_W = 0.42;
-  const centerX = -state.globalTotalWidth / 2;
-  const centerZ = -0.35;
+  const ROW_SPACING = 0.85;
+  const BAR_W = 0.32;
 
-  // Was aframeScale / 100 → way too small.
-  // New scale gives useful marker-sized output.
-  const s = aframeScale / 100;
+  // Overall AR size multiplier
+  const s = aframeScale * 0.12;
 
+  // Compress chart horizontally so it stays visible on marker
+  const MAX_AR_WIDTH = 3.2; // world units before scale
   let html = "";
   const allDates = [];
 
@@ -375,11 +373,22 @@ function buildBarsHTML() {
     const zOffsetWorld = rowIdx * ROW_SPACING;
     const keys = ["cusumPositiv", "cusumNegativ"];
 
+    const times = json.data.map((d) => new Date(d.time).getTime());
+    const minTime = Math.min(...times);
+    const maxTime = Math.max(...times);
+    const spanMonths = Math.max((maxTime - minTime) / (1000 * 60 * 60 * 24 * 30.44), 1);
+
+    const xScale = MAX_AR_WIDTH / spanMonths;
+
+    const label = (json.name ?? "Dataset").length > 20
+      ? `${(json.name ?? "Dataset").slice(0, 20)}…`
+      : (json.name ?? "Dataset");
+
     html += `<a-text
-      value="${(json.name ?? "Dataset").replace(/"/g, "'")}"
-      position="${((centerX - 1.4) * s).toFixed(4)} ${(0.16 * s).toFixed(4)} ${((centerZ + zOffsetWorld) * s).toFixed(4)}"
+      value="${label.replace(/"/g, "'")}"
+      position="${(-MAX_AR_WIDTH / 2 - 0.45) * s} ${(0.14 * s).toFixed(4)} ${(zOffsetWorld * s).toFixed(4)}"
       color="#00aaff"
-      width="${(10 * s).toFixed(4)}"
+      width="${(8 * s).toFixed(4)}"
       align="right"
       side="double">
     </a-text>`;
@@ -392,17 +401,17 @@ function buildBarsHTML() {
       material="visible: false"
       width="0.001"
       height="0.001"
-      position="0 0 ${((centerZ + zOffsetWorld) * s).toFixed(4)}">
+      position="0 0 ${(zOffsetWorld * s).toFixed(4)}">
     </a-plane>`;
 
     json.data.forEach((d) => {
+      const time = new Date(d.time).getTime();
       const dateStr = new Date(d.time).toISOString().slice(0, 7);
       allDates.push(dateStr);
 
-      const xWorld =
-        ((new Date(d.time).getTime() - state.globalChartT0) / (1000 * 60 * 60 * 24 * 30.44)) *
-          GROUP_SPACING +
-        centerX;
+      // Center the row around x = 0
+      const monthOffset = (time - minTime) / (1000 * 60 * 60 * 24 * 30.44);
+      const xWorld = monthOffset * xScale - MAX_AR_WIDTH / 2;
 
       const ea = !!d.earlyAccess;
 
@@ -414,7 +423,7 @@ function buildBarsHTML() {
         const opacity = d.reviewBombed ? 0.82 : ea ? 0.58 : 1.0;
 
         html += `<a-box
-          position="${(xWorld * s).toFixed(4)} ${(yWorld * s).toFixed(4)} ${((zOffsetWorld + centerZ) * s).toFixed(4)}"
+          position="${(xWorld * s).toFixed(4)} ${(yWorld * s).toFixed(4)} ${(zOffsetWorld * s).toFixed(4)}"
           width="${(BAR_W * s).toFixed(4)}"
           height="${Math.max(hWorld * s, 0.01).toFixed(4)}"
           depth="${(BAR_W * s).toFixed(4)}"
@@ -430,9 +439,9 @@ function buildBarsHTML() {
       if (d.reviewBombed) {
         html += `<a-text
           value="⚠"
-          position="${(xWorld * s).toFixed(4)} ${((MAX_BAR_HEIGHT + 0.45) * s).toFixed(4)} ${((zOffsetWorld + centerZ) * s).toFixed(4)}"
+          position="${(xWorld * s).toFixed(4)} ${((MAX_BAR_HEIGHT + 0.35) * s).toFixed(4)} ${(zOffsetWorld * s).toFixed(4)}"
           color="#ff4422"
-          width="${(4.5 * s).toFixed(4)}"
+          width="${(3.2 * s).toFixed(4)}"
           align="center"
           side="double"
           data-date="${dateStr}"
