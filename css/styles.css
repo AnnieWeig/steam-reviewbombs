@@ -720,64 +720,46 @@ body {
 }
 
 @media (pointer: coarse) and (orientation: landscape) {
-  #popup,
-  .wordcloud-preview-panel,
-  .wordcloud-info-panel {
-    top: 8px !important;
-    left: 8px !important;
-    right: 8px !important;
-    bottom: 8px !important;
-    width: auto !important;
-    max-width: none !important;
+  #popup.popup-mobile-landscape {
     max-height: calc(100dvh - 16px) !important;
+    overflow: hidden !important;
     padding: 10px !important;
     border-radius: 10px !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  #popup.popup-mobile-landscape #popup-content {
+    flex: 1 1 auto;
+    min-height: 0;
     overflow-y: auto !important;
     overflow-x: hidden !important;
+    max-height: none !important;
+    padding-right: 2px;
   }
 
-  #popup-title,
-  .wordcloud-title {
-    font-size: 13px !important;
-    line-height: 1.2 !important;
-    margin-bottom: 6px !important;
-  }
-
-  #popup-content,
-  .wordcloud-meta,
-  .wordcloud-description {
-    font-size: 11px !important;
-    line-height: 1.35 !important;
-  }
-
-  #popup-content > * {
-    margin-bottom: 8px !important;
-  }
-
-  #popup canvas,
-  #popup img,
-  .wordcloud-preview-panel canvas,
-  .wordcloud-preview-panel img {
+  /* critical fix */
+  #popup.popup-mobile-landscape .popup-wc-wrap {
+    width: 100% !important;
     max-width: 100% !important;
-    max-height: 24dvh !important;
-    object-fit: contain !important;
+    max-height: 22dvh !important;
+    overflow: auto !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #popup.popup-mobile-landscape .popup-wc-wrap canvas {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100% !important;
+    max-height: 22dvh !important;
     display: block;
-    margin: 0 auto 8px auto;
+    object-fit: contain !important;
   }
 
-  .wordcloud-preview-panel button,
-  .wordcloud-info-panel button,
-  #btn-enter-wordcloud,
-  .btn-enter-wordcloud,
-  #popup button {
-    min-height: 36px;
-    font-size: 12px !important;
-    padding: 8px 12px !important;
-  }
-
-  .wordcloud-actions,
-  #popup-actions,
-  .popup-actions {
+  #popup.popup-mobile-landscape #popup-actions,
+  #popup.popup-mobile-landscape .popup-actions {
     position: sticky;
     bottom: 0;
     background: rgba(15, 15, 25, 0.96);
