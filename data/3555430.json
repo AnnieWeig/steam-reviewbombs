@@ -1,0 +1,92 @@
+{
+    "id": "3555430",
+    "name": "Money Simulator: Brokeville",
+    "startDate": "2025-11-27 00:00:00",
+    "endDate": "2026-05-05 00:00:00",
+    "data": [
+        {
+            "time": "2025-11",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 27,
+                "cusumPositiv": 27,
+                "negativ": -8,
+                "cusumNegativ": -8
+            }
+        },
+        {
+            "time": "2025-12",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 176,
+                "cusumPositiv": 203,
+                "negativ": -27,
+                "cusumNegativ": -35
+            }
+        },
+        {
+            "time": "2026-01",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 201,
+                "cusumPositiv": 404,
+                "negativ": -30,
+                "cusumNegativ": -65
+            }
+        },
+        {
+            "time": "2026-02",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 199,
+                "cusumPositiv": 603,
+                "negativ": -23,
+                "cusumNegativ": -88
+            }
+        },
+        {
+            "time": "2026-03",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 121,
+                "cusumPositiv": 724,
+                "negativ": -25,
+                "cusumNegativ": -113
+            }
+        },
+        {
+            "time": "2026-04",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 129,
+                "cusumPositiv": 853,
+                "negativ": -18,
+                "cusumNegativ": -131
+            }
+        },
+        {
+            "time": "2026-05",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 20,
+                "cusumPositiv": 873,
+                "negativ": -6,
+                "cusumNegativ": -137
+            }
+        }
+    ]
+}

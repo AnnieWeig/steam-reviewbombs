@@ -1,0 +1,80 @@
+{
+    "id": "3823970",
+    "name": "Nighthold: Number 1",
+    "startDate": "2025-12-11 00:00:00",
+    "endDate": "2026-05-05 00:00:00",
+    "data": [
+        {
+            "time": "2025-12",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 121,
+                "cusumPositiv": 121,
+                "negativ": -49,
+                "cusumNegativ": -49
+            }
+        },
+        {
+            "time": "2026-01",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 64,
+                "cusumPositiv": 185,
+                "negativ": -24,
+                "cusumNegativ": -73
+            }
+        },
+        {
+            "time": "2026-02",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 38,
+                "cusumPositiv": 223,
+                "negativ": -11,
+                "cusumNegativ": -84
+            }
+        },
+        {
+            "time": "2026-03",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 32,
+                "cusumPositiv": 255,
+                "negativ": -16,
+                "cusumNegativ": -100
+            }
+        },
+        {
+            "time": "2026-04",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 18,
+                "cusumPositiv": 273,
+                "negativ": -5,
+                "cusumNegativ": -105
+            }
+        },
+        {
+            "time": "2026-05",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 1,
+                "cusumPositiv": 274,
+                "negativ": -1,
+                "cusumNegativ": -106
+            }
+        }
+    ]
+}

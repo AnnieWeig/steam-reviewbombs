@@ -1,0 +1,80 @@
+{
+    "id": "3846120",
+    "name": "MineMogul",
+    "startDate": "2025-12-04 00:00:00",
+    "endDate": "2026-05-05 00:00:00",
+    "data": [
+        {
+            "time": "2025-12",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 1051,
+                "cusumPositiv": 1051,
+                "negativ": -32,
+                "cusumNegativ": -32
+            }
+        },
+        {
+            "time": "2026-01",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 1097,
+                "cusumPositiv": 2148,
+                "negativ": -57,
+                "cusumNegativ": -89
+            }
+        },
+        {
+            "time": "2026-02",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 737,
+                "cusumPositiv": 2885,
+                "negativ": -23,
+                "cusumNegativ": -112
+            }
+        },
+        {
+            "time": "2026-03",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 427,
+                "cusumPositiv": 3312,
+                "negativ": -15,
+                "cusumNegativ": -127
+            }
+        },
+        {
+            "time": "2026-04",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 223,
+                "cusumPositiv": 3535,
+                "negativ": -12,
+                "cusumNegativ": -139
+            }
+        },
+        {
+            "time": "2026-05",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 12,
+                "cusumPositiv": 3547,
+                "negativ": -1,
+                "cusumNegativ": -140
+            }
+        }
+    ]
+}

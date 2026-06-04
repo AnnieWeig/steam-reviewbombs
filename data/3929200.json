@@ -1,0 +1,68 @@
+{
+    "id": "3929200",
+    "name": "BULT: Hunting simulator",
+    "startDate": "2026-01-06 00:00:00",
+    "endDate": "2026-05-05 00:00:00",
+    "data": [
+        {
+            "time": "2026-01",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 373,
+                "cusumPositiv": 373,
+                "negativ": -49,
+                "cusumNegativ": -49
+            }
+        },
+        {
+            "time": "2026-02",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 130,
+                "cusumPositiv": 503,
+                "negativ": -20,
+                "cusumNegativ": -69
+            }
+        },
+        {
+            "time": "2026-03",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 100,
+                "cusumPositiv": 603,
+                "negativ": -14,
+                "cusumNegativ": -83
+            }
+        },
+        {
+            "time": "2026-04",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 50,
+                "cusumPositiv": 653,
+                "negativ": -8,
+                "cusumNegativ": -91
+            }
+        },
+        {
+            "time": "2026-05",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 7,
+                "cusumPositiv": 660,
+                "negativ": -2,
+                "cusumNegativ": -93
+            }
+        }
+    ]
+}

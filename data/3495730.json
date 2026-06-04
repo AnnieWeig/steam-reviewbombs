@@ -1,0 +1,44 @@
+{
+    "id": "3495730",
+    "name": "Lucid Blocks",
+    "startDate": "2026-03-13 00:00:00",
+    "endDate": "2026-05-06 00:00:00",
+    "data": [
+        {
+            "time": "2026-03",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 2605,
+                "cusumPositiv": 2605,
+                "negativ": -160,
+                "cusumNegativ": -160
+            }
+        },
+        {
+            "time": "2026-04",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 870,
+                "cusumPositiv": 3475,
+                "negativ": -65,
+                "cusumNegativ": -225
+            }
+        },
+        {
+            "time": "2026-05",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 69,
+                "cusumPositiv": 3544,
+                "negativ": -5,
+                "cusumNegativ": -230
+            }
+        }
+    ]
+}

@@ -1,0 +1,56 @@
+{
+    "id": "377160",
+    "name": "Fallout 4",
+    "startDate": "2026-02-01 00:00:00",
+    "endDate": "2026-05-06 00:00:00",
+    "data": [
+        {
+            "time": "2026-02",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 3539,
+                "cusumPositiv": 3539,
+                "negativ": -740,
+                "cusumNegativ": -740
+            }
+        },
+        {
+            "time": "2026-03",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 1856,
+                "cusumPositiv": 5395,
+                "negativ": -319,
+                "cusumNegativ": -1059
+            }
+        },
+        {
+            "time": "2026-04",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 1348,
+                "cusumPositiv": 6743,
+                "negativ": -258,
+                "cusumNegativ": -1317
+            }
+        },
+        {
+            "time": "2026-05",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 199,
+                "cusumPositiv": 6942,
+                "negativ": -41,
+                "cusumNegativ": -1358
+            }
+        }
+    ]
+}
