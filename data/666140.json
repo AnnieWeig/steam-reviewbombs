@@ -1,0 +1,1220 @@
+{
+    "id": "666140",
+    "name": "My Time at Portia",
+    "startDate": "2018-01-23 00:00:00",
+    "endDate": "2026-05-05 00:00:00",
+    "data": [
+        {
+            "time": "2018-01",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 1419,
+                "cusumPositiv": 1419,
+                "negativ": -98,
+                "cusumNegativ": -98
+            }
+        },
+        {
+            "time": "2018-02",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 1130,
+                "cusumPositiv": 2549,
+                "negativ": -92,
+                "cusumNegativ": -190
+            }
+        },
+        {
+            "time": "2018-03",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 422,
+                "cusumPositiv": 2971,
+                "negativ": -35,
+                "cusumNegativ": -225
+            }
+        },
+        {
+            "time": "2018-04",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 338,
+                "cusumPositiv": 3309,
+                "negativ": -19,
+                "cusumNegativ": -244
+            }
+        },
+        {
+            "time": "2018-05",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 475,
+                "cusumPositiv": 3784,
+                "negativ": -33,
+                "cusumNegativ": -277
+            }
+        },
+        {
+            "time": "2018-06",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 586,
+                "cusumPositiv": 4370,
+                "negativ": -50,
+                "cusumNegativ": -327
+            }
+        },
+        {
+            "time": "2018-07",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 591,
+                "cusumPositiv": 4961,
+                "negativ": -29,
+                "cusumNegativ": -356
+            }
+        },
+        {
+            "time": "2018-08",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 386,
+                "cusumPositiv": 5347,
+                "negativ": -35,
+                "cusumNegativ": -391
+            }
+        },
+        {
+            "time": "2018-09",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 263,
+                "cusumPositiv": 5610,
+                "negativ": -18,
+                "cusumNegativ": -409
+            }
+        },
+        {
+            "time": "2018-10",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 336,
+                "cusumPositiv": 5946,
+                "negativ": -21,
+                "cusumNegativ": -430
+            }
+        },
+        {
+            "time": "2018-11",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 1047,
+                "cusumPositiv": 6993,
+                "negativ": -24,
+                "cusumNegativ": -454
+            }
+        },
+        {
+            "time": "2018-12",
+            "earlyAccess": true,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 302,
+                "cusumPositiv": 7295,
+                "negativ": -28,
+                "cusumNegativ": -482
+            }
+        },
+        {
+            "time": "2019-01",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 1600,
+                "cusumPositiv": 8895,
+                "negativ": -167,
+                "cusumNegativ": -649
+            }
+        },
+        {
+            "time": "2019-02",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 655,
+                "cusumPositiv": 9550,
+                "negativ": -79,
+                "cusumNegativ": -728
+            }
+        },
+        {
+            "time": "2019-03",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 401,
+                "cusumPositiv": 9951,
+                "negativ": -43,
+                "cusumNegativ": -771
+            }
+        },
+        {
+            "time": "2019-04",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 268,
+                "cusumPositiv": 10219,
+                "negativ": -126,
+                "cusumNegativ": -897
+            }
+        },
+        {
+            "time": "2019-05",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 300,
+                "cusumPositiv": 10519,
+                "negativ": -65,
+                "cusumNegativ": -962
+            }
+        },
+        {
+            "time": "2019-06",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 666,
+                "cusumPositiv": 11185,
+                "negativ": -44,
+                "cusumNegativ": -1006
+            }
+        },
+        {
+            "time": "2019-07",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 670,
+                "cusumPositiv": 11855,
+                "negativ": -35,
+                "cusumNegativ": -1041
+            }
+        },
+        {
+            "time": "2019-08",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 185,
+                "cusumPositiv": 12040,
+                "negativ": -18,
+                "cusumNegativ": -1059
+            }
+        },
+        {
+            "time": "2019-09",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 127,
+                "cusumPositiv": 12167,
+                "negativ": -21,
+                "cusumNegativ": -1080
+            }
+        },
+        {
+            "time": "2019-10",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 212,
+                "cusumPositiv": 12379,
+                "negativ": -28,
+                "cusumNegativ": -1108
+            }
+        },
+        {
+            "time": "2019-11",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 2382,
+                "cusumPositiv": 14761,
+                "negativ": -62,
+                "cusumNegativ": -1170
+            }
+        },
+        {
+            "time": "2019-12",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 1301,
+                "cusumPositiv": 16062,
+                "negativ": -60,
+                "cusumNegativ": -1230
+            }
+        },
+        {
+            "time": "2020-01",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 1004,
+                "cusumPositiv": 17066,
+                "negativ": -48,
+                "cusumNegativ": -1278
+            }
+        },
+        {
+            "time": "2020-02",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 808,
+                "cusumPositiv": 17874,
+                "negativ": -36,
+                "cusumNegativ": -1314
+            }
+        },
+        {
+            "time": "2020-03",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 596,
+                "cusumPositiv": 18470,
+                "negativ": -34,
+                "cusumNegativ": -1348
+            }
+        },
+        {
+            "time": "2020-04",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 1815,
+                "cusumPositiv": 20285,
+                "negativ": -100,
+                "cusumNegativ": -1448
+            }
+        },
+        {
+            "time": "2020-05",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 742,
+                "cusumPositiv": 21027,
+                "negativ": -51,
+                "cusumNegativ": -1499
+            }
+        },
+        {
+            "time": "2020-06",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 1213,
+                "cusumPositiv": 22240,
+                "negativ": -89,
+                "cusumNegativ": -1588
+            }
+        },
+        {
+            "time": "2020-07",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 961,
+                "cusumPositiv": 23201,
+                "negativ": -48,
+                "cusumNegativ": -1636
+            }
+        },
+        {
+            "time": "2020-08",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 496,
+                "cusumPositiv": 23697,
+                "negativ": -39,
+                "cusumNegativ": -1675
+            }
+        },
+        {
+            "time": "2020-09",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 291,
+                "cusumPositiv": 23988,
+                "negativ": -16,
+                "cusumNegativ": -1691
+            }
+        },
+        {
+            "time": "2020-10",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 551,
+                "cusumPositiv": 24539,
+                "negativ": -65,
+                "cusumNegativ": -1756
+            }
+        },
+        {
+            "time": "2020-11",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 953,
+                "cusumPositiv": 25492,
+                "negativ": -65,
+                "cusumNegativ": -1821
+            }
+        },
+        {
+            "time": "2020-12",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 640,
+                "cusumPositiv": 26132,
+                "negativ": -47,
+                "cusumNegativ": -1868
+            }
+        },
+        {
+            "time": "2021-01",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 718,
+                "cusumPositiv": 26850,
+                "negativ": -41,
+                "cusumNegativ": -1909
+            }
+        },
+        {
+            "time": "2021-02",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 495,
+                "cusumPositiv": 27345,
+                "negativ": -33,
+                "cusumNegativ": -1942
+            }
+        },
+        {
+            "time": "2021-03",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 556,
+                "cusumPositiv": 27901,
+                "negativ": -54,
+                "cusumNegativ": -1996
+            }
+        },
+        {
+            "time": "2021-04",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 306,
+                "cusumPositiv": 28207,
+                "negativ": -27,
+                "cusumNegativ": -2023
+            }
+        },
+        {
+            "time": "2021-05",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 485,
+                "cusumPositiv": 28692,
+                "negativ": -46,
+                "cusumNegativ": -2069
+            }
+        },
+        {
+            "time": "2021-06",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 409,
+                "cusumPositiv": 29101,
+                "negativ": -45,
+                "cusumNegativ": -2114
+            }
+        },
+        {
+            "time": "2021-07",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 466,
+                "cusumPositiv": 29567,
+                "negativ": -39,
+                "cusumNegativ": -2153
+            }
+        },
+        {
+            "time": "2021-08",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 357,
+                "cusumPositiv": 29924,
+                "negativ": -29,
+                "cusumNegativ": -2182
+            }
+        },
+        {
+            "time": "2021-09",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 679,
+                "cusumPositiv": 30603,
+                "negativ": -59,
+                "cusumNegativ": -2241
+            }
+        },
+        {
+            "time": "2021-10",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 278,
+                "cusumPositiv": 30881,
+                "negativ": -27,
+                "cusumNegativ": -2268
+            }
+        },
+        {
+            "time": "2021-11",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 537,
+                "cusumPositiv": 31418,
+                "negativ": -51,
+                "cusumNegativ": -2319
+            }
+        },
+        {
+            "time": "2021-12",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 354,
+                "cusumPositiv": 31772,
+                "negativ": -24,
+                "cusumNegativ": -2343
+            }
+        },
+        {
+            "time": "2022-01",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 486,
+                "cusumPositiv": 32258,
+                "negativ": -53,
+                "cusumNegativ": -2396
+            }
+        },
+        {
+            "time": "2022-02",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 261,
+                "cusumPositiv": 32519,
+                "negativ": -20,
+                "cusumNegativ": -2416
+            }
+        },
+        {
+            "time": "2022-03",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 193,
+                "cusumPositiv": 32712,
+                "negativ": -16,
+                "cusumNegativ": -2432
+            }
+        },
+        {
+            "time": "2022-04",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 432,
+                "cusumPositiv": 33144,
+                "negativ": -59,
+                "cusumNegativ": -2491
+            }
+        },
+        {
+            "time": "2022-05",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 442,
+                "cusumPositiv": 33586,
+                "negativ": -61,
+                "cusumNegativ": -2552
+            }
+        },
+        {
+            "time": "2022-06",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 369,
+                "cusumPositiv": 33955,
+                "negativ": -47,
+                "cusumNegativ": -2599
+            }
+        },
+        {
+            "time": "2022-07",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 346,
+                "cusumPositiv": 34301,
+                "negativ": -46,
+                "cusumNegativ": -2645
+            }
+        },
+        {
+            "time": "2022-08",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 200,
+                "cusumPositiv": 34501,
+                "negativ": -36,
+                "cusumNegativ": -2681
+            }
+        },
+        {
+            "time": "2022-09",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 192,
+                "cusumPositiv": 34693,
+                "negativ": -31,
+                "cusumNegativ": -2712
+            }
+        },
+        {
+            "time": "2022-10",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 203,
+                "cusumPositiv": 34896,
+                "negativ": -26,
+                "cusumNegativ": -2738
+            }
+        },
+        {
+            "time": "2022-11",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 243,
+                "cusumPositiv": 35139,
+                "negativ": -24,
+                "cusumNegativ": -2762
+            }
+        },
+        {
+            "time": "2022-12",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 198,
+                "cusumPositiv": 35337,
+                "negativ": -30,
+                "cusumNegativ": -2792
+            }
+        },
+        {
+            "time": "2023-01",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 229,
+                "cusumPositiv": 35566,
+                "negativ": -33,
+                "cusumNegativ": -2825
+            }
+        },
+        {
+            "time": "2023-02",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 145,
+                "cusumPositiv": 35711,
+                "negativ": -18,
+                "cusumNegativ": -2843
+            }
+        },
+        {
+            "time": "2023-03",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 193,
+                "cusumPositiv": 35904,
+                "negativ": -40,
+                "cusumNegativ": -2883
+            }
+        },
+        {
+            "time": "2023-04",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 192,
+                "cusumPositiv": 36096,
+                "negativ": -26,
+                "cusumNegativ": -2909
+            }
+        },
+        {
+            "time": "2023-05",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 161,
+                "cusumPositiv": 36257,
+                "negativ": -26,
+                "cusumNegativ": -2935
+            }
+        },
+        {
+            "time": "2023-06",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 271,
+                "cusumPositiv": 36528,
+                "negativ": -48,
+                "cusumNegativ": -2983
+            }
+        },
+        {
+            "time": "2023-07",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 272,
+                "cusumPositiv": 36800,
+                "negativ": -46,
+                "cusumNegativ": -3029
+            }
+        },
+        {
+            "time": "2023-08",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 156,
+                "cusumPositiv": 36956,
+                "negativ": -25,
+                "cusumNegativ": -3054
+            }
+        },
+        {
+            "time": "2023-09",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 165,
+                "cusumPositiv": 37121,
+                "negativ": -28,
+                "cusumNegativ": -3082
+            }
+        },
+        {
+            "time": "2023-10",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 156,
+                "cusumPositiv": 37277,
+                "negativ": -27,
+                "cusumNegativ": -3109
+            }
+        },
+        {
+            "time": "2023-11",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 243,
+                "cusumPositiv": 37520,
+                "negativ": -40,
+                "cusumNegativ": -3149
+            }
+        },
+        {
+            "time": "2023-12",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 169,
+                "cusumPositiv": 37689,
+                "negativ": -38,
+                "cusumNegativ": -3187
+            }
+        },
+        {
+            "time": "2024-01",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 122,
+                "cusumPositiv": 37811,
+                "negativ": -25,
+                "cusumNegativ": -3212
+            }
+        },
+        {
+            "time": "2024-02",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 123,
+                "cusumPositiv": 37934,
+                "negativ": -19,
+                "cusumNegativ": -3231
+            }
+        },
+        {
+            "time": "2024-03",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 156,
+                "cusumPositiv": 38090,
+                "negativ": -23,
+                "cusumNegativ": -3254
+            }
+        },
+        {
+            "time": "2024-04",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 87,
+                "cusumPositiv": 38177,
+                "negativ": -15,
+                "cusumNegativ": -3269
+            }
+        },
+        {
+            "time": "2024-05",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 124,
+                "cusumPositiv": 38301,
+                "negativ": -32,
+                "cusumNegativ": -3301
+            }
+        },
+        {
+            "time": "2024-06",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 125,
+                "cusumPositiv": 38426,
+                "negativ": -25,
+                "cusumNegativ": -3326
+            }
+        },
+        {
+            "time": "2024-07",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 116,
+                "cusumPositiv": 38542,
+                "negativ": -20,
+                "cusumNegativ": -3346
+            }
+        },
+        {
+            "time": "2024-08",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 103,
+                "cusumPositiv": 38645,
+                "negativ": -30,
+                "cusumNegativ": -3376
+            }
+        },
+        {
+            "time": "2024-09",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 108,
+                "cusumPositiv": 38753,
+                "negativ": -42,
+                "cusumNegativ": -3418
+            }
+        },
+        {
+            "time": "2024-10",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 120,
+                "cusumPositiv": 38873,
+                "negativ": -20,
+                "cusumNegativ": -3438
+            }
+        },
+        {
+            "time": "2024-11",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 107,
+                "cusumPositiv": 38980,
+                "negativ": -16,
+                "cusumNegativ": -3454
+            }
+        },
+        {
+            "time": "2024-12",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 92,
+                "cusumPositiv": 39072,
+                "negativ": -17,
+                "cusumNegativ": -3471
+            }
+        },
+        {
+            "time": "2025-01",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 82,
+                "cusumPositiv": 39154,
+                "negativ": -17,
+                "cusumNegativ": -3488
+            }
+        },
+        {
+            "time": "2025-02",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 61,
+                "cusumPositiv": 39215,
+                "negativ": -21,
+                "cusumNegativ": -3509
+            }
+        },
+        {
+            "time": "2025-03",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 92,
+                "cusumPositiv": 39307,
+                "negativ": -15,
+                "cusumNegativ": -3524
+            }
+        },
+        {
+            "time": "2025-04",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 89,
+                "cusumPositiv": 39396,
+                "negativ": -16,
+                "cusumNegativ": -3540
+            }
+        },
+        {
+            "time": "2025-05",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 76,
+                "cusumPositiv": 39472,
+                "negativ": -10,
+                "cusumNegativ": -3550
+            }
+        },
+        {
+            "time": "2025-06",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 83,
+                "cusumPositiv": 39555,
+                "negativ": -12,
+                "cusumNegativ": -3562
+            }
+        },
+        {
+            "time": "2025-07",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 135,
+                "cusumPositiv": 39690,
+                "negativ": -37,
+                "cusumNegativ": -3599
+            }
+        },
+        {
+            "time": "2025-08",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 100,
+                "cusumPositiv": 39790,
+                "negativ": -22,
+                "cusumNegativ": -3621
+            }
+        },
+        {
+            "time": "2025-09",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 66,
+                "cusumPositiv": 39856,
+                "negativ": -18,
+                "cusumNegativ": -3639
+            }
+        },
+        {
+            "time": "2025-10",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 87,
+                "cusumPositiv": 39943,
+                "negativ": -13,
+                "cusumNegativ": -3652
+            }
+        },
+        {
+            "time": "2025-11",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 65,
+                "cusumPositiv": 40008,
+                "negativ": -9,
+                "cusumNegativ": -3661
+            }
+        },
+        {
+            "time": "2025-12",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 81,
+                "cusumPositiv": 40089,
+                "negativ": -18,
+                "cusumNegativ": -3679
+            }
+        },
+        {
+            "time": "2026-01",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 69,
+                "cusumPositiv": 40158,
+                "negativ": -8,
+                "cusumNegativ": -3687
+            }
+        },
+        {
+            "time": "2026-02",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 74,
+                "cusumPositiv": 40232,
+                "negativ": -14,
+                "cusumNegativ": -3701
+            }
+        },
+        {
+            "time": "2026-03",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 58,
+                "cusumPositiv": 40290,
+                "negativ": -15,
+                "cusumNegativ": -3716
+            }
+        },
+        {
+            "time": "2026-04",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 59,
+                "cusumPositiv": 40349,
+                "negativ": -14,
+                "cusumNegativ": -3730
+            }
+        },
+        {
+            "time": "2026-05",
+            "earlyAccess": false,
+            "reviewBombed": false,
+            "wordClouds": [],
+            "values": {
+                "positiv": 6,
+                "cusumPositiv": 40355,
+                "negativ": -2,
+                "cusumNegativ": -3732
+            }
+        }
+    ]
+}
