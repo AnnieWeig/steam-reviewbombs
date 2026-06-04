@@ -4,6 +4,16 @@ let aframeIframe = null;
 let aframeExitBtn = null;
 let aframeScale = 3;
 
+async function tryLockLandscape() {
+  try {
+    if (screen.orientation?.lock) {
+      await screen.orientation.lock("landscape");
+    }
+  } catch (err) {
+    console.log("Landscape lock not available:", err?.message ?? err);
+  }
+}
+
 export function toggleAFrameAR() {
   aframeIframe ? exitAFrameAR() : enterAFrameAR();
 }
@@ -18,6 +28,7 @@ export function updateAFrameScale(val) {
 }
 
 export function enterWordCloudAR(wordMap, meta) {
+  tryLockLandscape();
   _openIframe(buildWordCloudHTML(wordMap, meta), "❌ Exit Word Cloud AR");
 }
 
@@ -30,15 +41,13 @@ function buildWordCloudHTML(wordMap, meta) {
   const isBombed = !!meta.reviewBombed;
 
   const CLOUD_BASE = 0.5;
-  const ROW_GAP = 0.15; // vertical space between rows
-  const WORD_PAD = 0.03; // horizontal space between words in a row
+  const ROW_GAP = 0.15;
+  const WORD_PAD = 0.03;
 
-  // t = 0 → first word (most used) = red
-  // t = 1 → last word  (least used) = bright blue
   function wordColor(t) {
-    const hue = Math.round(t * 220); // 0 (red) → 220 (blue)
+    const hue = Math.round(t * 220);
     const sat = 100;
-    const lum = Math.round(55 - t * 15); // 55% (red, slightly light) → 40% (blue, deeper)
+    const lum = Math.round(55 - t * 15);
     return `hsl(${hue},${sat}%,${lum}%)`;
   }
 
@@ -46,19 +55,23 @@ function buildWordCloudHTML(wordMap, meta) {
     return (0.4 + norm * 0.6).toFixed(2);
   }
 
-  // ── Pre-compute size for every word ───────────────────────
+  function escHtml(s = "") {
+    return String(s)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
   const sized = entries.map(([word, prob], i) => {
     const norm = prob / maxProb;
     const scale = 0.45 + Math.pow(norm, 0.7) * 0.55;
     const h = scale * 0.11;
     const w = word.length * h * 0.58 + h * 0.5;
-    const t = i / Math.max(entries.length - 1, 1); // 0 → 1 by rank
+    const t = i / Math.max(entries.length - 1, 1);
     return { word, norm, scale, h, w, color: wordColor(t), opacity: wordOpacity(norm) };
   });
 
-  // ── Pyramid row assignment ─────────────────────────────────
-  // Row 0 (top) = 1 word, row 1 = 2 words, row 2 = 3 words …
-  // Most-used word sits alone at the apex; each row below is wider.
   const rows = [];
   let idx = 0;
   for (let rowNum = 0; idx < sized.length; rowNum++) {
@@ -67,21 +80,16 @@ function buildWordCloudHTML(wordMap, meta) {
   }
 
   const totalRows = rows.length;
-
-  // ── Place words ────────────────────────────────────────────
   const wordData = [];
 
   rows.forEach((row, ri) => {
-    // ri = 0 is the apex — give it the highest Y
     const cy = ((totalRows - 1) / 2 - ri) * ROW_GAP;
-
-    // Total width of this row so we can centre it
     const rowW = row.reduce((s, d) => s + d.w, 0) + WORD_PAD * (row.length - 1);
 
-    let cx = -rowW / 2; // start at left edge of centred row
+    let cx = -rowW / 2;
 
     row.forEach((d) => {
-      const wordCx = cx + d.w / 2; // centre of this word plane
+      const wordCx = cx + d.w / 2;
       cx += d.w + WORD_PAD;
 
       wordData.push({
@@ -123,30 +131,111 @@ function buildWordCloudHTML(wordMap, meta) {
 
     function makeWordTexture(word, color, scale) {
       const fontSize = Math.round(280 + scale * 80);
-      const bold     = scale > 0.6 ? '700' : '400';
-      const font     = bold + ' ' + fontSize + 'px sans-serif';
+      const bold = scale > 0.6 ? '700' : '400';
+      const font = bold + ' ' + fontSize + 'px sans-serif';
 
       const mc = document.createElement('canvas');
       mc.getContext('2d').font = font;
       const textW = Math.ceil(mc.getContext('2d').measureText(word).width);
 
-      const pad    = Math.round(fontSize * 0.15);
+      const pad = Math.round(fontSize * 0.15);
       const canvas = document.createElement('canvas');
-      canvas.width  = textW + pad * 2;
+      canvas.width = textW + pad * 2;
       canvas.height = fontSize + pad * 2;
-      const ctx    = canvas.getContext('2d');
+      const ctx = canvas.getContext('2d');
 
       if (scale > 0.75) {
         ctx.shadowColor = color;
-        ctx.shadowBlur  = fontSize * 0.22;
+        ctx.shadowBlur = fontSize * 0.22;
       }
-      ctx.font         = font;
-      ctx.fillStyle    = color;
+      ctx.font = font;
+      ctx.fillStyle = color;
       ctx.textBaseline = 'middle';
-      ctx.textAlign    = 'center';
+      ctx.textAlign = 'center';
       ctx.fillText(word, canvas.width / 2, canvas.height / 2);
 
       return { dataURL: canvas.toDataURL('image/png'), aspect: canvas.width / canvas.height };
+    }
+
+    function updateOrientationHint() {
+      let el = document.getElementById('rotate-device-hint');
+      if (!el) return;
+      const isMobile = matchMedia('(pointer: coarse)').matches;
+      const isPortrait = innerHeight > innerWidth;
+      el.style.display = isMobile && isPortrait ? 'flex' : 'none';
+    }
+
+    function installARGestureControls(rootId) {
+      const root = document.getElementById(rootId);
+      const sceneEl = document.querySelector('a-scene');
+      if (!root || !sceneEl) return;
+
+      let start = null;
+
+      function dist(t1, t2) {
+        const dx = t1.clientX - t2.clientX;
+        const dy = t1.clientY - t2.clientY;
+        return Math.sqrt(dx * dx + dy * dy);
+      }
+
+      function angle(t1, t2) {
+        return Math.atan2(t2.clientY - t1.clientY, t2.clientX - t1.clientX);
+      }
+
+      sceneEl.addEventListener('touchstart', (e) => {
+        if (e.touches.length === 1) {
+          start = {
+            mode: 'drag',
+            x: e.touches[0].clientX,
+            y: e.touches[0].clientY,
+            pos: {
+              x: root.object3D.position.x,
+              y: root.object3D.position.y,
+              z: root.object3D.position.z
+            }
+          };
+        } else if (e.touches.length === 2) {
+          start = {
+            mode: 'gesture',
+            dist: dist(e.touches[0], e.touches[1]),
+            angle: angle(e.touches[0], e.touches[1]),
+            scale: root.object3D.scale.x,
+            rotY: root.object3D.rotation.y
+          };
+        }
+      }, { passive: false });
+
+      sceneEl.addEventListener('touchmove', (e) => {
+        if (!start) return;
+        e.preventDefault();
+
+        if (start.mode === 'drag' && e.touches.length === 1) {
+          const dx = (e.touches[0].clientX - start.x) * 0.0015;
+          const dy = (e.touches[0].clientY - start.y) * 0.0015;
+          root.object3D.position.x = start.pos.x + dx;
+          root.object3D.position.z = start.pos.z + dy;
+        }
+
+        if (start.mode === 'gesture' && e.touches.length === 2) {
+          const newDist = dist(e.touches[0], e.touches[1]);
+          const newAngle = angle(e.touches[0], e.touches[1]);
+
+          const scaleFactor = newDist / start.dist;
+          const nextScale = Math.max(0.2, Math.min(6, start.scale * scaleFactor));
+          root.object3D.scale.set(nextScale, nextScale, nextScale);
+
+          const deltaAngle = newAngle - start.angle;
+          root.object3D.rotation.y = start.rotY + deltaAngle;
+        }
+      }, { passive: false });
+
+      sceneEl.addEventListener('touchend', (e) => {
+        if (!e.touches || e.touches.length === 0) start = null;
+      });
+
+      sceneEl.addEventListener('touchcancel', () => {
+        start = null;
+      });
     }
 
     document.querySelector('a-scene').addEventListener('loaded', () => {
@@ -156,11 +245,19 @@ function buildWordCloudHTML(wordMap, meta) {
         if (!plane) return;
         const h = parseFloat(d.planeH);
         plane.setAttribute('width', (h * aspect).toFixed(4));
-        plane.setAttribute('material',
+        plane.setAttribute(
+          'material',
           'transparent: true; alphaTest: 0.05; opacity: ' + d.opacity + '; ' +
-          'side: double; shader: flat; src: url(' + dataURL + ')');
+          'side: double; shader: flat; src: url(' + dataURL + ')'
+        );
       });
+
+      installARGestureControls('wordcloud-root');
+      updateOrientationHint();
     });
+
+    window.addEventListener('resize', updateOrientationHint);
+    window.addEventListener('orientationchange', updateOrientationHint);
 
     const marker = document.querySelector('a-marker');
     marker.addEventListener('markerFound', () => {
@@ -179,6 +276,7 @@ function buildWordCloudHTML(wordMap, meta) {
   <title>Word Cloud AR</title>
   <script src="https://aframe.io/releases/1.4.2/aframe.min.js"><\/script>
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"><\/script>
+  <script src="https://cdn.jsdelivr.net/npm/aframe-extras@6.1.1/dist/aframe-extras.min.js"><\/script>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { overflow: hidden; background: #000; font-family: sans-serif; }
@@ -206,12 +304,27 @@ function buildWordCloudHTML(wordMap, meta) {
       padding: 7px 14px; border-radius: 6px; pointer-events: none;
       z-index: 200; white-space: nowrap;
     }
+    #rotate-device-hint {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,0.92);
+      color: white;
+      font: 600 18px sans-serif;
+      text-align: center;
+      padding: 24px;
+    }
   </style>
 </head>
 <body>
+  <div id="rotate-device-hint">📱 Please rotate your device to landscape</div>
+
   <div id="info">
-    <div class="title">${(meta.gameName ?? "").replace(/</g, "&lt;")} · ${(meta.date ?? "").replace(/</g, "&lt;")}</div>
-    ${badges ? `<div class="badges">${badges}</div>` : ""}
+    <div class="title">${escHtml(meta.gameName ?? "")} · ${escHtml(meta.date ?? "")}</div>
+    ${badges ? `<div class="badges">${escHtml(badges)}</div>` : ""}
     <div class="stats">
       ✅ ${(meta.positiv ?? 0).toLocaleString()} positive
       &nbsp;·&nbsp;
@@ -220,11 +333,10 @@ function buildWordCloudHTML(wordMap, meta) {
   </div>
   <div id="marker-hint">
     👆 Point at the
-    <a href="https://raw.githubusercontent.com/AR-js-org/AR.js/master/data/images/hiro.png"
-       target="_blank">Hiro marker</a>
+    <a href="https://raw.githubusercontent.com/AR-js-org/AR.js/master/data/images/hiro.png" target="_blank">Hiro marker</a>
     — word cloud appears above it
   </div>
-  <div id="tip">🔴 Top = most used &nbsp;·&nbsp; 🟢 Bottom = least used &nbsp;·&nbsp; 🔄 Slowly rotating</div>
+  <div id="tip">☝️ Drag = move &nbsp;·&nbsp; 🤏 Pinch = zoom &nbsp;·&nbsp; 🔄 Twist = rotate</div>
 
   <a-scene
     arjs="sourceType: webcam; debugUIEnabled: false; trackingMethod: best;"
@@ -232,8 +344,10 @@ function buildWordCloudHTML(wordMap, meta) {
     vr-mode-ui="enabled: false"
     loading-screen="dotsColor: #00aaff; backgroundColor: #111111">
     <a-marker preset="hiro" smooth="true" smoothCount="5" smoothTolerance="0.01">
-      <a-entity>
-        ${planesHTML}
+      <a-entity id="wordcloud-root" position="0 0 0" rotation="0 0 0" scale="1 1 1">
+        <a-entity>
+          ${planesHTML}
+        </a-entity>
       </a-entity>
     </a-marker>
     <a-entity camera look-controls="enabled: false"></a-entity>
@@ -243,7 +357,6 @@ function buildWordCloudHTML(wordMap, meta) {
 </html>`;
 }
 
-// ── Chart AR (unchanged) ───────────────────────────────────────
 function buildBarsHTML() {
   const GROUP_SPACING = 1.2;
   const BAR_W = 0.8;
@@ -275,7 +388,7 @@ function buildBarsHTML() {
     </a-plane>`;
 
     json.data.forEach((d) => {
-      const dateStr = new Date(d.time).toISOString().slice(0, 57).slice(0, 7);
+      const dateStr = new Date(d.time).toISOString().slice(0, 7);
       allDates.push(dateStr);
       const xWorld =
         ((new Date(d.time).getTime() - state.globalChartT0) / (1000 * 60 * 60 * 24 * 30.44)) * GROUP_SPACING + centerX;
@@ -351,25 +464,127 @@ function iframeCSS() {
     .game-list { display: flex; flex-direction: column; gap: 8px; }
     .game-list-entry { background: rgba(255,255,255,0.07); border-radius: 6px; padding: 8px 10px; }
     .g-name { font-size: 12px; font-weight: 500; color: #00aaff; }
-    .g-id   { font-size: 10px; color: #555; margin-top: 2px; }
+    .g-id { font-size: 10px; color: #555; margin-top: 2px; }
     .panel-hint { color: #666; font-size: 10px; line-height: 1.5; margin-top: 8px; }
     .marker-link { display: block; color: #cc88ff; font-size: 12px; text-decoration: none; }
     .marker-link:hover { text-decoration: underline; }
     #marker-hint { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.72); color: #ccc; font-size: 12px; padding: 10px 18px; border-radius: 8px; text-align: center; pointer-events: none; white-space: nowrap; z-index: 200; }
     #marker-hint a { color: #cc88ff; pointer-events: all; }
+    #rotate-device-hint {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,0.92);
+      color: white;
+      font: 600 18px sans-serif;
+      text-align: center;
+      padding: 24px;
+    }
   `;
 }
 
 function iframeJS(minDate, maxDate) {
   return `
-    const openMenu  = () => { document.getElementById('menu-panel').classList.add('open'); document.getElementById('menu-overlay').classList.add('open'); };
-    const closeMenu = () => { document.getElementById('menu-panel').classList.remove('open'); document.getElementById('menu-overlay').classList.remove('open'); };
-    document.getElementById('burger-btn')    .addEventListener('click', openMenu);
+    const openMenu = () => {
+      document.getElementById('menu-panel').classList.add('open');
+      document.getElementById('menu-overlay').classList.add('open');
+    };
+
+    const closeMenu = () => {
+      document.getElementById('menu-panel').classList.remove('open');
+      document.getElementById('menu-overlay').classList.remove('open');
+    };
+
+    function updateOrientationHint() {
+      const el = document.getElementById('rotate-device-hint');
+      const isMobile = matchMedia('(pointer: coarse)').matches;
+      const isPortrait = innerHeight > innerWidth;
+      el.style.display = isMobile && isPortrait ? 'flex' : 'none';
+    }
+
+    function installARGestureControls(rootId) {
+      const root = document.getElementById(rootId);
+      const sceneEl = document.querySelector('a-scene');
+      if (!root || !sceneEl) return;
+
+      let start = null;
+
+      function dist(t1, t2) {
+        const dx = t1.clientX - t2.clientX;
+        const dy = t1.clientY - t2.clientY;
+        return Math.sqrt(dx * dx + dy * dy);
+      }
+
+      function angle(t1, t2) {
+        return Math.atan2(t2.clientY - t1.clientY, t2.clientX - t1.clientX);
+      }
+
+      sceneEl.addEventListener('touchstart', (e) => {
+        if (e.touches.length === 1) {
+          start = {
+            mode: 'drag',
+            x: e.touches[0].clientX,
+            y: e.touches[0].clientY,
+            pos: {
+              x: root.object3D.position.x,
+              y: root.object3D.position.y,
+              z: root.object3D.position.z
+            }
+          };
+        } else if (e.touches.length === 2) {
+          start = {
+            mode: 'gesture',
+            dist: dist(e.touches[0], e.touches[1]),
+            angle: angle(e.touches[0], e.touches[1]),
+            scale: root.object3D.scale.x,
+            rotY: root.object3D.rotation.y
+          };
+        }
+      }, { passive: false });
+
+      sceneEl.addEventListener('touchmove', (e) => {
+        if (!start) return;
+        e.preventDefault();
+
+        if (start.mode === 'drag' && e.touches.length === 1) {
+          const dx = (e.touches[0].clientX - start.x) * 0.0015;
+          const dy = (e.touches[0].clientY - start.y) * 0.0015;
+          root.object3D.position.x = start.pos.x + dx;
+          root.object3D.position.z = start.pos.z + dy;
+        }
+
+        if (start.mode === 'gesture' && e.touches.length === 2) {
+          const newDist = dist(e.touches[0], e.touches[1]);
+          const newAngle = angle(e.touches[0], e.touches[1]);
+
+          const scaleFactor = newDist / start.dist;
+          const nextScale = Math.max(0.2, Math.min(6, start.scale * scaleFactor));
+          root.object3D.scale.set(nextScale, nextScale, nextScale);
+
+          const deltaAngle = newAngle - start.angle;
+          root.object3D.rotation.y = start.rotY + deltaAngle;
+        }
+      }, { passive: false });
+
+      sceneEl.addEventListener('touchend', (e) => {
+        if (!e.touches || e.touches.length === 0) start = null;
+      });
+
+      sceneEl.addEventListener('touchcancel', () => {
+        start = null;
+      });
+    }
+
+    document.getElementById('burger-btn').addEventListener('click', openMenu);
     document.getElementById('menu-close-btn').addEventListener('click', closeMenu);
-    document.getElementById('menu-overlay')  .addEventListener('click', closeMenu);
+    document.getElementById('menu-overlay').addEventListener('click', closeMenu);
+
     function applyFilters() {
       const from = document.getElementById('filterFrom').value || '${minDate}';
-      const to   = document.getElementById('filterTo').value   || '${maxDate}';
+      const to = document.getElementById('filterTo').value || '${maxDate}';
       const bomb = document.getElementById('review-bomb-toggle').checked;
       const bombRows = new Set();
       document.querySelectorAll('[data-has-bomb]').forEach(el => bombRows.add(el.dataset.row));
@@ -378,20 +593,35 @@ function iframeJS(minDate, maxDate) {
         el.setAttribute('visible', String(el.dataset.date >= from && el.dataset.date <= to && rowOk(el.dataset.row)));
       });
     }
+
     function resetFilters() {
       document.getElementById('filterFrom').value = '${minDate}';
-      document.getElementById('filterTo').value   = '${maxDate}';
+      document.getElementById('filterTo').value = '${maxDate}';
       document.getElementById('review-bomb-toggle').checked = false;
       document.querySelectorAll('[data-date][data-row]').forEach(el => el.setAttribute('visible', 'true'));
     }
+
     document.getElementById('btn-apply').addEventListener('click', applyFilters);
     document.getElementById('btn-reset').addEventListener('click', resetFilters);
     document.getElementById('review-bomb-toggle').addEventListener('change', applyFilters);
+
     const marker = document.querySelector('a-marker');
     if (marker) {
-      marker.addEventListener('markerFound', () => { document.getElementById('marker-hint').style.display = 'none'; });
-      marker.addEventListener('markerLost',  () => { document.getElementById('marker-hint').style.display = 'block'; });
+      marker.addEventListener('markerFound', () => {
+        document.getElementById('marker-hint').style.display = 'none';
+      });
+      marker.addEventListener('markerLost', () => {
+        document.getElementById('marker-hint').style.display = 'block';
+      });
     }
+
+    document.querySelector('a-scene').addEventListener('loaded', () => {
+      installARGestureControls('ar-chart-root');
+      updateOrientationHint();
+    });
+
+    window.addEventListener('resize', updateOrientationHint);
+    window.addEventListener('orientationchange', updateOrientationHint);
   `;
 }
 
@@ -402,7 +632,7 @@ function buildIframeHTML() {
     .map(
       (j) => `
     <div class="game-list-entry">
-      <div class="g-name">${j.name ?? "Unknown"}</div>
+      <div class="g-name">${(j.name ?? "Unknown").replace(/</g, "&lt;")}</div>
       <div class="g-id">ID: ${j.id ?? "—"}</div>
     </div>`
     )
@@ -413,12 +643,14 @@ function buildIframeHTML() {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  <title>AR — ${gameTitle}</title>
+  <title>AR — ${gameTitle.replace(/</g, "&lt;")}</title>
   <script src="https://aframe.io/releases/1.4.2/aframe.min.js"><\/script>
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"><\/script>
   <style>${iframeCSS()}</style>
 </head>
 <body>
+  <div id="rotate-device-hint">📱 Please rotate your device to landscape</div>
+
   <button id="burger-btn">☰</button>
   <div id="menu-overlay"></div>
   <div id="menu-panel">
@@ -426,7 +658,7 @@ function buildIframeHTML() {
     <div class="menu-section">
       <h3>📅 Narrow date range</h3>
       <div class="filter-row"><label>From</label><input type="month" id="filterFrom" value="${minDate}"></div>
-      <div class="filter-row"><label>To</label>  <input type="month" id="filterTo"   value="${maxDate}"></div>
+      <div class="filter-row"><label>To</label><input type="month" id="filterTo" value="${maxDate}"></div>
       <div class="filter-actions">
         <button class="btn-primary" id="btn-apply">Apply</button>
         <button class="btn-secondary" id="btn-reset">Reset</button>
@@ -443,24 +675,30 @@ function buildIframeHTML() {
       <h3>📊 Viewing (${state.loadedJsons.length} game${state.loadedJsons.length !== 1 ? "s" : ""})</h3>
       <div class="game-list">${gameListHTML}</div>
       <p class="panel-hint">Exit AR to add or remove games.</p>
+      <p class="panel-hint">☝️ Drag = move chart · 🤏 Pinch = zoom · 🔄 Twist = rotate</p>
     </div>
     <div class="menu-section">
       <a class="marker-link" href="https://raw.githubusercontent.com/AR-js-org/AR.js/master/data/images/hiro.png" target="_blank">📄 Open / print Hiro marker</a>
     </div>
   </div>
+
   <div id="marker-hint">
     👆 Point at the <a href="https://raw.githubusercontent.com/AR-js-org/AR.js/master/data/images/hiro.png" target="_blank">Hiro marker</a>
   </div>
+
   <a-scene
     arjs="sourceType: webcam; debugUIEnabled: false; trackingMethod: best;"
     renderer="logarithmicDepthBuffer: true; antialias: true;"
     vr-mode-ui="enabled: false"
     loading-screen="dotsColor: #00aaff; backgroundColor: #111111">
     <a-marker preset="hiro" smooth="true" smoothCount="5" smoothTolerance="0.01">
-      ${barsHTML}
+      <a-entity id="ar-chart-root" position="0 0 0" rotation="0 0 0" scale="1 1 1">
+        ${barsHTML}
+      </a-entity>
     </a-marker>
     <a-entity camera look-controls="enabled: false"></a-entity>
   </a-scene>
+
   <script>${iframeJS(minDate, maxDate)}<\/script>
 </body>
 </html>`;
@@ -469,6 +707,7 @@ function buildIframeHTML() {
 function _openIframe(html, exitLabel) {
   const blob = new Blob([html], { type: "text/html" });
   const blobUrl = URL.createObjectURL(blob);
+
   aframeIframe = document.createElement("iframe");
   aframeIframe.src = blobUrl;
   aframeIframe.allow = "camera";
@@ -494,6 +733,7 @@ export function enterAFrameAR() {
     alert("Add at least one game before entering AR.");
     return;
   }
+  tryLockLandscape();
   _openIframe(buildIframeHTML(), "❌ Exit AR");
 }
 
@@ -501,6 +741,7 @@ export function exitAFrameAR() {
   if (!aframeIframe) return;
   aframeIframe.remove();
   aframeIframe = null;
+
   if (aframeExitBtn) {
     aframeExitBtn.remove();
     aframeExitBtn = null;
