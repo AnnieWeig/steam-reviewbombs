@@ -715,35 +715,46 @@ body {
 .wordcloud-preview-panel,
 .wordcloud-info-panel {
   max-height: 100dvh;
-  overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
 
 @media (pointer: coarse) and (orientation: landscape) {
   #popup.popup-mobile-landscape {
-    max-height: calc(100dvh - 16px) !important;
-    overflow: hidden !important;
+    max-width: min(92vw, 520px) !important;
+    max-height: 82dvh !important;
     padding: 10px !important;
     border-radius: 10px !important;
+    overflow: hidden !important;
     display: flex !important;
     flex-direction: column !important;
+  }
+
+  #popup.popup-mobile-landscape #popup-title,
+  #popup.popup-mobile-landscape .wordcloud-title {
+    font-size: 13px !important;
+    line-height: 1.2 !important;
+    margin-bottom: 6px !important;
   }
 
   #popup.popup-mobile-landscape #popup-content {
     flex: 1 1 auto;
     min-height: 0;
+    font-size: 11px !important;
+    line-height: 1.35 !important;
     overflow-y: auto !important;
     overflow-x: hidden !important;
-    max-height: none !important;
     padding-right: 2px;
   }
 
-  /* critical fix */
+  #popup.popup-mobile-landscape #popup-content > * {
+    margin-bottom: 8px !important;
+  }
+
   #popup.popup-mobile-landscape .popup-wc-wrap {
     width: 100% !important;
     max-width: 100% !important;
     max-height: 22dvh !important;
-    overflow: auto !important;
+    overflow: hidden !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -756,6 +767,14 @@ body {
     max-height: 22dvh !important;
     display: block;
     object-fit: contain !important;
+  }
+
+  #popup.popup-mobile-landscape button,
+  #popup.popup-mobile-landscape #popup-wc-ar-btn,
+  #popup.popup-mobile-landscape .btn-enter-wordcloud {
+    min-height: 36px;
+    font-size: 12px !important;
+    padding: 8px 12px !important;
   }
 
   #popup.popup-mobile-landscape #popup-actions,
