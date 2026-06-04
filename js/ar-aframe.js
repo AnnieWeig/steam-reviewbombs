@@ -359,34 +359,44 @@ function buildWordCloudHTML(wordMap, meta) {
 
 function buildBarsHTML() {
   const ROW_SPACING = 0.85;
-  const BAR_W = 0.32;
+  const BAR_W = 0.3;
 
   // Overall AR size multiplier
   const s = aframeScale * 0.12;
 
-  // Compress chart horizontally so it stays visible on marker
-  const MAX_AR_WIDTH = 3.2; // world units before scale
+  // Fixed compact width for the whole AR chart before scale
+  const MAX_AR_WIDTH = 3.2;
+
   let html = "";
   const allDates = [];
+  const allTimes = state.loadedJsons.flatMap((json) => json.data.map((d) => new Date(d.time).getTime()));
+
+  if (!allTimes.length) {
+    return { html: "", minDate: "", maxDate: "" };
+  }
+
+  const globalMinTime = Math.min(...allTimes);
+  const globalMaxTime = Math.max(...allTimes);
+  const globalSpanMonths = Math.max(
+    (globalMaxTime - globalMinTime) / (1000 * 60 * 60 * 24 * 30.44),
+    1
+  );
+
+  // Single X scale shared by all rows
+  const xScale = MAX_AR_WIDTH / globalSpanMonths;
 
   state.loadedJsons.forEach((json, rowIdx) => {
     const zOffsetWorld = rowIdx * ROW_SPACING;
     const keys = ["cusumPositiv", "cusumNegativ"];
 
-    const times = json.data.map((d) => new Date(d.time).getTime());
-    const minTime = Math.min(...times);
-    const maxTime = Math.max(...times);
-    const spanMonths = Math.max((maxTime - minTime) / (1000 * 60 * 60 * 24 * 30.44), 1);
-
-    const xScale = MAX_AR_WIDTH / spanMonths;
-
-    const label = (json.name ?? "Dataset").length > 20
-      ? `${(json.name ?? "Dataset").slice(0, 20)}…`
-      : (json.name ?? "Dataset");
+    const label =
+      (json.name ?? "Dataset").length > 20
+        ? `${(json.name ?? "Dataset").slice(0, 20)}…`
+        : json.name ?? "Dataset";
 
     html += `<a-text
       value="${label.replace(/"/g, "'")}"
-      position="${(-MAX_AR_WIDTH / 2 - 0.45) * s} ${(0.14 * s).toFixed(4)} ${(zOffsetWorld * s).toFixed(4)}"
+      position="${((-MAX_AR_WIDTH / 2 - 0.42) * s).toFixed(4)} ${(0.14 * s).toFixed(4)} ${(zOffsetWorld * s).toFixed(4)}"
       color="#00aaff"
       width="${(8 * s).toFixed(4)}"
       align="right"
@@ -409,8 +419,8 @@ function buildBarsHTML() {
       const dateStr = new Date(d.time).toISOString().slice(0, 7);
       allDates.push(dateStr);
 
-      // Center the row around x = 0
-      const monthOffset = (time - minTime) / (1000 * 60 * 60 * 24 * 30.44);
+      // Shared global date axis centered around x = 0
+      const monthOffset = (time - globalMinTime) / (1000 * 60 * 60 * 24 * 30.44);
       const xWorld = monthOffset * xScale - MAX_AR_WIDTH / 2;
 
       const ea = !!d.earlyAccess;
