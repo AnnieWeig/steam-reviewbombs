@@ -92,7 +92,7 @@ export function buildChart(json, zOffset = 0, globalT0 = null, scale = 0.01) {
       valDiv.textContent = Math.round(value).toLocaleString();
       Object.assign(valDiv.style, { visibility: "hidden" });
       const valLbl = new CSS2DObject(valDiv);
-      valLbl.position.set(x, value >= 0 ? height + 0.15 : -height - 0.15, 0);
+      valLbl.position.set(x, value > 0 ? height + 0.15 : -height - 0.15, 0);
       group.add(valLbl);
       group.userData.detailLabels.push(valDiv);
       state.allBars.push({
@@ -115,14 +115,6 @@ export function buildChart(json, zOffset = 0, globalT0 = null, scale = 0.01) {
 
     if (!ea && di > 0 && !!dataPoints[di - 1].earlyAccess)
       addDetail("◀ EA ended", x, MAX_BAR_HEIGHT + 0.25, "label-ea", { color: "#aaffaa" });
-
-    addDetail(new Date(d.time).toLocaleDateString("de-DE", { month: "short", year: "2-digit" }), x, 0.2, "label-x", {
-      transform: "rotate(-90deg)",
-      transformOrigin: "center",
-      fontSize: "10px",
-      background: "transparent",
-      padding: "0"
-    });
   });
 
   scene.add(group);
