@@ -21,13 +21,16 @@ function renderWordCloud(canvas, wordMap) {
 
   function overlaps(x, y, w, h) {
     const pad = 2;
-    for (const r of placed)
-      if (x - pad < r.x + r.w && x + w + pad > r.x && y - pad < r.y + r.h && y + h + pad > r.y) return true;
+    for (const r of placed) {
+      if (x - pad < r.x + r.w && x + w + pad > r.x && y - pad < r.y + r.h && y + h + pad > r.y) {
+        return true;
+      }
+    }
     return false;
   }
 
-  const cx = W / 2,
-    cy = H / 2;
+  const cx = W / 2;
+  const cy = H / 2;
 
   for (const [word, prob] of entries) {
     const norm = prob / maxProb;
@@ -41,7 +44,6 @@ function renderWordCloud(canvas, wordMap) {
     ctx.font = `${norm > 0.6 ? 700 : 400} ${fontSize.toFixed(1)}px sans-serif`;
     ctx.fillStyle = `hsl(${hue}, 100%, ${lum}%)`;
 
-    // tw = exact measured width — draw origin is top-left so bounds match perfectly
     const tw = ctx.measureText(word).width;
     const th = fontSize * 1.25;
     let placed_ = false;
@@ -49,14 +51,13 @@ function renderWordCloud(canvas, wordMap) {
     outer: for (let r = 0; r < Math.max(W, H); r += 1.5) {
       const angleStep = Math.max(0.05, 0.4 / (1 + r * 0.012));
       for (let angle = 0; angle < Math.PI * 2; angle += angleStep) {
-        const x = cx + r * Math.cos(angle) - tw / 2; // centre the word on the spiral point
+        const x = cx + r * Math.cos(angle) - tw / 2;
         const y = cy + r * Math.sin(angle) - th / 2;
 
-        // All four edges must clear the margin
         if (x < MARGIN || y < MARGIN || x + tw > W - MARGIN || y + th > H - MARGIN) continue;
 
         if (!overlaps(x, y, tw, th)) {
-          ctx.fillText(word, x, y + th / 2); // textAlign=left → draw from x exactly
+          ctx.fillText(word, x, y + th / 2);
           placed.push({ x, y, w: tw, h: th });
           placed_ = true;
           break outer;
@@ -77,9 +78,32 @@ function renderWordCloud(canvas, wordMap) {
     }
   }
 }
-// ── Open popup ──────────────────────────────────────────────────
-// Keep a reference so the AR button can read the current bar's data
+
 let _currentBarData = null;
+
+function applyMobilePopupLayout() {
+  const popup = document.getElementById("popup");
+  const content = document.getElementById("popup-content");
+  if (!popup || !content) return;
+
+  const isMobileLandscape =
+    matchMedia("(pointer: coarse)").matches && window.innerWidth > window.innerHeight;
+
+  if (isMobileLandscape) {
+    popup.classList.add("popup-mobile-landscape");
+    content.style.overflowY = "auto";
+    content.style.overflowX = "hidden";
+    content.style.webkitOverflowScrolling = "touch";
+  } else {
+    popup.classList.remove("popup-mobile-landscape");
+    content.style.removeProperty("overflow-y");
+    content.style.removeProperty("overflow-x");
+    content.style.removeProperty("-webkit-overflow-scrolling");
+  }
+}
+
+window.addEventListener("resize", applyMobilePopupLayout);
+window.addEventListener("orientationchange", applyMobilePopupLayout);
 
 export function openBarPopup(barData) {
   _currentBarData = barData;
@@ -93,7 +117,9 @@ export function openBarPopup(barData) {
     barData.wordClouds && !Array.isArray(barData.wordClouds)
       ? barData.wordClouds
       : Object.fromEntries(
-          (barData.wordClouds ?? []).map((w) => (typeof w === "string" ? [w, 1] : [w.word ?? w, w.probability ?? 1]))
+          (barData.wordClouds ?? []).map((w) =>
+            typeof w === "string" ? [w, 1] : [w.word ?? w, w.probability ?? 1]
+          )
         );
 
   const hasWords = Object.keys(wordMap).length > 0;
@@ -102,21 +128,26 @@ export function openBarPopup(barData) {
   if (barData.earlyAccess) badges.push(`<span class="badge badge-ea">⚡ Early Access</span>`);
   if (barData.reviewBombed) badges.push(`<span class="badge badge-bomb">⚠ Review Bomb</span>`);
 
-  // "View in AR" button — only shown when word data exists
   const arBtn = hasWords
-    ? `<button id="popup-wc-ar-btn">
-         🔮 View word cloud in AR
-       </button>`
+    ? `
+      <div id="popup-actions" class="popup-actions">
+        <button id="popup-wc-ar-btn" class="btn-enter-wordcloud">
+          🔮 View word cloud in AR
+        </button>
+      </div>
+    `
     : "";
 
   const wcSection = hasWords
-    ? `<div class="popup-wc-label">
-         ${barData.reviewBombed ? "⚠ Review bomb" : "Top review"} keywords
-       </div>
-       <div class="popup-wc-wrap">
-         <canvas id="wc-canvas"></canvas>
-       </div>
-       ${arBtn}`
+    ? `
+      <div class="popup-wc-label">
+        ${barData.reviewBombed ? "⚠ Review bomb" : "Top review"} keywords
+      </div>
+      <div class="popup-wc-wrap">
+        <canvas id="wc-canvas"></canvas>
+      </div>
+      ${arBtn}
+    `
     : `<div class="popup-no-wc">No word cloud data for this month.</div>`;
 
   document.getElementById("popup-title").textContent = `${barData.gameName} — ${dateStr}`;
@@ -142,12 +173,13 @@ export function openBarPopup(barData) {
   popup.style.display = "flex";
   popup.style.pointerEvents = "all";
 
+  applyMobilePopupLayout();
+
   if (hasWords) {
     requestAnimationFrame(() => {
       const canvas = document.getElementById("wc-canvas");
       if (canvas) renderWordCloud(canvas, wordMap);
 
-      // Wire the AR button now that it is in the DOM
       document.getElementById("popup-wc-ar-btn")?.addEventListener("click", () => {
         closePopup();
         enterWordCloudAR(wordMap, {
@@ -183,5 +215,6 @@ export function closePopup() {
   const popup = document.getElementById("popup");
   popup.style.display = "none";
   popup.style.pointerEvents = "none";
+  popup.classList.remove("popup-mobile-landscape");
   _currentBarData = null;
 }
