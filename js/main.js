@@ -86,8 +86,8 @@ document.body.insertAdjacentHTML(
     <div class="menu-section">
       <h3>🔍 AR chart scale</h3>
       <div class="scale-row">
-        <input id="aframe-scale-slider" type="range" min="1" max="10" value="3">
-        <span id="aframe-scale-val">3</span>
+        <input id="aframe-scale-slider" type="range" min="1" max="10" value="5">
+        <span id="aframe-scale-val">5</span>
       </div>
       <p class="panel-hint">Adjust if bars appear too small on the Hiro marker.</p>
     </div>
