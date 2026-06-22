@@ -8,6 +8,7 @@ let _visibleIndexCount = 0;
 
 const INITIAL_GAME_LIMIT = 10;
 const LOAD_MORE_STEP = 10;
+const MAX_LOADED_GAMES = 20;
 
 export async function loadIndex() {
   try {
@@ -59,7 +60,13 @@ export async function loadData() {
 export async function loadMoreGames() {
   if (_visibleIndexCount >= _index.length) return;
 
-  const nextCount = Math.min(_visibleIndexCount + LOAD_MORE_STEP, _index.length);
+  const slotsAvailable = MAX_LOADED_GAMES - state.loadedJsons.length;
+  if (slotsAvailable <= 0) {
+    _refreshLoadMoreButton();
+    return;
+  }
+
+  const nextCount = Math.min(_visibleIndexCount + Math.min(LOAD_MORE_STEP, slotsAvailable), _index.length);
   const nextEntries = _index.slice(_visibleIndexCount, nextCount);
 
   try {
@@ -95,6 +102,13 @@ function _refreshLoadMoreButton() {
   const btn = document.getElementById("btn-load-more-games");
   if (!btn) return;
 
+  if (state.loadedJsons.length >= MAX_LOADED_GAMES) {
+    btn.style.display = "inline-flex";
+    btn.disabled = true;
+    btn.textContent = `Max ${MAX_LOADED_GAMES} games reached`;
+    return;
+  }
+
   const remaining = Math.max(_index.length - _visibleIndexCount, 0);
 
   if (remaining <= 0) {
@@ -103,6 +117,7 @@ function _refreshLoadMoreButton() {
   }
 
   btn.style.display = "inline-flex";
+  btn.disabled = false;
   btn.textContent = `Load more games (${remaining} left)`;
 }
 
@@ -115,12 +130,13 @@ function _initChart(jsons) {
   document.getElementById("filterTo").value = toMonth(maxDate);
 
   state.globalChartT0 = Math.min(...allDates);
-  state.globalChartScale = MAX_BAR_HEIGHT /
-  Math.max(
-    ...jsons.flatMap((j) =>
-      j.data.flatMap((d) => [Math.abs(d.values.cusumPositiv ?? 0), Math.abs(d.values.cusumNegativ ?? 0)])
-    )
-  );
+  state.globalChartScale =
+    MAX_BAR_HEIGHT /
+    Math.max(
+      ...jsons.flatMap((j) =>
+        j.data.flatMap((d) => [Math.abs(d.values.cusumPositiv ?? 0), Math.abs(d.values.cusumNegativ ?? 0)])
+      )
+    );
   state.globalTotalWidth = 0;
   state.loadedJsons = [];
 
@@ -150,6 +166,14 @@ export async function loadGameDynamic(idOrName) {
     (j) => String(j.id).toLowerCase() === query || (j.name ?? "").toLowerCase() === query
   );
   if (alreadyLoaded) return { ok: false, msg: `"${alreadyLoaded.name}" is already shown.` };
+
+  // Max games loaded reached
+  if (state.loadedJsons.length >= MAX_LOADED_GAMES) {
+    return {
+      ok: false,
+      msg: `Maximum of ${MAX_LOADED_GAMES} games reached. Remove a game before adding another.`
+    };
+  }
 
   const entry = _index.find((e) => String(e.id).toLowerCase() === query || (e.name ?? "").toLowerCase() === query);
   if (!entry) return { ok: false, msg: `No game found for "${idOrName}".` };
@@ -210,6 +234,7 @@ export function removeGame(gameId) {
   _recalcScale();
   _rebuildAllRows();
   _refreshActiveGamesList();
+  _refreshLoadMoreButton();
 }
 
 // ── Helpers ──────────────────────────────────────────────────────
@@ -241,7 +266,6 @@ function _rebuildAllRows() {
     state.rowGroups.push(group);
     state.globalTotalWidth = Math.max(state.globalTotalWidth, totalWidth);
   });
-
 }
 
 /** Added once on boot — never recreated. */
@@ -300,8 +324,7 @@ export function _refreshActiveGamesList() {
   if (!state.loadedJsons.length) {
     container.innerHTML = `<div class="no-games-hint">No games loaded yet.</div>`;
     if (enterBtn) {
-      enterBtn.disabled = true;
-      enterBtn.textContent = "🔮 Enter AR";
+      enterBtn.style.display = "none";
     }
     return;
   }
@@ -314,7 +337,10 @@ export function _refreshActiveGamesList() {
         <div class="g-name">${json.name ?? "Unknown"}</div>
         <div class="g-id">ID: ${json.id ?? "—"}</div>
       </div>
-      <button class="btn-danger" data-remove-id="${json.id}">✕</button>
+      <div class="game-actions">
+        <button class="btn-ar" data-ar-id="${json.id}" title="Enter AR with this game">AR</button>
+        <button class="btn-danger" data-remove-id="${json.id}" title="Remove">X</button>
+      </div>
     </div>
   `
     )
@@ -324,9 +350,18 @@ export function _refreshActiveGamesList() {
     btn.addEventListener("click", () => removeGame(btn.dataset.removeId));
   });
 
-  const n = state.loadedJsons.length;
+  container.querySelectorAll("[data-ar-id]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const id = btn.dataset.arId;
+      const json = state.loadedJsons.find((j) => String(j.id) === String(id));
+      if (!json) return;
+      import("./ar-aframe.js").then(({ enterAFrameARWithGame }) => {
+        enterAFrameARWithGame(json);
+      });
+    });
+  });
+
   if (enterBtn) {
-    enterBtn.disabled = false;
-    enterBtn.textContent = `🔮 Enter AR with ${n} game${n !== 1 ? "s" : ""}`;
+    enterBtn.style.display = "none";
   }
 }
