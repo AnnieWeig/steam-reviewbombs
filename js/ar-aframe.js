@@ -359,13 +359,13 @@ function buildWordCloudHTML(wordMap, meta) {
 
 function buildBarsHTML() {
   const ROW_SPACING = 0.85;
-  const BAR_W = 0.3;
+  const BAR_W = 0.4;
 
   // Overall AR size multiplier
-  const s = aframeScale * 0.12;
+  const s = aframeScale * 0.15;
 
   // Fixed compact width for the whole AR chart before scale
-  const MAX_AR_WIDTH = 3.2;
+  const MAX_AR_WIDTH = 3.6;
 
   let html = "";
   const allDates = [];
@@ -776,6 +776,8 @@ export function enterAFrameAR() {
   tryLockLandscape();
   _openIframe(buildIframeHTML(), "❌ Exit AR");
 }
+
+
 
 export function exitAFrameAR() {
   if (!aframeIframe) return;
