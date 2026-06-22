@@ -4,7 +4,7 @@ import { setupInteractions } from "./interactions.js"; // ← was missing
 import { applyFilter, resetFilter, applyReviewBombFilter } from "./filter.js";
 import { closePopup } from "./popup.js";
 import { enterAFrameAR, updateAFrameScale } from "./ar-aframe.js";
-import { loadData, loadGameDynamic, removeGame, loadMoreGames, setupLoadMoreButton } from "./data.js";
+import { loadData, loadGameDynamic, removeGame, loadMoreGames, setupLoadMoreButton, getIndex } from "./data.js";
 import { state } from "./state.js";
 
 // ── Inject DOM ──────────────────────────────────────────────────
@@ -35,10 +35,11 @@ document.body.insertAdjacentHTML(
       <div class="filter-actions">
         <button class="btn-primary" id="btn-game-search">Add game</button>
       </div>
+      <div id="search-autocomplete" class="search-autocomplete"></div>
       <div id="search-status" class="search-status"></div>
-      <button id="btn-load-more-games" class="btn-secondary" style="display:none; margin-top: 10px; width: 100%;">
+        <button id="btn-load-more-games" class="btn-secondary" style="display:none; margin-top: 10px; width: 100%;">
         Load more games
-      </button>
+        </button>
     </div>
 
     <!-- 2 — Active games + Enter AR CTA -->
@@ -49,7 +50,7 @@ document.body.insertAdjacentHTML(
       </div>
       <button id="btn-enter-ar" disabled>🔮 Enter AR</button>
       <p class="panel-hint">
-        Add the games you want to compare, set a date range, then tap Enter AR.
+        AR mode supports only one game at a time. Compare multiple games in the 3D view.
       </p>
     </div>
 
@@ -100,7 +101,7 @@ document.body.insertAdjacentHTML(
   </div>
 
  <!-- Legend toggle button -->
-  <button id="legend-btn" title="Show legend">🎨</button>
+  <button id="legend-btn" title="Show legend">❔</button>
 
   <!-- Legend panel (hidden by default) -->
   <div id="color-legend">
@@ -184,8 +185,7 @@ export function refreshActiveGamesList() {
 
   if (!n) {
     container.innerHTML = `<div class="no-games-hint">No games loaded yet.</div>`;
-    enterBtn.disabled = true;
-    enterBtn.textContent = "🔮 Enter AR";
+    if (enterBtn) enterBtn.style.display = "none";
     return;
   }
 
@@ -197,7 +197,10 @@ export function refreshActiveGamesList() {
         <div class="g-name">${json.name ?? "Unknown"}</div>
         <div class="g-id">ID: ${json.id ?? "—"}</div>
       </div>
-      <button class="btn-danger" data-remove-id="${json.id}">✕</button>
+      <div class="game-actions">
+        <button class="btn-ar" data-ar-id="${json.id}" title="Enter AR with this game">AR</button>
+        <button class="btn-danger" data-remove-id="${json.id}" title="Remove">X</button>
+      </div>
     </div>
   `
     )
@@ -210,14 +213,20 @@ export function refreshActiveGamesList() {
     });
   });
 
-  enterBtn.disabled = false;
-  enterBtn.textContent = `🔮 Enter AR with ${n} game${n !== 1 ? "s" : ""}`;
-}
+  container.querySelectorAll("[data-ar-id]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const id = btn.dataset.arId;
+      const json = state.loadedJsons.find((j) => String(j.id) === String(id));
+      if (!json) return;
+      import("./ar-aframe.js").then(({ enterAFrameARWithGame }) => {
+        closeMenu();
+        enterAFrameARWithGame(json);
+      });
+    });
+  });
 
-document.getElementById("btn-enter-ar").addEventListener("click", () => {
-  closeMenu();
-  enterAFrameAR();
-});
+  if (enterBtn) enterBtn.style.display = "none";
+}
 
 // ── Game search ─────────────────────────────────────────────────
 async function doGameSearch() {
@@ -307,6 +316,105 @@ window.addEventListener("resize", () => {
 
 // ── Interactions ─────────────────────────────────────────────────
 setupInteractions(); // ← was missing — restores camera pan/zoom + bar drag
+
+// ── Autocomplete ─────────────────────────────────────────────────
+const searchInput = document.getElementById("game-search-input");
+const autocompleteBox = document.getElementById("search-autocomplete");
+
+function renderSuggestions(query) {
+  const index = getIndex();
+  if (!query || query.length < 2) {
+    autocompleteBox.style.display = "none";
+    autocompleteBox.innerHTML = "";
+    return;
+  }
+
+  const q = query.toLowerCase();
+  const matches = index
+    .filter(
+      (e) =>
+        (e.name ?? "").toLowerCase().includes(q) ||
+        String(e.id).toLowerCase().includes(q)
+    )
+    .slice(0, 8); // max 8 suggestions
+
+  if (!matches.length) {
+    autocompleteBox.style.display = "none";
+    autocompleteBox.innerHTML = "";
+    return;
+  }
+
+  autocompleteBox.innerHTML = matches
+    .map(
+      (e, i) => `
+      <div class="autocomplete-item" data-index="${i}" data-name="${(e.name ?? "").replace(/"/g, "&quot;")}">
+        <span class="ac-name">${_highlight(e.name ?? "", q)}</span>
+        <span class="ac-id">${e.id}</span>
+      </div>`
+    )
+    .join("");
+
+  autocompleteBox.style.display = "block";
+
+  autocompleteBox.querySelectorAll(".autocomplete-item").forEach((item) => {
+    item.addEventListener("mousedown", (e) => {
+      e.preventDefault(); // prevent input blur before click fires
+      searchInput.value = item.dataset.name;
+      autocompleteBox.style.display = "none";
+      autocompleteBox.innerHTML = "";
+      doGameSearch();
+    });
+  });
+}
+
+function _highlight(text, query) {
+  const safe = text.replace(/</g, "&lt;");
+  const safeQ = query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return safe.replace(new RegExp(`(${safeQ})`, "gi"), "<mark>$1</mark>");
+}
+
+searchInput.addEventListener("input", (e) => {
+  renderSuggestions(e.target.value.trim());
+});
+
+searchInput.addEventListener("keydown", (e) => {
+  const items = autocompleteBox.querySelectorAll(".autocomplete-item");
+  const active = autocompleteBox.querySelector(".autocomplete-item.active");
+  const activeIdx = active ? Number(active.dataset.index) : -1;
+
+  if (e.key === "ArrowDown") {
+    e.preventDefault();
+    const next = Math.min(activeIdx + 1, items.length - 1);
+    items.forEach((el) => el.classList.remove("active"));
+    items[next]?.classList.add("active");
+    items[next]?.scrollIntoView({ block: "nearest" });
+  } else if (e.key === "ArrowUp") {
+    e.preventDefault();
+    const prev = Math.max(activeIdx - 1, 0);
+    items.forEach((el) => el.classList.remove("active"));
+    items[prev]?.classList.add("active");
+    items[prev]?.scrollIntoView({ block: "nearest" });
+  } else if (e.key === "Enter") {
+    if (active) {
+      e.preventDefault(); // let arrow selection confirm, not submit
+      searchInput.value = active.dataset.name;
+      autocompleteBox.style.display = "none";
+      autocompleteBox.innerHTML = "";
+      doGameSearch();
+    }
+    // if no active suggestion, fall through to normal doGameSearch
+  } else if (e.key === "Escape") {
+    autocompleteBox.style.display = "none";
+    autocompleteBox.innerHTML = "";
+  }
+});
+
+document.addEventListener("click", (e) => {
+  if (!searchInput.contains(e.target) && !autocompleteBox.contains(e.target)) {
+    autocompleteBox.style.display = "none";
+    autocompleteBox.innerHTML = "";
+  }
+});
 
 // ── Render loop ──────────────────────────────────────────────────
 function animate() {
