@@ -56,11 +56,7 @@ function buildWordCloudHTML(wordMap, meta) {
   }
 
   function escHtml(s = "") {
-    return String(s)
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;")
-      .replace(/"/g, "&quot;");
+    return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
   }
 
   const sized = entries.map(([word, prob], i) => {
@@ -377,10 +373,7 @@ function buildBarsHTML() {
 
   const globalMinTime = Math.min(...allTimes);
   const globalMaxTime = Math.max(...allTimes);
-  const globalSpanMonths = Math.max(
-    (globalMaxTime - globalMinTime) / (1000 * 60 * 60 * 24 * 30.44),
-    1
-  );
+  const globalSpanMonths = Math.max((globalMaxTime - globalMinTime) / (1000 * 60 * 60 * 24 * 30.44), 1);
 
   // Single X scale shared by all rows
   const xScale = MAX_AR_WIDTH / globalSpanMonths;
@@ -390,9 +383,7 @@ function buildBarsHTML() {
     const keys = ["cusumPositiv", "cusumNegativ"];
 
     const label =
-      (json.name ?? "Dataset").length > 20
-        ? `${(json.name ?? "Dataset").slice(0, 20)}…`
-        : json.name ?? "Dataset";
+      (json.name ?? "Dataset").length > 20 ? `${(json.name ?? "Dataset").slice(0, 20)}…` : (json.name ?? "Dataset");
 
     html += `<a-text
       value="${label.replace(/"/g, "'")}"
@@ -768,6 +759,30 @@ function _openIframe(html, exitLabel) {
   document.body.appendChild(aframeExitBtn);
 }
 
+export function enterAFrameARWithGame(json) {
+  // Snapshot full state
+  const savedJsons = state.loadedJsons;
+  const savedT0 = state.globalChartT0;
+  const savedScale = state.globalChartScale;
+
+  // Temporarily override state to just this one game
+  const max = Math.max(
+    ...json.data.flatMap((d) => [Math.abs(d.values?.cusumPositiv ?? 0), Math.abs(d.values?.cusumNegativ ?? 0)])
+  );
+  state.loadedJsons = [json];
+  state.globalChartT0 = Math.min(...json.data.map((d) => new Date(d.time).getTime()));
+  state.globalChartScale = MAX_BAR_HEIGHT / (max || 1);
+
+  // Build iframe while state is overridden
+  tryLockLandscape();
+  _openIframe(buildIframeHTML(), "❌ Exit AR");
+
+  // Restore full state immediately after — iframe already has a snapshot in the blob
+  state.loadedJsons = savedJsons;
+  state.globalChartT0 = savedT0;
+  state.globalChartScale = savedScale;
+}
+
 export function enterAFrameAR() {
   if (!state.loadedJsons.length) {
     alert("Add at least one game before entering AR.");
@@ -776,8 +791,6 @@ export function enterAFrameAR() {
   tryLockLandscape();
   _openIframe(buildIframeHTML(), "❌ Exit AR");
 }
-
-
 
 export function exitAFrameAR() {
   if (!aframeIframe) return;
