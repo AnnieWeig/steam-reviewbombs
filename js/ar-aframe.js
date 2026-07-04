@@ -405,7 +405,7 @@ function buildBarsHTML() {
       position="0 0 ${(zOffsetWorld * s).toFixed(4)}">
     </a-plane>`;
 
-    json.data.forEach((d) => {
+    json.data.forEach((d, di) => {
       const time = new Date(d.time).getTime();
       const dateStr = new Date(d.time).toISOString().slice(0, 7);
       allDates.push(dateStr);
@@ -437,18 +437,35 @@ function buildBarsHTML() {
         </a-box>`;
       });
 
-      if (d.reviewBombed) {
+      const prevBombed = di > 0 && !!json.data[di - 1].reviewBombed;
+      const nextBombed = di < json.data.length - 1 && !!json.data[di + 1].reviewBombed;
+
+      if (d.reviewBombed && !prevBombed) {
         html += `<a-text
-          value="⚠"
-          position="${(xWorld * s).toFixed(4)} ${((MAX_BAR_HEIGHT + 0.35) * s).toFixed(4)} ${(zOffsetWorld * s).toFixed(4)}"
-          color="#ff4422"
-          width="${(3.2 * s).toFixed(4)}"
-          align="center"
-          side="double"
-          data-date="${dateStr}"
-          data-row="${rowIdx}"
-          data-review-bombed="true">
-        </a-text>`;
+        value="⚠ bomb"
+        position="${(xWorld * s).toFixed(4)} ${((MAX_BAR_HEIGHT + 0.35) * s).toFixed(4)} ${(zOffsetWorld * s).toFixed(4)}"
+        color="#ff4422"
+        width="${(3.2 * s).toFixed(4)}"
+        align="center"
+        side="double"
+        data-date="${dateStr}"
+        data-row="${rowIdx}"
+        data-review-bombed="true">
+      </a-text>`;
+      }
+
+      if (d.reviewBombed && !nextBombed && prevBombed) {
+        html += `<a-text
+        value="◀ ended"
+        position="${(xWorld * s).toFixed(4)} ${((MAX_BAR_HEIGHT + 0.35) * s).toFixed(4)} ${(zOffsetWorld * s).toFixed(4)}"
+        color="#ffaa88"
+        width="${(3.2 * s).toFixed(4)}"
+        align="center"
+        side="double"
+        data-date="${dateStr}"
+        data-row="${rowIdx}"
+        data-review-bombed="true">
+      </a-text>`;
       }
     });
   });
