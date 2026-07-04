@@ -2,6 +2,7 @@ import { state, MAX_BAR_HEIGHT } from "./state.js";
 import { scene } from "./scene.js";
 import { buildChart, disposeCSS2D } from "./chart.js";
 import { spherical, target, updateCamera } from "./camera.js";
+import { enterAFrameARWithGame } from "./ar-aframe.js";
 
 let _index = [];
 let _visibleIndexCount = 0;
@@ -37,10 +38,19 @@ export async function loadData() {
     return;
   }
 
+  // Prefer "The Long Dark" as the default starting game
+  const preferredName = "the long dark";
+  const preferred =
+    _index.find((e) => (e.name ?? "").toLowerCase() === preferredName) ??
+    _index.find((e) => (e.name ?? "").toLowerCase().includes(preferredName));
+
+  const startEntries = preferred ? [preferred] : [_index[0]];
+
+  console.log("startEntries", startEntries);
   _visibleIndexCount = Math.min(INITIAL_GAME_LIMIT, _index.length);
 
   const jsons = await Promise.all(
-    _index.slice(0, _visibleIndexCount).map((entry) => {
+    startEntries.map((entry) => {
       const url = entry.file ?? `./data/${entry.id}.json`;
       return fetch(url).then((r) => {
         if (!r.ok) throw new Error(`Failed to load ${url}`);
@@ -355,9 +365,12 @@ export function _refreshActiveGamesList() {
       const id = btn.dataset.arId;
       const json = state.loadedJsons.find((j) => String(j.id) === String(id));
       if (!json) return;
-      import("./ar-aframe.js").then(({ enterAFrameARWithGame }) => {
-        enterAFrameARWithGame(json);
-      });
+
+      // Close the panel first, then enter AR
+      document.getElementById("menu-panel").classList.remove("open");
+      document.getElementById("menu-overlay").classList.remove("open");
+
+      enterAFrameARWithGame(json);
     });
   });
 
