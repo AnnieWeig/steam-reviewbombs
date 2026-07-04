@@ -6,6 +6,7 @@ import { enterAFrameARWithGame } from "./ar-aframe.js";
 
 let _index = [];
 let _visibleIndexCount = 0;
+let _gridObject = null;
 
 const INITIAL_GAME_LIMIT = 10;
 const LOAD_MORE_STEP = 10;
@@ -157,7 +158,8 @@ function _initChart(jsons) {
     state.globalTotalWidth = Math.max(state.globalTotalWidth, totalWidth);
   });
 
-  _addInitialGrid();
+  // ← must be after globalTotalWidth is fully set
+  _rebuildGrid();
 
   target.set(state.globalTotalWidth / 2, 0, 0.75);
   spherical.radius = Math.max(state.globalTotalWidth, 1.5) * 0.5;
@@ -199,14 +201,14 @@ export async function loadGameDynamic(idOrName) {
     return { ok: false, msg: `Failed to load data for "${entry.name}": ${e.message}` };
   }
 
-  // First game after a full clear — reinitialise t0 + date inputs
-  if (state.loadedJsons.length === 0) {
-    const allDates = json.data.map((d) => new Date(d.time).getTime());
-    state.globalChartT0 = Math.min(...allDates);
-    const toMonth = (ms) => new Date(ms).toISOString().slice(0, 7);
-    document.getElementById("filterFrom").value = toMonth(Math.min(...allDates));
-    document.getElementById("filterTo").value = toMonth(Math.max(...allDates));
-  }
+  // Update date range inputs to cover all games including the new one
+  const allDates = [
+    ...state.loadedJsons.flatMap((j) => j.data.map((d) => new Date(d.time).getTime())),
+    ...json.data.map((d) => new Date(d.time).getTime())
+  ];
+  const toMonth = (ms) => new Date(ms).toISOString().slice(0, 7);
+  document.getElementById("filterFrom").value = toMonth(Math.min(...allDates));
+  document.getElementById("filterTo").value = toMonth(Math.max(...allDates));
 
   state.loadedJsons.push(json);
   _recalcScale();
@@ -257,11 +259,13 @@ function _recalcScale() {
     )
   );
   state.globalChartScale = MAX_BAR_HEIGHT / globalMax;
+
+  // Recalculate T0 from ALL loaded games — oldest date wins
+  state.globalChartT0 = Math.min(...state.loadedJsons.flatMap((j) => j.data.map((d) => new Date(d.time).getTime())));
 }
 
 /** Dispose all current row groups and rebuild them at the current scale. */
 function _rebuildAllRows() {
-  // Dispose all existing groups + their DOM labels
   for (const group of state.rowGroups) {
     disposeCSS2D(group);
     scene.remove(group);
@@ -270,20 +274,34 @@ function _rebuildAllRows() {
   state.allBars = [];
   state.globalTotalWidth = 0;
 
-  // Rebuild
   state.loadedJsons.forEach((json, i) => {
     const { group, totalWidth } = buildChart(json, i * 1.5, state.globalChartT0, state.globalChartScale);
     state.rowGroups.push(group);
     state.globalTotalWidth = Math.max(state.globalTotalWidth, totalWidth);
   });
+
+  // ← after totalWidth is recalculated
+  _rebuildGrid();
 }
 
-/** Added once on boot — never recreated. */
-function _addInitialGrid() {
-  const gridSize = Math.ceil(Math.max(state.globalTotalWidth ?? 10, 10) + 4);
-  const grid = new THREE.GridHelper(gridSize, gridSize);
-  grid.position.set((state.globalTotalWidth ?? 0) / 2, 0, 0.75);
-  scene.add(grid);
+function _rebuildGrid() {
+  console.log("im here");
+  // Remove old grid if it exists
+  if (_gridObject) {
+    scene.remove(_gridObject);
+    _gridObject.geometry.dispose();
+    _gridObject.material.dispose();
+    _gridObject = null;
+  }
+
+  const numRows = state.loadedJsons.length;
+  const width = Math.ceil(Math.max(state.globalTotalWidth ?? 10, 10) + 4);
+  const depth = Math.ceil(Math.max(numRows * 1.5, 4) + 2);
+  const gridSize = Math.max(width, depth);
+
+  _gridObject = new THREE.GridHelper(gridSize, gridSize);
+  _gridObject.position.set((state.globalTotalWidth ?? 0) / 2, 0, 0.75);
+  scene.add(_gridObject);
 }
 
 function _clearAll() {
@@ -299,6 +317,13 @@ function _clearAll() {
     disposeCSS2D(state.yLabelGroup);
     scene.remove(state.yLabelGroup);
     state.yLabelGroup = null;
+  }
+
+  if (_gridObject) {
+    scene.remove(_gridObject);
+    _gridObject.geometry.dispose();
+    _gridObject.material.dispose();
+    _gridObject = null;
   }
 
   state.allBars = [];
