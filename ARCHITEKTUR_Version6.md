@@ -16,7 +16,7 @@ sowohl in einer normalen 3D-Ansicht (Three.js) als auch in einer AR-Ansicht (AR.
 │   ├── index.json          ← Liste aller verfügbaren Spiele (id, name, file)
 │   └── {id}.json           ← Bewertungsdaten pro Spiel
 ├── src/
-│   ├── index.js            ← Einstiegspunkt, DOM, UI-Events
+│   ├── main.js             ← Einstiegspunkt, DOM, UI-Events
 │   ├── state.js            ← Globaler Zustand
 │   ├── scene.js            ← Three.js Szene, Renderer, Kamera
 │   ├── camera.js           ← Kamerasteuerung (sphärisch)
@@ -55,7 +55,7 @@ sowohl in einer normalen 3D-Ansicht (Three.js) als auch in einer AR-Ansicht (AR.
 
 ---
 
-### `index.js`
+### `main.js`
 **Einstiegspunkt – baut das DOM auf und verdrahtet alle UI-Events.**
 
 #### Verantwortlichkeiten
@@ -285,7 +285,7 @@ rendert HTML-Elemente positioniert im 3D-Raum.
 ```
 Nutzer gibt Name/ID ein
         ↓
-index.js: doGameSearch()
+main.js: doGameSearch()
         ↓
 data.js: loadGameDynamic()
   ├─ Index-Suche
@@ -307,7 +307,7 @@ data.js: loadGameDynamic()
 ```
 Nutzer klickt 🔮 in Spielzeile
         ↓
-index.js / data.js: [data-ar-id] click handler
+main.js / data.js: [data-ar-id] click handler
         ↓
 ar-aframe.js: enterAFrameARWithGame(json)
   ├─ State snapshot speichern
