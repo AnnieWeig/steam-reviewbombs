@@ -354,14 +354,14 @@ function buildWordCloudHTML(wordMap, meta) {
 }
 
 function buildBarsHTML() {
-  const ROW_SPACING = 0.85;
-  const BAR_W = 0.4;
+  const ROW_SPACING = 1.2;
+  const BAR_W = 0.12;
 
   // Overall AR size multiplier
   const s = aframeScale * 0.15;
 
   // Fixed compact width for the whole AR chart before scale
-  const MAX_AR_WIDTH = 3.6;
+  const MAX_AR_WIDTH = 15;
 
   let html = "";
   const allDates = [];
@@ -422,19 +422,20 @@ function buildBarsHTML() {
         const yWorld = value >= 0 ? hWorld / 2 : -hWorld / 2;
         const color = getBarColorHex(j, ea, d.reviewBombed);
         const opacity = d.reviewBombed ? 0.82 : ea ? 0.58 : 1.0;
+        const zNudge = (j * 0.001).toFixed(4); // ← tiny per-key offset to prevent Z-fighting
 
         html += `<a-box
-          position="${(xWorld * s).toFixed(4)} ${(yWorld * s).toFixed(4)} ${(zOffsetWorld * s).toFixed(4)}"
-          width="${(BAR_W * s).toFixed(4)}"
-          height="${Math.max(hWorld * s, 0.01).toFixed(4)}"
-          depth="${(BAR_W * s).toFixed(4)}"
-          color="${color}"
-          material="transparent:true;opacity:${opacity};side:double"
-          shadow
-          data-date="${dateStr}"
-          data-row="${rowIdx}"
-          data-review-bombed="${!!d.reviewBombed}">
-        </a-box>`;
+      position="${(xWorld * s).toFixed(4)} ${(yWorld * s).toFixed(4)} ${((zOffsetWorld + Number(zNudge)) * s).toFixed(4)}"
+      width="${(BAR_W * s).toFixed(4)}"
+      height="${Math.max(hWorld * s, 0.01).toFixed(4)}"
+      depth="${(BAR_W * s * 0.95).toFixed(4)}"
+      color="${color}"
+      material="transparent:true;opacity:${opacity};side:double;depthTest:true"
+      shadow
+      data-date="${dateStr}"
+      data-row="${rowIdx}"
+      data-review-bombed="${!!d.reviewBombed}">
+      </a-box>`;
       });
 
       const prevBombed = di > 0 && !!json.data[di - 1].reviewBombed;
@@ -736,7 +737,7 @@ function buildIframeHTML() {
 
   <a-scene
     arjs="sourceType: webcam; debugUIEnabled: false; trackingMethod: best;"
-    renderer="logarithmicDepthBuffer: true; antialias: true;"
+    renderer="logarithmicDepthBuffer: true; antialias: true; precision: highp;"
     vr-mode-ui="enabled: false"
     loading-screen="dotsColor: #00aaff; backgroundColor: #111111">
     <a-marker preset="hiro" smooth="true" smoothCount="5" smoothTolerance="0.01">
