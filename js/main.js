@@ -3,7 +3,7 @@ import { updateCamera } from "./camera.js";
 import { setupInteractions } from "./interactions.js"; // ← was missing
 import { applyFilter, resetFilter, applyReviewBombFilter } from "./filter.js";
 import { closePopup } from "./popup.js";
-import { enterAFrameAR, updateAFrameScale } from "./ar-aframe.js";
+import { enterAFrameAR, updateAFrameScale, enterAFrameARWithGame } from "./ar-aframe.js";
 import { loadData, loadGameDynamic, removeGame, loadMoreGames, setupLoadMoreButton, getIndex } from "./data.js";
 import { state } from "./state.js";
 
@@ -218,10 +218,8 @@ export function refreshActiveGamesList() {
       const id = btn.dataset.arId;
       const json = state.loadedJsons.find((j) => String(j.id) === String(id));
       if (!json) return;
-      import("./ar-aframe.js").then(({ enterAFrameARWithGame }) => {
-        closeMenu();
-        enterAFrameARWithGame(json);
-      });
+      closeMenu();
+      enterAFrameARWithGame(json);
     });
   });
 
@@ -331,11 +329,7 @@ function renderSuggestions(query) {
 
   const q = query.toLowerCase();
   const matches = index
-    .filter(
-      (e) =>
-        (e.name ?? "").toLowerCase().includes(q) ||
-        String(e.id).toLowerCase().includes(q)
-    )
+    .filter((e) => (e.name ?? "").toLowerCase().includes(q) || String(e.id).toLowerCase().includes(q))
     .slice(0, 8); // max 8 suggestions
 
   if (!matches.length) {
