@@ -33,8 +33,8 @@ export function clearRowSelection() {
 export function buildChart(json, zOffset = 0, globalT0 = null, scale = 0.01) {
   const dataPoints = [...json.data].sort((a, b) => new Date(a.time) - new Date(b.time));
   const keys = ["cusumPositiv", "cusumNegativ"];
-  const GROUP_SPACING = 0.44; 
-  const BAR_W = 0.36; 
+  const GROUP_SPACING = 0.44;
+  const BAR_W = 0.36;
   const t0 = globalT0 ?? new Date(dataPoints[0].time).getTime();
 
   const group = new THREE.Group();
@@ -108,13 +108,26 @@ export function buildChart(json, zOffset = 0, globalT0 = null, scale = 0.01) {
       });
     });
 
-    if (d.reviewBombed) addDetail("⚠ bombed", x, MAX_BAR_HEIGHT + 0.6, "label-bomb");
-
+    // ── Early Access span labels ─────────────────────────────
     if (ea && (di === 0 || !dataPoints[di - 1].earlyAccess))
-      addDetail("▶ Early Access", x, MAX_BAR_HEIGHT + 0.25, "label-ea");
+      addDetail("▶ Early Access", x, MAX_BAR_HEIGHT + 0.25, "label-ea", { color: "#aaffaa" });
 
     if (!ea && di > 0 && !!dataPoints[di - 1].earlyAccess)
       addDetail("◀ EA ended", x, MAX_BAR_HEIGHT + 0.25, "label-ea", { color: "#aaffaa" });
+
+    // ── Review bomb span labels ───────────────────────────────
+    const prevBombed = di > 0 && !!dataPoints[di - 1].reviewBombed;
+    const nextBombed = di < dataPoints.length - 1 && !!dataPoints[di + 1].reviewBombed;
+
+    if (d.reviewBombed && !prevBombed) {
+      // Start of a bomb span
+      addDetail("⚠ Review bomb", x, MAX_BAR_HEIGHT + 0.6, "label-bomb");
+    }
+
+    if (d.reviewBombed && !nextBombed && prevBombed) {
+      // End of a multi-bar span — add closing marker
+      addDetail("◀ RB ended", x, MAX_BAR_HEIGHT + 0.6, "label-bomb", { color: "#ff4422" });
+    }
   });
 
   scene.add(group);
