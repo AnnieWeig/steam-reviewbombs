@@ -8,6 +8,6 @@ Zum Aufrufen der Seite im Browser Localhost aufrufen:
 
 Alternativ:
 
-Aufruden der Pages Seite: 
+Aufrufen der Pages Seite: 
 [Pages](https://annieweig.github.io/jsar-test/)
 
