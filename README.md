@@ -4,10 +4,10 @@ Zum Starten des Servers in der Komandozeile:
 
 Zum Aufrufen der Seite im Browser Localhost aufrufen:
 
-[Localhost]([http://localhost:8000/])
+[Localhost](http://localhost:8000/)
 
 Alternativ:
 
 Aufruden der Pages Seite: 
-[Pages]([https://annieweig.github.io/jsar-test/])
+[Pages](https://annieweig.github.io/jsar-test/)
 
