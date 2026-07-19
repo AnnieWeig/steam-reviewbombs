@@ -41,7 +41,7 @@ Jedes Review enthält Informationen zu:
 
 Die Visualisierung soll eine besseren Überblick über Reviews von Spielen gewähren.
 
-Im Gegensatz zu Steam werden Reviews hier kummulativ dargestellt, wogegen bei Steam pro Zeitabschnitt nur die dann erstellten Reviews angezeigt werden.  
+Im Gegensatz zu Steam werden Reviews hier kummulativ dargestellt, wohingegen bei Steam pro Zeitabschnitt nur die dann erstellten Reviews angezeigt werden.  
 Es ist anhand der Einfärbung des Graphen erkennbar, wann ein Spiel aus dem Early Access ging und in welchem Zeitraum Reviews von Steam als auffällig geflagt wurden, also Umgangssprachlich Review Bombing betrieben wurde. 
 
 ## Visualisierung
