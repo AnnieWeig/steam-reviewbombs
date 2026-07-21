@@ -1,20 +1,4 @@
-﻿Zum Starten des Servers in der Komandozeile:
-
-```bash python3 -m http.server ```
-
-Zum Aufrufen der Seite im Browser Localhost aufrufen:
-
-[Localhost](http://localhost:8000/)
-
-Alternativ:
-
-Aufrufen der Pages Seite: 
-
-[Pages](https://annieweig.github.io/steam-reviewbombs/)
-
-
-
-# Informationsvisualisierung: Steam Reviews und Review Bombs
+﻿# Informationsvisualisierung: Steam Reviews und Review Bombs
 
 **Pages link**: https://annieweig.github.io/steam-reviewbombs/
 
@@ -22,7 +6,7 @@ Dieses Projekt wurde im Zuge des Kurses Informationsvisualisierung erstellt und 
 
 ## Datenquelle
 
-Die Daten werden über die Steap API bereitgestellt.
+Die Daten werden über die Steam API bereitgestellt.
 
 Steam bietet die Funktion, dass Nutzer einem Spiel einen Tag hinzufügen können. Über diese Tags können über die Steam API unter https://api.steampowered.com/IStoreQueryService/Query/v1/ abgerufen werden.
 
@@ -41,7 +25,7 @@ Jedes Review enthält Informationen zu:
 
 Die Visualisierung soll eine besseren Überblick über Reviews von Spielen gewähren.
 
-Im Gegensatz zu Steam werden Reviews hier kummulativ dargestellt, wohingegen bei Steam pro Zeitabschnitt nur die dann erstellten Reviews angezeigt werden.  
+Im Gegensatz zu Steam werden Reviews hier kummulativ dargestellt, wohingegen bei Steam pro Zeitabschnitt nur die in diesem Zeitraum erstellten Reviews angezeigt werden.  
 Es ist anhand der Einfärbung des Graphen erkennbar, wann ein Spiel aus dem Early Access ging und in welchem Zeitraum Reviews von Steam als auffällig geflagt wurden, also Umgangssprachlich Review Bombing betrieben wurde. 
 
 ## Visualisierung
@@ -59,16 +43,21 @@ Für jeden Review-Balken wird angezeigt, wie viel positive und negative Revies i
 - Mit dem Mausrad wird herangezoomt.
 - Bei gedrückter rechten Maustaste auf einem Graph kann dieser in den Vorder- oder Hintergrund geschoben werden.
 - Ein Klick mit der linken Maustaste auf einen Balken zeigt die Anzahl der in diesem Zeitraum entstandenen Reviews dar und, falls in diesem Zeitraum Review Bombing betrieben wurde und Reviews in Deutsch oder Englisch vorhanden sind, eine Wordcloud mit Bigrammen der häufigsten verwendeten Wörtern in den Reviews.
-- Ist eine Wordcloud verfügbar, kann diese in VR dargestellt werden.
+- Ist eine Wordcloud verfügbar, kann diese in AR dargestellt werden.
 
 Links oben im Eck kann das Menü aufgerufen werden. In diesem können: 
 - Spiele hinzugefügt oder entfernt werden
 - die Darstellung der Reviews auf einen Zeitraum begrenzt werden
-- ein Review Graph in VR angesehen werden
+- ein Review Graph in AR angesehen werden
 - Spiele ohne Review Bombing in der Visualisierung ausgeblendet werden
 - die Skalierung in AR einstellen
 - der Marker für die AR Darstellung aufgerufen werden
 
+## AR
+
+Für die Nutzung der AR-Funktionalität muss der Nutzer zunächst den Marker (z. B. https://raw.githubusercontent.com/AR-js-org/AR.js/master/data/images/hiro.png oder den in der Anwendung verlinkten Marker) auf der Oberfläche platzieren, auf der das gewünschte Objekt (der Graph oder die Wordcloud) dargestellt werden soll. Anschließend muss die Kamera des verwendeten Geräts in einem leicht schrägen Winkel von oben auf den Marker ausgerichtet werden, damit die AR-Ansicht korrekt erkannt und angezeigt werden kann.
+
+Aufgrund der vergleichsweise unpraktischen Handhabung dieses Ansatzes wurden für diese Ansicht keine zusätzlichen Nutzerinteraktionen implementiert.
 
 ## EEG-Messung
 
