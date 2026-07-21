@@ -294,12 +294,6 @@ function buildWordCloudHTML(wordMap, meta) {
       pointer-events: none; z-index: 200; white-space: nowrap;
     }
     #marker-hint a { color: #cc88ff; pointer-events: all; }
-    #tip {
-      position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%);
-      background: rgba(0,0,0,0.65); color: #888; font-size: 11px;
-      padding: 7px 14px; border-radius: 6px; pointer-events: none;
-      z-index: 200; white-space: nowrap;
-    }
     #rotate-device-hint {
       position: fixed;
       inset: 0;
@@ -332,8 +326,7 @@ function buildWordCloudHTML(wordMap, meta) {
     <a href="https://raw.githubusercontent.com/AR-js-org/AR.js/master/data/images/hiro.png" target="_blank">Hiro marker</a>
     — word cloud appears above it
   </div>
-  <div id="tip">☝️ Drag = move &nbsp;·&nbsp; 🤏 Pinch = zoom &nbsp;·&nbsp; 🔄 Twist = rotate</div>
-
+  
   <a-scene
     arjs="sourceType: webcam; debugUIEnabled: false; trackingMethod: best;"
     renderer="logarithmicDepthBuffer: true; antialias: true;"
@@ -724,7 +717,6 @@ function buildIframeHTML() {
       <h3>📊 Viewing (${state.loadedJsons.length} game${state.loadedJsons.length !== 1 ? "s" : ""})</h3>
       <div class="game-list">${gameListHTML}</div>
       <p class="panel-hint">Exit AR to add or remove games.</p>
-      <p class="panel-hint">☝️ Drag = move chart · 🤏 Pinch = zoom · 🔄 Twist = rotate</p>
     </div>
     <div class="menu-section">
       <a class="marker-link" href="https://raw.githubusercontent.com/AR-js-org/AR.js/master/data/images/hiro.png" target="_blank">📄 Open / print Hiro marker</a>
